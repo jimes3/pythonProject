@@ -7,10 +7,10 @@ import numpy as np
 from tqdm import tqdm
 
 # 加载 npz 文件
-npz = np.load("C:\\Users\jimes\PycharmProjects\课程\PyTorch框架(2022重录)\第七章：LSTM文本分类实战\\text\THUCNews\data\embedding_Tencent.npz")
+npz = np.load("C:\\Users\Jimes\PycharmProjects\课程\PyTorch框架(2022重录)\第七章：LSTM文本分类实战\\text\THUCNews\data\embedding_Tencent.npz")
 #print(len(npz['embeddings']))  # 输出文件中包含的数组名称
 # 打开文件并读取词汇表
-with open("C:\\Users\\jimes\\PycharmProjects\\课程\\PyTorch框架(2022重录)\\第七章：LSTM文本分类实战\\text\THUCNews\data\\vocab.pkl", "rb") as file:
+with open("C:\\Users\\Jimes\\PycharmProjects\\课程\\PyTorch框架(2022重录)\\第七章：LSTM文本分类实战\\text\THUCNews\data\\vocab.pkl", "rb") as file:
     vocab = pickle.load(file)
 
 # 数据预加载
@@ -143,7 +143,7 @@ output_dim = 10  # 输出类别数
 pad_idx = 4761  # <PAD> 的索引
 #embedding = nn.Embedding.from_pretrained(embedding_matrix, freeze=True) # 词嵌入不变
 
-device = torch.device("cpu")
+device = torch.device("cuda")
 # 初始化模型
 model = SimpleRNN(vocab_size, embedding_dim, hidden_dim, output_dim, num_layers, pad_idx, embedding_matrix).to(device)
 
