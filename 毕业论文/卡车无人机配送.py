@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from itertools import groupby
 import warnings
+#np.random.seed(36)
 warnings.filterwarnings("ignore")
 np.set_printoptions(threshold=np.inf) # threshold 指定超过多少使用省略号，np.inf代表无限大
 np.set_printoptions(suppress=True) #不以科学计数法输出
@@ -177,12 +178,46 @@ def calculate_weighted_delivery_time(truck_route, drone_missions,  speed_truck, 
 
     return weighted_time, node_service_times
 
-towns_str = "小南海镇,老庄镇,老道寺镇,褒城镇,永乐镇"
+def find_index(lst, element):
+    """
+    返回元素在列表中第一次出现的索引
+    如果元素不在列表中，返回 -1
+    """
+    try:
+        return lst.index(element)
+    except ValueError:
+        return -1
+
+towns_str = "白雀寺镇,太阳岭镇,代家坝镇"
 towns_list = towns_str.split(',')
 towns_loc = []
 for i in range(len(towns_list)):
     towns_loc.append(xxx[towns_list[i]])
-towns_loc1 = [[33.052466,107.078539]]+towns_loc   # 配送点记得修改
+distribution = [
+    [33.052466, 107.078539],
+    [33.00691, 106.943519],
+    [33.162452, 107.340352],
+    [33.23089, 107.551097],
+    [32.983209, 107.766627],
+    [33.152748, 106.67331],
+    [32.835302, 106.263788],
+    [33.333119, 106.163146],
+    [32.543287, 107.901175],
+    [33.624014, 106.928095],
+    [33.524357, 107.990847]
+]
+#towns_loc1 = [distribution[0]]+towns_loc   # 汉中市
+#towns_loc1 = [distribution[1]]+towns_loc   # 南郑区
+#towns_loc1 = [distribution[2]]+towns_loc   # 城固县
+#towns_loc1 = [distribution[3]]+towns_loc   # 洋县
+#towns_loc1 = [distribution[4]]+towns_loc   # 西乡县
+#towns_loc1 = [distribution[5]]+towns_loc   # 勉县
+#towns_loc1 = [distribution[6]]+towns_loc   # 宁强县
+towns_loc1 = [distribution[7]]+towns_loc   # 略阳县
+#towns_loc1 = [distribution[8]]+towns_loc   # 镇巴县
+#towns_loc1 = [distribution[9]]+towns_loc   # 留坝县
+#towns_loc1 = [distribution[10]]+towns_loc   # 佛坪县
+
 coordinates = np.array(towns_loc1)
 #print(towns_loc1)
 values = [0]
@@ -221,11 +256,11 @@ def fun(X,h=0):
         print('无人机',drone_missions)
         for node, time in service_times.items():
             if node==0:continue
-            node = list(xxx.keys()).index(towns_list[int(trace[node-1])-1])
+            node = list(xxx.keys()).index(towns_list[node-1])
             print(f"节点所需时间 {node+1}: {time:.3f}")
         for i in range(1,len(truck_route)-1):
             index = list(xxx.keys()).index(towns_list[int(truck_route[i])-1])
-            print(index+1)
+            print(index+1,end="-")
         towns_list.append("配送点") #防止起飞到达为配送点显示失误
         for i in range(len(drone_missions)):
             index1 = list(xxx.keys()).index(towns_list[int(drone_missions[i][0])-1])
@@ -235,26 +270,32 @@ def fun(X,h=0):
             if index2==83:index2=-1
             if index3==83:index3=-1
             drone = (index1+1,index2+1,index3+1)
-            print(drone)
+            print(drone,end="-")
     # 约束无人机的顺序
     dr = []
     for i in range(len(drone_missions)):
-        dr.append(drone_missions[i][0])
-        dr.append(drone_missions[i][1])
+        try:
+            dr.append(truck_route.index(drone_missions[i][0]))
+            dr.append(truck_route.index(drone_missions[i][1]))
+        except ValueError:
+            total_time += 10000
         if values[drone_missions[i][2]]>1: # 约束无人机载重
-            total_time += 1000
-        if drone_missions[i][0]==drone_missions[i][1] or drone_missions[i][0]==drone_missions[i][2] or drone_missions[i][2]==drone_missions[i][1]: #防止自发自收
-            total_time += 1000
+            total_time += 10000
+        if drone_missions[i][0]==drone_missions[i][1]:
+            total_time += 10000
+        if drone_missions[i][0]==drone_missions[i][2]:
+            total_time += 10000
+        if drone_missions[i][1]==drone_missions[i][2]:
+            total_time += 10000
         if dist_matrix[drone_missions[i][0],drone_missions[i][1]]+dist_matrix[drone_missions[i][1],drone_missions[i][2]]>1000:
-            total_time += 1000
-    for i in range(len(drone_missions)):
+            total_time += 10000
+    for i in range(len(dr)):
         if dr[-1]==0:
             del dr[-1]
         else:
             break
-    if not np.all(np.diff(np.array(dr)) >= 0):
-        total_time += 1000
-
+    if  np.any(np.diff(np.array(dr)) < 0):
+        total_time += 10000
     return total_time
 
 def dd2(best_x, x):  #欧氏距离
@@ -370,13 +411,13 @@ up = np.array([len_towns_list-i-1 for i in range(len_towns_list)]+
               len_towns_list * [1]+
               [len_towns_list] * len_towns_list*2)  # 自变量上限
 type = np.array(len_towns_list*[0] + len_towns_list*[1] + 2*len_towns_list*[0])    #-1是有理数，0是整数，1是0-1变量
-best_x,best_f,trace = woa(sub,up,type,30,100)     #种群大小，迭代次数
+best_x,best_f,trace = woa(sub,up,type,50,200)     #种群大小，迭代次数
 #种群大小可以为自变量个数，迭代次数看情况
 print('最优解为：')
 print(best_x)
 print('最优值为：')
 print(float(best_f))
-fun(best_x,1)
+print(fun(best_x,1))
 
 '''plt.title('鲸鱼算法')
 plt.plot(range(1,len(trace)+1),trace, color='r')
