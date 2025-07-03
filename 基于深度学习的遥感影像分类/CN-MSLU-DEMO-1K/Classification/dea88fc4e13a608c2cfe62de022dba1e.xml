@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Pub</folder>
+	<filename>dea88fc4e13a608c2cfe62de022dba1e.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>170</width>
+		<height>235</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Public Services</firstlevel>
+		<secondlevel>Educational and Research Institutions</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>

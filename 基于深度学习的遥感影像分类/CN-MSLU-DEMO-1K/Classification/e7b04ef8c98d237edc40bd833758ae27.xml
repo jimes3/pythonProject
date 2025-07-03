@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Com</folder>
+	<filename>e7b04ef8c98d237edc40bd833758ae27.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>106</width>
+		<height>123</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Commercial Zones</firstlevel>
+		<secondlevel>Business Tower</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Ind</folder>
+	<filename>a54ca81883328d1d266cfcb03b9c6669.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>203</width>
+		<height>143</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Industrial Land</firstlevel>
+		<secondlevel>Industrial Park and Factory</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>

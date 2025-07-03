@@ -1,0 +1,1001 @@
+Class,Filename,Filepath,Width,Height,FirstLevel,SecondLevel
+Com,00040ef5b8f2e7b2708f5cf4390fc4a1.tif,ImageSets\Com\00040ef5b8f2e7b2708f5cf4390fc4a1.tif,107,127,Commercial Zones,Business Tower
+Res,00118c122b6c0d8e4f126af92ef698e0.tif,ImageSets\Res\00118c122b6c0d8e4f126af92ef698e0.tif,247,249,Residential Districts,High-rise Residential Buildings
+Res,005dd86c172d6c2bc6dace28be71a896.tif,ImageSets\Res\005dd86c172d6c2bc6dace28be71a896.tif,433,220,Residential Districts,High-rise Residential Buildings
+Agr,00912a5eea76ced46bda9ac3249ed0ba.tif,ImageSets\Agr\00912a5eea76ced46bda9ac3249ed0ba.tif,360,301,Agriculture and Nature,Mountain
+Agr,016083f38d56228f51e98a460c832575.tif,ImageSets\Agr\016083f38d56228f51e98a460c832575.tif,376,352,Agriculture and Nature,Wasteland
+Ind,01c379093f8ce97e0c3ed32ec51b7022.tif,ImageSets\Ind\01c379093f8ce97e0c3ed32ec51b7022.tif,262,125,Industrial Land,Industrial Park and Factory
+Com,02259ec7145167ad8646fd6c67a51840.tif,ImageSets\Com\02259ec7145167ad8646fd6c67a51840.tif,194,153,Commercial Zones,Office Campus
+Com,023ded876ac45419f73c755a4534dede.tif,ImageSets\Com\023ded876ac45419f73c755a4534dede.tif,151,198,Commercial Zones,Business Tower
+Ind,0249d017c10e8697ef4bdc0c337ac973.tif,ImageSets\Ind\0249d017c10e8697ef4bdc0c337ac973.tif,184,329,Industrial Land,Industrial Park and Factory
+Com,02596b63d2bc679d36721a4b03aa5628.tif,ImageSets\Com\02596b63d2bc679d36721a4b03aa5628.tif,156,160,Commercial Zones,Office Campus
+Ind,0267486fcbf89feb5147979d4b3ad08a.tif,ImageSets\Ind\0267486fcbf89feb5147979d4b3ad08a.tif,364,312,Industrial Land,Industrial Park and Factory
+Ind,02b2a81c2e2f688286ce406bb618b529.tif,ImageSets\Ind\02b2a81c2e2f688286ce406bb618b529.tif,244,259,Industrial Land,Industrial Park and Factory
+Pub,02bb4e4a1b68ddf324890f256d789eda.tif,ImageSets\Pub\02bb4e4a1b68ddf324890f256d789eda.tif,205,234,Public Services,Parks and Squares
+Agr,02cb1834a289f0326e6cb603f4e327be.tif,ImageSets\Agr\02cb1834a289f0326e6cb603f4e327be.tif,577,1112,Agriculture and Nature,Forestland and Grassland
+Pub,02da23b9c24549d7453b9d7761258615.tif,ImageSets\Pub\02da23b9c24549d7453b9d7761258615.tif,154,271,Public Services,Educational and Research Institutions
+Res,03042939ba595a3866d9aec3758ef08a.tif,ImageSets\Res\03042939ba595a3866d9aec3758ef08a.tif,281,316,Residential Districts,High-rise Residential Buildings
+Com,036adc1f18acd58a16f451c84977e2f3.tif,ImageSets\Com\036adc1f18acd58a16f451c84977e2f3.tif,275,211,Commercial Zones,Office Campus
+Pub,03723116b036171bd2adb657569880b6.tif,ImageSets\Pub\03723116b036171bd2adb657569880b6.tif,331,306,Public Services,Educational and Research Institutions
+Com,0395b7e391cb2c9d8b2b23b4ef6ae5ec.tif,ImageSets\Com\0395b7e391cb2c9d8b2b23b4ef6ae5ec.tif,163,163,Commercial Zones,Commercial Market
+Ind,03dba13da714e594fba85b4a6f91898d.tif,ImageSets\Ind\03dba13da714e594fba85b4a6f91898d.tif,276,326,Industrial Land,Industrial Park and Factory
+Agr,04556edf8b52c46a9e74bcdceb9081a5.tif,ImageSets\Agr\04556edf8b52c46a9e74bcdceb9081a5.tif,705,712,Agriculture and Nature,Farmland
+Com,045d0aa1c50768916cab70113af0855f.tif,ImageSets\Com\045d0aa1c50768916cab70113af0855f.tif,103,103,Commercial Zones,Commercial Market
+Res,0460f09d35a047deb4d3d2877ed83192.tif,ImageSets\Res\0460f09d35a047deb4d3d2877ed83192.tif,306,199,Residential Districts,High-rise Residential Buildings
+Res,046739101f78f44ad89487c2cf074081.tif,ImageSets\Res\046739101f78f44ad89487c2cf074081.tif,328,306,Residential Districts,High-rise Residential Buildings
+Ind,049a8cff5f32c9c2242f93eb0945e909.tif,ImageSets\Ind\049a8cff5f32c9c2242f93eb0945e909.tif,267,192,Industrial Land,Industrial Park and Factory
+Res,049c02c51eca7c9ab34fd77835cd818b.tif,ImageSets\Res\049c02c51eca7c9ab34fd77835cd818b.tif,145,178,Residential Districts,Urban Villages
+Com,04c8b2e0200e8aecfd04175c2657ed00.tif,ImageSets\Com\04c8b2e0200e8aecfd04175c2657ed00.tif,248,155,Commercial Zones,Office Campus
+Pub,051d6c39031a949593364b3c82033203.tif,ImageSets\Pub\051d6c39031a949593364b3c82033203.tif,227,268,Public Services,Parks and Squares
+Res,0523ccecd2e546a99af126542bb8850d.tif,ImageSets\Res\0523ccecd2e546a99af126542bb8850d.tif,308,209,Residential Districts,High-rise Residential Buildings
+Agr,058d8619cbe0651b66a8834197418063.tif,ImageSets\Agr\058d8619cbe0651b66a8834197418063.tif,297,738,Agriculture and Nature,Farmland
+Agr,05dbf93cc46e5936831148f84132d93d.tif,ImageSets\Agr\05dbf93cc46e5936831148f84132d93d.tif,249,133,Agriculture and Nature,Forestland and Grassland
+Agr,066529ce26eb28583ea074bfe2241f1d.tif,ImageSets\Agr\066529ce26eb28583ea074bfe2241f1d.tif,157,169,Agriculture and Nature,Farmland
+Pub,066f676ca7946198972b955c23202153.tif,ImageSets\Pub\066f676ca7946198972b955c23202153.tif,180,208,Public Services,Educational and Research Institutions
+Pub,06a39510c831f38ccb7abe2d1e268270.tif,ImageSets\Pub\06a39510c831f38ccb7abe2d1e268270.tif,238,212,Public Services,Educational and Research Institutions
+Pub,071b5d3f25d58d24945169b19827c763.tif,ImageSets\Pub\071b5d3f25d58d24945169b19827c763.tif,212,166,Public Services,Educational and Research Institutions
+Pub,077c3ef732fad8978c01cbfaaa4d80f8.tif,ImageSets\Pub\077c3ef732fad8978c01cbfaaa4d80f8.tif,230,198,Public Services,Educational and Research Institutions
+Agr,07c0e72ba872824ee87eb8410c997246.tif,ImageSets\Agr\07c0e72ba872824ee87eb8410c997246.tif,254,215,Agriculture and Nature,Wasteland
+Com,0823b595ab43fb0fec98e46692c6f142.tif,ImageSets\Com\0823b595ab43fb0fec98e46692c6f142.tif,120,119,Commercial Zones,Commercial Market
+Com,082adeeb5c8633a43d39c5f267aa890b.tif,ImageSets\Com\082adeeb5c8633a43d39c5f267aa890b.tif,155,170,Commercial Zones,Commercial Market
+Ind,08475c3651cd42a6830c2438674042ed.tif,ImageSets\Ind\08475c3651cd42a6830c2438674042ed.tif,431,263,Industrial Land,Construction Site
+Res,08594e69e9563d26eb699cd57c5eb34a.tif,ImageSets\Res\08594e69e9563d26eb699cd57c5eb34a.tif,232,158,Residential Districts,High-rise Residential Buildings
+Res,08637f00acf0d07cd6a7d0a5f6ac198a.tif,ImageSets\Res\08637f00acf0d07cd6a7d0a5f6ac198a.tif,190,184,Residential Districts,High-rise Residential Buildings
+Pub,0880dc93bb739c1eed972f2edfd0af0f.tif,ImageSets\Pub\0880dc93bb739c1eed972f2edfd0af0f.tif,106,148,Public Services,Parks and Squares
+Res,0915f66379d1dfdb6a00a8798e8b634f.tif,ImageSets\Res\0915f66379d1dfdb6a00a8798e8b634f.tif,256,227,Residential Districts,High-rise Residential Buildings
+Pub,092b872a7492742a381aeecc9a4089be.tif,ImageSets\Pub\092b872a7492742a381aeecc9a4089be.tif,117,125,Public Services,Educational and Research Institutions
+Pub,095f018284f7f19be975b2979db418f5.tif,ImageSets\Pub\095f018284f7f19be975b2979db418f5.tif,158,157,Public Services,Parks and Squares
+Pub,09a879adece4fea725b9c17824902253.tif,ImageSets\Pub\09a879adece4fea725b9c17824902253.tif,391,430,Public Services,Educational and Research Institutions
+Agr,09fa85106cc12d0abc6f233831ae2443.tif,ImageSets\Agr\09fa85106cc12d0abc6f233831ae2443.tif,2819,3458,Agriculture and Nature,Mountain
+Res,0a1662ce5e0b6131a219c0b091e7aff9.tif,ImageSets\Res\0a1662ce5e0b6131a219c0b091e7aff9.tif,172,157,Residential Districts,High-rise Residential Buildings
+Agr,0a20a0cf109abcb5df4936c9be014306.tif,ImageSets\Agr\0a20a0cf109abcb5df4936c9be014306.tif,241,318,Agriculture and Nature,Forestland and Grassland
+Ind,0a4b6d6592013171298fdb2ee4c23df4.tif,ImageSets\Ind\0a4b6d6592013171298fdb2ee4c23df4.tif,262,388,Industrial Land,Industrial Park and Factory
+Agr,0ae7609aa3d0b1010a04e544103486f3.tif,ImageSets\Agr\0ae7609aa3d0b1010a04e544103486f3.tif,260,302,Agriculture and Nature,Wasteland
+Res,0b182009fae1e3d5941fa7c2f9ff0d1b.tif,ImageSets\Res\0b182009fae1e3d5941fa7c2f9ff0d1b.tif,177,254,Residential Districts,High-rise Residential Buildings
+Res,0b4d6fa79425e90ed4637f885eac2dbd.tif,ImageSets\Res\0b4d6fa79425e90ed4637f885eac2dbd.tif,352,240,Residential Districts,Villas and High-end Residences
+Ind,0b6e46101a2e3da4e11ea05bfbbfbe9a.tif,ImageSets\Ind\0b6e46101a2e3da4e11ea05bfbbfbe9a.tif,262,232,Industrial Land,Industrial Park and Factory
+Pub,0befa627907ecc2c697a6476d25af75f.tif,ImageSets\Pub\0befa627907ecc2c697a6476d25af75f.tif,257,215,Public Services,Educational and Research Institutions
+Com,0c20baefafbcabb0434ffd95f887de06.tif,ImageSets\Com\0c20baefafbcabb0434ffd95f887de06.tif,128,126,Commercial Zones,Office Campus
+Com,0c636e12cb963e8593b656bf94db461f.tif,ImageSets\Com\0c636e12cb963e8593b656bf94db461f.tif,160,107,Commercial Zones,Office Campus
+Agr,0c6699d0d334feedb86aa85d1c427e18.tif,ImageSets\Agr\0c6699d0d334feedb86aa85d1c427e18.tif,317,383,Agriculture and Nature,Farmland
+Agr,0cf2156e0d62b4790232bed951173801.tif,ImageSets\Agr\0cf2156e0d62b4790232bed951173801.tif,336,320,Agriculture and Nature,Mountain
+Com,0d8b5a166297c5d6cd4f5850064a0e79.tif,ImageSets\Com\0d8b5a166297c5d6cd4f5850064a0e79.tif,270,198,Commercial Zones,Office Campus
+Pub,0dc84222183abe585dff037de31c8f18.tif,ImageSets\Pub\0dc84222183abe585dff037de31c8f18.tif,869,610,Public Services,Parks and Squares
+Agr,0dcf999b54a9309a3e7dcc553b989320.tif,ImageSets\Agr\0dcf999b54a9309a3e7dcc553b989320.tif,429,745,Agriculture and Nature,Forestland and Grassland
+Agr,0df6f77e1dcd3a20a3704fc713d54110.tif,ImageSets\Agr\0df6f77e1dcd3a20a3704fc713d54110.tif,129,153,Agriculture and Nature,Farmland
+Agr,0e1e3f3d0dd9deb7cdcd4b917125a630.tif,ImageSets\Agr\0e1e3f3d0dd9deb7cdcd4b917125a630.tif,3269,2054,Agriculture and Nature,Mountain
+Res,0e287477cb81deace8dce39bbb57b046.tif,ImageSets\Res\0e287477cb81deace8dce39bbb57b046.tif,185,248,Residential Districts,High-rise Residential Buildings
+Agr,0e45b68a8f18e23f274f1fbed32b7dce.tif,ImageSets\Agr\0e45b68a8f18e23f274f1fbed32b7dce.tif,249,249,Agriculture and Nature,Wasteland
+Ind,0e4d6f3e64980dc10b7151a809cb0685.tif,ImageSets\Ind\0e4d6f3e64980dc10b7151a809cb0685.tif,127,125,Industrial Land,Industrial Park and Factory
+Agr,0e988fb35a70ed288ab628bbaff8f9a3.tif,ImageSets\Agr\0e988fb35a70ed288ab628bbaff8f9a3.tif,213,134,Agriculture and Nature,Forestland and Grassland
+Com,0f680ae17119b54245e6ee3e0257a183.tif,ImageSets\Com\0f680ae17119b54245e6ee3e0257a183.tif,453,194,Commercial Zones,Office Campus
+Ind,0fa011749e9dbb46853973fdcb1fbffa.tif,ImageSets\Ind\0fa011749e9dbb46853973fdcb1fbffa.tif,698,912,Industrial Land,Industrial Park and Factory
+Pub,0faa16ff07c514e667492ac7c9e3512a.tif,ImageSets\Pub\0faa16ff07c514e667492ac7c9e3512a.tif,226,211,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Pub,0fd0c4204e15c93bf29161a76927c655.tif,ImageSets\Pub\0fd0c4204e15c93bf29161a76927c655.tif,1198,866,Public Services,Educational and Research Institutions
+Res,1020b2d87f0a2a86939bbcfcc73ab2be.tif,ImageSets\Res\1020b2d87f0a2a86939bbcfcc73ab2be.tif,302,303,Residential Districts,High-rise Residential Buildings
+Com,104a146ea144fd4bd986fb61fbf865b0.tif,ImageSets\Com\104a146ea144fd4bd986fb61fbf865b0.tif,117,131,Commercial Zones,Office Campus
+Res,110d261e8689e7bba6a988e0889eb795.tif,ImageSets\Res\110d261e8689e7bba6a988e0889eb795.tif,266,104,Residential Districts,Rural Homestead
+Pub,11ac6f8cc7bac786a5220636fd6a517e.tif,ImageSets\Pub\11ac6f8cc7bac786a5220636fd6a517e.tif,227,192,Public Services,Parks and Squares
+Com,11db4666adab95ead606ec55d3074fae.tif,ImageSets\Com\11db4666adab95ead606ec55d3074fae.tif,391,229,Commercial Zones,Office Campus
+Ind,11e8ae9e3fcfc6c6b9119257e0612fae.tif,ImageSets\Ind\11e8ae9e3fcfc6c6b9119257e0612fae.tif,350,444,Industrial Land,Industrial Park and Factory
+Agr,1222925bba73a84764ddbc8ca7168378.tif,ImageSets\Agr\1222925bba73a84764ddbc8ca7168378.tif,509,346,Agriculture and Nature,Forestland and Grassland
+Agr,12ad372e4092564152524ada64d043d2.tif,ImageSets\Agr\12ad372e4092564152524ada64d043d2.tif,238,230,Agriculture and Nature,Wasteland
+Ind,12c59c2a261a51e8d2cf743456f8ae64.tif,ImageSets\Ind\12c59c2a261a51e8d2cf743456f8ae64.tif,541,383,Industrial Land,Industrial Park and Factory
+Agr,1360e3c681b46195dc413409bb34881e.tif,ImageSets\Agr\1360e3c681b46195dc413409bb34881e.tif,376,399,Agriculture and Nature,Farmland
+Ind,13a59d2b161906e9684208730b36f171.tif,ImageSets\Ind\13a59d2b161906e9684208730b36f171.tif,180,146,Industrial Land,Industrial Park and Factory
+Pub,13a7799c939500b642f8545413df3770.tif,ImageSets\Pub\13a7799c939500b642f8545413df3770.tif,128,117,Public Services,Educational and Research Institutions
+Ind,13a875d14a993fc628274316318274c9.tif,ImageSets\Ind\13a875d14a993fc628274316318274c9.tif,246,116,Industrial Land,Industrial Park and Factory
+Ind,13cadcae4afb331b024beda09b37b4ef.tif,ImageSets\Ind\13cadcae4afb331b024beda09b37b4ef.tif,228,230,Industrial Land,Industrial Park and Factory
+Pub,13e896267969dd67366b9b92d3501551.tif,ImageSets\Pub\13e896267969dd67366b9b92d3501551.tif,235,108,Public Services,Educational and Research Institutions
+Res,13ff33511e2176bc6038e81563d95de3.tif,ImageSets\Res\13ff33511e2176bc6038e81563d95de3.tif,107,178,Residential Districts,High-rise Residential Buildings
+Com,14447d4131a1f0d229ce8beb4e852d8f.tif,ImageSets\Com\14447d4131a1f0d229ce8beb4e852d8f.tif,196,177,Commercial Zones,Office Campus
+Com,14b79e8da6c6a197635c86ff91fad346.tif,ImageSets\Com\14b79e8da6c6a197635c86ff91fad346.tif,137,154,Commercial Zones,Business Tower
+Ind,14cb0624c85105470861dbb097851ed2.tif,ImageSets\Ind\14cb0624c85105470861dbb097851ed2.tif,258,233,Industrial Land,Industrial Park and Factory
+Pub,14d40a1f876d1fd0ed96e099658d6d46.tif,ImageSets\Pub\14d40a1f876d1fd0ed96e099658d6d46.tif,168,263,Public Services,Educational and Research Institutions
+Pub,14dd2008104101443421a3a5aaba1aac.tif,ImageSets\Pub\14dd2008104101443421a3a5aaba1aac.tif,211,446,Public Services,Parks and Squares
+Pub,14eaa66489bf5bea004affab6331b292.tif,ImageSets\Pub\14eaa66489bf5bea004affab6331b292.tif,222,168,Public Services,Educational and Research Institutions
+Com,152981c2d6421805113b40d3ef63a4a6.tif,ImageSets\Com\152981c2d6421805113b40d3ef63a4a6.tif,107,128,Commercial Zones,Business Tower
+Agr,1555d74e68141f5bd7e4cfaaaf467517.tif,ImageSets\Agr\1555d74e68141f5bd7e4cfaaaf467517.tif,644,747,Agriculture and Nature,Water
+Pub,155a17a788d2c89943f92fa93753aad8.tif,ImageSets\Pub\155a17a788d2c89943f92fa93753aad8.tif,163,222,Public Services,Educational and Research Institutions
+Ind,156ebc4ff1c71bb3e68766108a1d43f2.tif,ImageSets\Ind\156ebc4ff1c71bb3e68766108a1d43f2.tif,194,186,Industrial Land,Industrial Park and Factory
+Com,15a301560bce7b7c8e1e3c8b5f9c786b.tif,ImageSets\Com\15a301560bce7b7c8e1e3c8b5f9c786b.tif,335,281,Commercial Zones,Office Campus
+Agr,15f384ec6079d7cc85e47e40a7dbcdb4.tif,ImageSets\Agr\15f384ec6079d7cc85e47e40a7dbcdb4.tif,1535,1147,Agriculture and Nature,Farmland
+Agr,15f5195a8fe54361b370f78783574c63.tif,ImageSets\Agr\15f5195a8fe54361b370f78783574c63.tif,1014,922,Agriculture and Nature,Farmland
+Res,1605b24b6f3672c2efb246882f7d6395.tif,ImageSets\Res\1605b24b6f3672c2efb246882f7d6395.tif,230,355,Residential Districts,High-rise Residential Buildings
+Com,162a041f45b4219c2c905bdcef083517.tif,ImageSets\Com\162a041f45b4219c2c905bdcef083517.tif,114,108,Commercial Zones,Business Tower
+Pub,1707e31065f0c57c235cdb1b5ad8596b.tif,ImageSets\Pub\1707e31065f0c57c235cdb1b5ad8596b.tif,534,312,Public Services,Educational and Research Institutions
+Com,171178088255a502c9f5b219433e4ee9.tif,ImageSets\Com\171178088255a502c9f5b219433e4ee9.tif,476,262,Commercial Zones,Commercial Market
+Ind,17525a151e24bf8cdecff57b64b5b7a9.tif,ImageSets\Ind\17525a151e24bf8cdecff57b64b5b7a9.tif,120,138,Industrial Land,Industrial Park and Factory
+Pub,17862a11a2166d6eb4a0d0f3bbeee7a3.tif,ImageSets\Pub\17862a11a2166d6eb4a0d0f3bbeee7a3.tif,111,247,Public Services,Parks and Squares
+Pub,179b5f6db3a0f348968f0acf5d3221b3.tif,ImageSets\Pub\179b5f6db3a0f348968f0acf5d3221b3.tif,222,177,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,17a26fc98f7dc5d17844caab4a558609.tif,ImageSets\Agr\17a26fc98f7dc5d17844caab4a558609.tif,1313,2253,Agriculture and Nature,Farmland
+Res,17cb543499e6f12e3ab94a5bf3494b39.tif,ImageSets\Res\17cb543499e6f12e3ab94a5bf3494b39.tif,231,265,Residential Districts,High-rise Residential Buildings
+Res,17d17235ff246a1f33b78a42ca0141ee.tif,ImageSets\Res\17d17235ff246a1f33b78a42ca0141ee.tif,260,216,Residential Districts,High-rise Residential Buildings
+Com,182c85284f2977dbb0d7d353c08da35f.tif,ImageSets\Com\182c85284f2977dbb0d7d353c08da35f.tif,161,156,Commercial Zones,Office Campus
+Agr,183d7ce219b0d8aebf4fdaf9e45ebad0.tif,ImageSets\Agr\183d7ce219b0d8aebf4fdaf9e45ebad0.tif,134,139,Agriculture and Nature,Farmland
+Com,1895dc6ff58cb0c0d504b67b44463c28.tif,ImageSets\Com\1895dc6ff58cb0c0d504b67b44463c28.tif,151,126,Commercial Zones,Shopping Center and Commercial Street
+Com,18aace213bd43abac569cb1120557150.tif,ImageSets\Com\18aace213bd43abac569cb1120557150.tif,186,146,Commercial Zones,Shopping Center and Commercial Street
+Pub,18c66f2ad64c04553ba122f24bf500e0.tif,ImageSets\Pub\18c66f2ad64c04553ba122f24bf500e0.tif,373,423,Public Services,Educational and Research Institutions
+Ind,1941e02ca6cc3f5745f93be8c7716a6b.tif,ImageSets\Ind\1941e02ca6cc3f5745f93be8c7716a6b.tif,434,302,Industrial Land,Industrial Park and Factory
+Pub,194a3ba80413768882f981cd9914c906.tif,ImageSets\Pub\194a3ba80413768882f981cd9914c906.tif,105,122,Public Services,Educational and Research Institutions
+Pub,1966647eefe4bfedbbd47e5679302a02.tif,ImageSets\Pub\1966647eefe4bfedbbd47e5679302a02.tif,312,268,Public Services,Parks and Squares
+Com,19a08d2b4562c14e6a114ef8e976a40a.tif,ImageSets\Com\19a08d2b4562c14e6a114ef8e976a40a.tif,126,166,Commercial Zones,Office Campus
+Agr,19a8a6188557b13181f911f66eb8ff83.tif,ImageSets\Agr\19a8a6188557b13181f911f66eb8ff83.tif,684,343,Agriculture and Nature,Farmland
+Com,19b4699cfe4a06480c2d1a5204482df3.tif,ImageSets\Com\19b4699cfe4a06480c2d1a5204482df3.tif,209,187,Commercial Zones,Office Campus
+Ind,19e16d1a8db9212f68d1b5e1cbe43c54.tif,ImageSets\Ind\19e16d1a8db9212f68d1b5e1cbe43c54.tif,241,193,Industrial Land,Industrial Park and Factory
+Ind,1a20aed8235c2a7ff5347f1b917bcc2e.tif,ImageSets\Ind\1a20aed8235c2a7ff5347f1b917bcc2e.tif,300,300,Industrial Land,Industrial Park and Factory
+Pub,1a42a618813dd05c26f339a384581018.tif,ImageSets\Pub\1a42a618813dd05c26f339a384581018.tif,312,423,Public Services,Educational and Research Institutions
+Agr,1ab724e0ac02e27e53abffa23f19adfb.tif,ImageSets\Agr\1ab724e0ac02e27e53abffa23f19adfb.tif,611,397,Agriculture and Nature,Farmland
+Agr,1b1585fc7de88d57ce0247eff9ddc9df.tif,ImageSets\Agr\1b1585fc7de88d57ce0247eff9ddc9df.tif,242,238,Agriculture and Nature,Forestland and Grassland
+Pub,1b7b8ee14aa2a441aa2eb8ec02d7cb2b.tif,ImageSets\Pub\1b7b8ee14aa2a441aa2eb8ec02d7cb2b.tif,158,152,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Pub,1b8a36578d95f1855461493bb05dfddd.tif,ImageSets\Pub\1b8a36578d95f1855461493bb05dfddd.tif,200,207,Public Services,Parks and Squares
+Pub,1b917ee9d243313ac46d9ad73ff5fecc.tif,ImageSets\Pub\1b917ee9d243313ac46d9ad73ff5fecc.tif,494,329,Public Services,Educational and Research Institutions
+Com,1c2e33999c07b80da209b0cbb9bfc94d.tif,ImageSets\Com\1c2e33999c07b80da209b0cbb9bfc94d.tif,214,181,Commercial Zones,Office Campus
+Pub,1c4f02ce10336c0dceb7a44a81853501.tif,ImageSets\Pub\1c4f02ce10336c0dceb7a44a81853501.tif,244,306,Public Services,Educational and Research Institutions
+Ind,1c616d77d7c0a905a637f3ef13544557.tif,ImageSets\Ind\1c616d77d7c0a905a637f3ef13544557.tif,198,147,Industrial Land,Industrial Park and Factory
+Pub,1c65bf73385d8c9f7e8f4a6fcbc7cc86.tif,ImageSets\Pub\1c65bf73385d8c9f7e8f4a6fcbc7cc86.tif,563,278,Public Services,Parks and Squares
+Ind,1c9a894896c5c16af28a1b208ce63351.tif,ImageSets\Ind\1c9a894896c5c16af28a1b208ce63351.tif,287,271,Industrial Land,Industrial Park and Factory
+Ind,1cc93bde24ce98c6b9e96eee7ad854dc.tif,ImageSets\Ind\1cc93bde24ce98c6b9e96eee7ad854dc.tif,410,267,Industrial Land,Industrial Park and Factory
+Ind,1cd1fa290a5e12c3ab94cba602f85f1c.tif,ImageSets\Ind\1cd1fa290a5e12c3ab94cba602f85f1c.tif,188,153,Industrial Land,Industrial Park and Factory
+Pub,1d372678ebd43a384cb2e73bf8be142f.tif,ImageSets\Pub\1d372678ebd43a384cb2e73bf8be142f.tif,192,142,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,1d3f6c9b3226fc6231bafd67e9d0ac6f.tif,ImageSets\Agr\1d3f6c9b3226fc6231bafd67e9d0ac6f.tif,430,789,Agriculture and Nature,Mountain
+Pub,1d6b2353369957b5ed8d53a9fadecd5c.tif,ImageSets\Pub\1d6b2353369957b5ed8d53a9fadecd5c.tif,500,442,Public Services,Educational and Research Institutions
+Ind,1d8dcc5f6540517e96ab3c0db4635225.tif,ImageSets\Ind\1d8dcc5f6540517e96ab3c0db4635225.tif,436,789,Industrial Land,Industrial Park and Factory
+Ind,1e22d4c5024f6c8ae70f4367f485b74c.tif,ImageSets\Ind\1e22d4c5024f6c8ae70f4367f485b74c.tif,208,234,Industrial Land,Industrial Park and Factory
+Com,1e9d73bf23b4bde00a8e26c0ca2df896.tif,ImageSets\Com\1e9d73bf23b4bde00a8e26c0ca2df896.tif,185,319,Commercial Zones,Commercial Market
+Pub,1ec55ff4a5fc9405592ad421056a1c32.tif,ImageSets\Pub\1ec55ff4a5fc9405592ad421056a1c32.tif,276,213,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Pub,1ef1a500ee5f052d09a941e72c8c81c1.tif,ImageSets\Pub\1ef1a500ee5f052d09a941e72c8c81c1.tif,119,215,Public Services,Educational and Research Institutions
+Pub,1f781b189bfb44106d647d10305111f6.tif,ImageSets\Pub\1f781b189bfb44106d647d10305111f6.tif,227,275,Public Services,Educational and Research Institutions
+Com,1f89c629c3ad38c295acc50415de18df.tif,ImageSets\Com\1f89c629c3ad38c295acc50415de18df.tif,152,103,Commercial Zones,Business Tower
+Com,1fc21b14cc13613abfcaf511f5526d42.tif,ImageSets\Com\1fc21b14cc13613abfcaf511f5526d42.tif,368,293,Commercial Zones,Commercial Market
+Com,2084e6400b1b56ce7cd5c1bd1859d933.tif,ImageSets\Com\2084e6400b1b56ce7cd5c1bd1859d933.tif,256,222,Commercial Zones,Hotel
+Pub,2087a5adc715b4a7d366d25341dae277.tif,ImageSets\Pub\2087a5adc715b4a7d366d25341dae277.tif,101,109,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Ind,20c57a1c120c13062feedff76b7fee79.tif,ImageSets\Ind\20c57a1c120c13062feedff76b7fee79.tif,382,307,Industrial Land,Industrial Park and Factory
+Com,20d941f17ddf840beab9fdd5eb9080a6.tif,ImageSets\Com\20d941f17ddf840beab9fdd5eb9080a6.tif,227,370,Commercial Zones,Commercial Market
+Com,21353d790905e9a248486f8734976670.tif,ImageSets\Com\21353d790905e9a248486f8734976670.tif,206,174,Commercial Zones,Office Campus
+Pub,2147655b5d7899870f200bbc7c47d002.tif,ImageSets\Pub\2147655b5d7899870f200bbc7c47d002.tif,189,170,Public Services,Educational and Research Institutions
+Agr,21c37c6353090cfaba9984415c4baa34.tif,ImageSets\Agr\21c37c6353090cfaba9984415c4baa34.tif,2964,3907,Agriculture and Nature,Mountain
+Agr,21c9618f3913b6ac58d4aa705b1fd080.tif,ImageSets\Agr\21c9618f3913b6ac58d4aa705b1fd080.tif,4544,4221,Agriculture and Nature,Farmland
+Res,222ab5d83282c2ff83cba00f20b6e587.tif,ImageSets\Res\222ab5d83282c2ff83cba00f20b6e587.tif,108,108,Residential Districts,High-rise Residential Buildings
+Agr,225bbcf9beacdbf57fd8a511fb79876d.tif,ImageSets\Agr\225bbcf9beacdbf57fd8a511fb79876d.tif,193,406,Agriculture and Nature,Wasteland
+Com,2273aa16f243bc4332b56c2c83d07c58.tif,ImageSets\Com\2273aa16f243bc4332b56c2c83d07c58.tif,108,136,Commercial Zones,Business Tower
+Com,2322b75fd1fbbdcad0121945ff287a79.tif,ImageSets\Com\2322b75fd1fbbdcad0121945ff287a79.tif,105,129,Commercial Zones,Shopping Center and Commercial Street
+Pub,234afddea04809979c04c76e21599e6a.tif,ImageSets\Pub\234afddea04809979c04c76e21599e6a.tif,379,244,Public Services,Educational and Research Institutions
+Ind,23a971db1f74626ed0c4c6d5ad5bdb93.tif,ImageSets\Ind\23a971db1f74626ed0c4c6d5ad5bdb93.tif,272,187,Industrial Land,Industrial Park and Factory
+Agr,23bd75564443eab4486679f08180e4ee.tif,ImageSets\Agr\23bd75564443eab4486679f08180e4ee.tif,259,316,Agriculture and Nature,Forestland and Grassland
+Ind,243b2df28c708fc31c23cea9543ecf3f.tif,ImageSets\Ind\243b2df28c708fc31c23cea9543ecf3f.tif,475,235,Industrial Land,Industrial Park and Factory
+Agr,244cd6afbafa3cbff590fbc01b8a4a9f.tif,ImageSets\Agr\244cd6afbafa3cbff590fbc01b8a4a9f.tif,183,181,Agriculture and Nature,Mountain
+Ind,251e46f53fc552b203300f7fbdacce57.tif,ImageSets\Ind\251e46f53fc552b203300f7fbdacce57.tif,239,197,Industrial Land,Industrial Park and Factory
+Com,25d9d9b6f56f24e09fd621d0bd7223fd.tif,ImageSets\Com\25d9d9b6f56f24e09fd621d0bd7223fd.tif,351,328,Commercial Zones,Office Campus
+Agr,26728985f1f27278fd0dd9e6ac2a2566.tif,ImageSets\Agr\26728985f1f27278fd0dd9e6ac2a2566.tif,2352,2320,Agriculture and Nature,Mountain
+Com,26a9d7809bcfabef10587dde1db15794.tif,ImageSets\Com\26a9d7809bcfabef10587dde1db15794.tif,371,544,Commercial Zones,Office Campus
+Com,26e066ac1283feddd9681005925f1af7.tif,ImageSets\Com\26e066ac1283feddd9681005925f1af7.tif,161,140,Commercial Zones,Office Campus
+Pub,275fca1552f9321cfbbb9099a740813e.tif,ImageSets\Pub\275fca1552f9321cfbbb9099a740813e.tif,147,268,Public Services,Educational and Research Institutions
+Pub,27868c7eede3167ad4e32e46197de4f9.tif,ImageSets\Pub\27868c7eede3167ad4e32e46197de4f9.tif,365,275,Public Services,Parks and Squares
+Com,279e6164d670688842340725bb8b1069.tif,ImageSets\Com\279e6164d670688842340725bb8b1069.tif,215,201,Commercial Zones,Office Campus
+Agr,27aa8f44de4b5d3cdb3e0c787923f760.tif,ImageSets\Agr\27aa8f44de4b5d3cdb3e0c787923f760.tif,980,1527,Agriculture and Nature,Farmland
+Agr,27c7490a5860330b2a6c368c35023edd.tif,ImageSets\Agr\27c7490a5860330b2a6c368c35023edd.tif,202,290,Agriculture and Nature,Forestland and Grassland
+Agr,2835be43f70c9af569e85a7249047b82.tif,ImageSets\Agr\2835be43f70c9af569e85a7249047b82.tif,672,468,Agriculture and Nature,Wasteland
+Res,28a9833b4e1ed76bfea0debead6c4609.tif,ImageSets\Res\28a9833b4e1ed76bfea0debead6c4609.tif,155,135,Residential Districts,High-rise Residential Buildings
+Res,29369208005866779f7b8bcb0d9a3475.tif,ImageSets\Res\29369208005866779f7b8bcb0d9a3475.tif,288,252,Residential Districts,Villas and High-end Residences
+Res,29377b381571016dc3f3692f9a0127f3.tif,ImageSets\Res\29377b381571016dc3f3692f9a0127f3.tif,203,191,Residential Districts,High-rise Residential Buildings
+Pub,299007d7dd1ea136d721d5ba1c6b4c31.tif,ImageSets\Pub\299007d7dd1ea136d721d5ba1c6b4c31.tif,341,211,Public Services,Educational and Research Institutions
+Com,2a6aec8c8cee349a5efa4d0cf2f02fa8.tif,ImageSets\Com\2a6aec8c8cee349a5efa4d0cf2f02fa8.tif,117,135,Commercial Zones,Shopping Center and Commercial Street
+Pub,2a8cf5b92d86203802b96e3982d3eaf2.tif,ImageSets\Pub\2a8cf5b92d86203802b96e3982d3eaf2.tif,398,413,Public Services,Educational and Research Institutions
+Com,2a91768e256f108d4e83d8256ac868bc.tif,ImageSets\Com\2a91768e256f108d4e83d8256ac868bc.tif,291,226,Commercial Zones,Office Campus
+Pub,2a957c0c3f63a68daca0669d2f0e84c7.tif,ImageSets\Pub\2a957c0c3f63a68daca0669d2f0e84c7.tif,179,126,Public Services,Educational and Research Institutions
+Com,2b04df2adb325fd95cad40f306c45b57.tif,ImageSets\Com\2b04df2adb325fd95cad40f306c45b57.tif,283,197,Commercial Zones,Office Campus
+Ind,2b3565671695f36773c8d9112b18a60b.tif,ImageSets\Ind\2b3565671695f36773c8d9112b18a60b.tif,297,180,Industrial Land,Industrial Park and Factory
+Res,2b472b37eb659cd5a357b64df8eb8f7c.tif,ImageSets\Res\2b472b37eb659cd5a357b64df8eb8f7c.tif,188,304,Residential Districts,High-rise Residential Buildings
+Agr,2ba121106571bdb50c505433983ddfc6.tif,ImageSets\Agr\2ba121106571bdb50c505433983ddfc6.tif,174,377,Agriculture and Nature,Farmland
+Com,2c1b438259868bfa3378398609ec8417.tif,ImageSets\Com\2c1b438259868bfa3378398609ec8417.tif,71,65,Commercial Zones,Commercial Market
+Com,2c5e4c95a664f66b33738f5f9eb41c0f.tif,ImageSets\Com\2c5e4c95a664f66b33738f5f9eb41c0f.tif,301,254,Commercial Zones,Office Campus
+Res,2c8ea75b546115ae095c7c8d299aa290.tif,ImageSets\Res\2c8ea75b546115ae095c7c8d299aa290.tif,136,103,Residential Districts,Urban Villages
+Ind,2cfd08f342f8564d084b7f613ac419ae.tif,ImageSets\Ind\2cfd08f342f8564d084b7f613ac419ae.tif,240,302,Industrial Land,Industrial Park and Factory
+Agr,2d0bdce1660dd2c703bc7c8f244fffe7.tif,ImageSets\Agr\2d0bdce1660dd2c703bc7c8f244fffe7.tif,278,278,Agriculture and Nature,Water
+Com,2d550cad44048a7a00fcf9af5d6e729d.tif,ImageSets\Com\2d550cad44048a7a00fcf9af5d6e729d.tif,303,185,Commercial Zones,Office Campus
+Agr,2d5a3a8ca296de885d771715d6da79c3.tif,ImageSets\Agr\2d5a3a8ca296de885d771715d6da79c3.tif,319,618,Agriculture and Nature,Farmland
+Agr,2da96280337650de90a56a99021d88a2.tif,ImageSets\Agr\2da96280337650de90a56a99021d88a2.tif,118,272,Agriculture and Nature,Forestland and Grassland
+Pub,2daf7454bd0cd386009e3f78bc785d84.tif,ImageSets\Pub\2daf7454bd0cd386009e3f78bc785d84.tif,1018,1042,Public Services,Parks and Squares
+Com,2e0f22bc5df93cfcfb5678a6a0f6363e.tif,ImageSets\Com\2e0f22bc5df93cfcfb5678a6a0f6363e.tif,264,119,Commercial Zones,Office Campus
+Pub,2e96d2a8fa1f59655cc3e245e3fd7fd1.tif,ImageSets\Pub\2e96d2a8fa1f59655cc3e245e3fd7fd1.tif,393,217,Public Services,Educational and Research Institutions
+Res,2ec57d7130743c2fb48f5c36b8efb9fa.tif,ImageSets\Res\2ec57d7130743c2fb48f5c36b8efb9fa.tif,156,106,Residential Districts,High-rise Residential Buildings
+Pub,2f2c5d6e4a9cc9cdc72929250587bc4b.tif,ImageSets\Pub\2f2c5d6e4a9cc9cdc72929250587bc4b.tif,319,259,Public Services,Educational and Research Institutions
+Res,2f5f7c8dfd570b755087a6f0128efbbe.tif,ImageSets\Res\2f5f7c8dfd570b755087a6f0128efbbe.tif,104,140,Residential Districts,High-rise Residential Buildings
+Ind,2fce64fec9a2a869c32597bb919df8b1.tif,ImageSets\Ind\2fce64fec9a2a869c32597bb919df8b1.tif,257,434,Industrial Land,Industrial Park and Factory
+Com,2fdbde894fb43378b93f5d218ad1694e.tif,ImageSets\Com\2fdbde894fb43378b93f5d218ad1694e.tif,201,105,Commercial Zones,Shopping Center and Commercial Street
+Pub,3000ba2607719d111c0ea1ccfc1ef868.tif,ImageSets\Pub\3000ba2607719d111c0ea1ccfc1ef868.tif,190,187,Public Services,Educational and Research Institutions
+Agr,3027a8e7c8b7d6400c2af1a770f4532b.tif,ImageSets\Agr\3027a8e7c8b7d6400c2af1a770f4532b.tif,209,124,Agriculture and Nature,Forestland and Grassland
+Com,303a72248ea2c2157510ea95a6b27d4f.tif,ImageSets\Com\303a72248ea2c2157510ea95a6b27d4f.tif,215,159,Commercial Zones,Office Campus
+Com,3040e3b42b84f41159b510ce65a67767.tif,ImageSets\Com\3040e3b42b84f41159b510ce65a67767.tif,97,118,Commercial Zones,Shopping Center and Commercial Street
+Agr,3076e4c5da09d574588c251e7d9cba88.tif,ImageSets\Agr\3076e4c5da09d574588c251e7d9cba88.tif,189,190,Agriculture and Nature,Mountain
+Com,31458bf48d7e314442a438c77b46e978.tif,ImageSets\Com\31458bf48d7e314442a438c77b46e978.tif,352,355,Commercial Zones,Office Campus
+Ind,31d71062f3d96f98f0b8bdd15386b7e5.tif,ImageSets\Ind\31d71062f3d96f98f0b8bdd15386b7e5.tif,333,340,Industrial Land,Construction Site
+Pub,32286c2de13d2927b264a67b786ff0e5.tif,ImageSets\Pub\32286c2de13d2927b264a67b786ff0e5.tif,201,139,Public Services,Educational and Research Institutions
+Agr,322aa9600a19ab5514e2f5592c9adeef.tif,ImageSets\Agr\322aa9600a19ab5514e2f5592c9adeef.tif,236,117,Agriculture and Nature,Farmland
+Res,32c9936f6a94979a510e29012126661b.tif,ImageSets\Res\32c9936f6a94979a510e29012126661b.tif,123,206,Residential Districts,High-rise Residential Buildings
+Ind,32d86ce255b6c4822b594497b8e18719.tif,ImageSets\Ind\32d86ce255b6c4822b594497b8e18719.tif,345,396,Industrial Land,Industrial Park and Factory
+Pub,32f4bd3f8f82010fe90b53f90c28103c.tif,ImageSets\Pub\32f4bd3f8f82010fe90b53f90c28103c.tif,237,207,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Ind,333f16fbf00ea6a7f16f51e7e17fe2a6.tif,ImageSets\Ind\333f16fbf00ea6a7f16f51e7e17fe2a6.tif,442,241,Industrial Land,Industrial Park and Factory
+Agr,3371262f59faa5e1bbe09967371db550.tif,ImageSets\Agr\3371262f59faa5e1bbe09967371db550.tif,366,372,Agriculture and Nature,Wasteland
+Pub,34777439c77a16a835a4028afc03e3a0.tif,ImageSets\Pub\34777439c77a16a835a4028afc03e3a0.tif,294,279,Public Services,Educational and Research Institutions
+Ind,348b2a219301436b1264f3d44115f2b1.tif,ImageSets\Ind\348b2a219301436b1264f3d44115f2b1.tif,166,200,Industrial Land,Industrial Park and Factory
+Res,34c9b35a5e4f84a82fed9ec71e5888b7.tif,ImageSets\Res\34c9b35a5e4f84a82fed9ec71e5888b7.tif,178,156,Residential Districts,High-rise Residential Buildings
+Res,34e441c44ca2f77d0f0ed4171a228348.tif,ImageSets\Res\34e441c44ca2f77d0f0ed4171a228348.tif,146,138,Residential Districts,Urban Villages
+Res,3595e00f27ef700feb9796206e1a6ef9.tif,ImageSets\Res\3595e00f27ef700feb9796206e1a6ef9.tif,149,133,Residential Districts,Urban Villages
+Agr,35d2ff2352b723e9a5f531a80fe431ab.tif,ImageSets\Agr\35d2ff2352b723e9a5f531a80fe431ab.tif,244,247,Agriculture and Nature,Forestland and Grassland
+Ind,3603aca48e5849aa12b29faef9a72766.tif,ImageSets\Ind\3603aca48e5849aa12b29faef9a72766.tif,145,121,Industrial Land,Construction Site
+Agr,363f14486a2b2a251f89d61e72716988.tif,ImageSets\Agr\363f14486a2b2a251f89d61e72716988.tif,172,147,Agriculture and Nature,Wasteland
+Ind,36432e1c2097e38fab9bca2ce9b92f98.tif,ImageSets\Ind\36432e1c2097e38fab9bca2ce9b92f98.tif,201,256,Industrial Land,Industrial Park and Factory
+Res,36464b092875352b4aa7e6684e6ab1e5.tif,ImageSets\Res\36464b092875352b4aa7e6684e6ab1e5.tif,283,158,Residential Districts,Urban Villages
+Ind,366423c729291207da0bdff06c586a3c.tif,ImageSets\Ind\366423c729291207da0bdff06c586a3c.tif,259,201,Industrial Land,Industrial Park and Factory
+Ind,368cf253652c1111fe86aa79824fc94b.tif,ImageSets\Ind\368cf253652c1111fe86aa79824fc94b.tif,326,328,Industrial Land,Industrial Park and Factory
+Com,36a9ea1c8e61d9f15b11b9c33c6df3bf.tif,ImageSets\Com\36a9ea1c8e61d9f15b11b9c33c6df3bf.tif,140,187,Commercial Zones,Shopping Center and Commercial Street
+Pub,370e30d06448c38743ddacfa288d2d9f.tif,ImageSets\Pub\370e30d06448c38743ddacfa288d2d9f.tif,253,166,Public Services,Educational and Research Institutions
+Agr,374463e511690a1f2070d88417ef9667.tif,ImageSets\Agr\374463e511690a1f2070d88417ef9667.tif,405,214,Agriculture and Nature,Farmland
+Com,37494bdc16a668f9d7e179c03c020eba.tif,ImageSets\Com\37494bdc16a668f9d7e179c03c020eba.tif,208,264,Commercial Zones,Office Campus
+Pub,3780dc9ec8b87851af4ef2a27b55a256.tif,ImageSets\Pub\3780dc9ec8b87851af4ef2a27b55a256.tif,441,342,Public Services,Parks and Squares
+Res,378e6e857381d7324f78f4772134cfee.tif,ImageSets\Res\378e6e857381d7324f78f4772134cfee.tif,358,162,Residential Districts,High-rise Residential Buildings
+Ind,37a281e76a55cce30f7a603f06f414b6.tif,ImageSets\Ind\37a281e76a55cce30f7a603f06f414b6.tif,357,223,Industrial Land,Industrial Park and Factory
+Res,3801fad1fb1e1d63d4e5eccec0c30f43.tif,ImageSets\Res\3801fad1fb1e1d63d4e5eccec0c30f43.tif,200,219,Residential Districts,High-rise Residential Buildings
+Ind,38327327af7d7e6f557094ae97738793.tif,ImageSets\Ind\38327327af7d7e6f557094ae97738793.tif,135,110,Industrial Land,Industrial Park and Factory
+Ind,38c6bf6b46621e959fd4f28a7d4b2091.tif,ImageSets\Ind\38c6bf6b46621e959fd4f28a7d4b2091.tif,222,167,Industrial Land,Industrial Park and Factory
+Res,39893624f0df44bddf0a0995835432a5.tif,ImageSets\Res\39893624f0df44bddf0a0995835432a5.tif,158,212,Residential Districts,High-rise Residential Buildings
+Res,399978e57fc3b3308f8ad433a1a1e3f1.tif,ImageSets\Res\399978e57fc3b3308f8ad433a1a1e3f1.tif,192,166,Residential Districts,High-rise Residential Buildings
+Com,3a6abf8ee2e79794a38cdbcef67ec675.tif,ImageSets\Com\3a6abf8ee2e79794a38cdbcef67ec675.tif,244,201,Commercial Zones,Business Tower
+Res,3aabe8789a5400976ece3ff79f0c0b32.tif,ImageSets\Res\3aabe8789a5400976ece3ff79f0c0b32.tif,152,119,Residential Districts,High-rise Residential Buildings
+Com,3aeec1ef9cd6bd2f79eb5576c536916d.tif,ImageSets\Com\3aeec1ef9cd6bd2f79eb5576c536916d.tif,124,138,Commercial Zones,Shopping Center and Commercial Street
+Res,3af8e15cf40527c22ad519146f47019a.tif,ImageSets\Res\3af8e15cf40527c22ad519146f47019a.tif,143,146,Residential Districts,High-rise Residential Buildings
+Res,3b26f7c821aa6ffbb9095213ddccc20b.tif,ImageSets\Res\3b26f7c821aa6ffbb9095213ddccc20b.tif,471,190,Residential Districts,High-rise Residential Buildings
+Pub,3b3461fcdcccdb061d15a004b888f2c0.tif,ImageSets\Pub\3b3461fcdcccdb061d15a004b888f2c0.tif,150,129,Public Services,Educational and Research Institutions
+Agr,3b40b7a1e1ee5ee56c4b8921ecb38d31.tif,ImageSets\Agr\3b40b7a1e1ee5ee56c4b8921ecb38d31.tif,154,148,Agriculture and Nature,Farmland
+Res,3b66f9166c8c82e29de1d82d439cc2be.tif,ImageSets\Res\3b66f9166c8c82e29de1d82d439cc2be.tif,346,402,Residential Districts,High-rise Residential Buildings
+Com,3bae7754b1d6cd0ba27227dd4d9ce302.tif,ImageSets\Com\3bae7754b1d6cd0ba27227dd4d9ce302.tif,160,244,Commercial Zones,Office Campus
+Com,3bbbd9e7e3bef7390c4a50d3795da27f.tif,ImageSets\Com\3bbbd9e7e3bef7390c4a50d3795da27f.tif,208,157,Commercial Zones,Shopping Center and Commercial Street
+Pub,3bf1f02e40a8b9da29c780149d469204.tif,ImageSets\Pub\3bf1f02e40a8b9da29c780149d469204.tif,294,139,Public Services,Parks and Squares
+Res,3c3979a464f4d4e278b4bbbdb206eb6d.tif,ImageSets\Res\3c3979a464f4d4e278b4bbbdb206eb6d.tif,570,203,Residential Districts,High-rise Residential Buildings
+Com,3c6f8cc663694d1f8b5c8ff7115119fc.tif,ImageSets\Com\3c6f8cc663694d1f8b5c8ff7115119fc.tif,156,142,Commercial Zones,Office Campus
+Com,3cac5449d1f1f74becaca670f63395fb.tif,ImageSets\Com\3cac5449d1f1f74becaca670f63395fb.tif,265,272,Commercial Zones,Office Campus
+Pub,3d0d5e77a95f03dd23a237a60c5feb2d.tif,ImageSets\Pub\3d0d5e77a95f03dd23a237a60c5feb2d.tif,243,259,Public Services,Educational and Research Institutions
+Res,3d5dd365c2bff11aed0658cee4bf3244.tif,ImageSets\Res\3d5dd365c2bff11aed0658cee4bf3244.tif,225,263,Residential Districts,Rural Homestead
+Com,3df33f6bbe9bfafdc4d44cb87166e5ec.tif,ImageSets\Com\3df33f6bbe9bfafdc4d44cb87166e5ec.tif,231,175,Commercial Zones,Office Campus
+Pub,3e59388a6c44d6275fa62edeed28edd9.tif,ImageSets\Pub\3e59388a6c44d6275fa62edeed28edd9.tif,750,1124,Public Services,Parks and Squares
+Com,3e99729739224729de52a91cce256cd4.tif,ImageSets\Com\3e99729739224729de52a91cce256cd4.tif,174,165,Commercial Zones,Business Tower
+Agr,3eb4c10b3c53afbf7aaef7c067f4c841.tif,ImageSets\Agr\3eb4c10b3c53afbf7aaef7c067f4c841.tif,1779,528,Agriculture and Nature,Farmland
+Com,3eba502dc505a1747e1daae6962cf91c.tif,ImageSets\Com\3eba502dc505a1747e1daae6962cf91c.tif,159,206,Commercial Zones,Office Campus
+Pub,3f0b4f1837a361e3e9527f1087fabe5c.tif,ImageSets\Pub\3f0b4f1837a361e3e9527f1087fabe5c.tif,131,180,Public Services,Parks and Squares
+Ind,3f79726ee3f5fc47b7c26e06fd8e93bb.tif,ImageSets\Ind\3f79726ee3f5fc47b7c26e06fd8e93bb.tif,348,387,Industrial Land,Industrial Park and Factory
+Ind,3f98244449fc42466f9abec4fc3a38ae.tif,ImageSets\Ind\3f98244449fc42466f9abec4fc3a38ae.tif,328,360,Industrial Land,Industrial Park and Factory
+Res,401490bdd5becb9f654e5f63e020bf1d.tif,ImageSets\Res\401490bdd5becb9f654e5f63e020bf1d.tif,112,174,Residential Districts,High-rise Residential Buildings
+Agr,406aa87ecc12e5bb782c782aae72103c.tif,ImageSets\Agr\406aa87ecc12e5bb782c782aae72103c.tif,651,1209,Agriculture and Nature,Mountain
+Pub,411ffb0286c51a72af356bae7f76bd18.tif,ImageSets\Pub\411ffb0286c51a72af356bae7f76bd18.tif,171,181,Public Services,Parks and Squares
+Agr,418cf4963556c2486368a56661327293.tif,ImageSets\Agr\418cf4963556c2486368a56661327293.tif,1005,1506,Agriculture and Nature,Mountain
+Com,41c6c5a599f3ea238a214ce3996cf97b.tif,ImageSets\Com\41c6c5a599f3ea238a214ce3996cf97b.tif,248,130,Commercial Zones,Commercial Market
+Com,4211b171bee6b64b7762fc4c5944aa21.tif,ImageSets\Com\4211b171bee6b64b7762fc4c5944aa21.tif,136,189,Commercial Zones,Office Campus
+Res,4232d4b1ab62d5378af4e86c5403d4cb.tif,ImageSets\Res\4232d4b1ab62d5378af4e86c5403d4cb.tif,108,110,Residential Districts,Urban Villages
+Pub,4289c1b49d35adc34b934f0383e6006d.tif,ImageSets\Pub\4289c1b49d35adc34b934f0383e6006d.tif,270,241,Public Services,Educational and Research Institutions
+Ind,42a42a3678234492caca2f424c47d196.tif,ImageSets\Ind\42a42a3678234492caca2f424c47d196.tif,189,118,Industrial Land,Construction Site
+Com,4330cfc24c8a1a8369a4957108cd5dbb.tif,ImageSets\Com\4330cfc24c8a1a8369a4957108cd5dbb.tif,228,225,Commercial Zones,Office Campus
+Res,434045367fd6a5b5309cbd9ee927568e.tif,ImageSets\Res\434045367fd6a5b5309cbd9ee927568e.tif,226,118,Residential Districts,Villas and High-end Residences
+Pub,4392992911fa34481e51c24caaef4bb2.tif,ImageSets\Pub\4392992911fa34481e51c24caaef4bb2.tif,180,200,Public Services,Parks and Squares
+Ind,439d61ec1941f2e8ae2f292bb83bb5a7.tif,ImageSets\Ind\439d61ec1941f2e8ae2f292bb83bb5a7.tif,176,145,Industrial Land,Industrial Park and Factory
+Ind,43a99ebbeb6cbe19c20961c6788d81d6.tif,ImageSets\Ind\43a99ebbeb6cbe19c20961c6788d81d6.tif,192,130,Industrial Land,Industrial Park and Factory
+Agr,43d3eeb447640c4ed8344f26252c9469.tif,ImageSets\Agr\43d3eeb447640c4ed8344f26252c9469.tif,659,1005,Agriculture and Nature,Mountain
+Agr,43f1880fbfb757a986ee63ca7bc2a989.tif,ImageSets\Agr\43f1880fbfb757a986ee63ca7bc2a989.tif,349,201,Agriculture and Nature,Wasteland
+Ind,43f6d9a7fc38ff382db67987e1f4fdde.tif,ImageSets\Ind\43f6d9a7fc38ff382db67987e1f4fdde.tif,307,266,Industrial Land,Industrial Park and Factory
+Com,44618ae481fa5e5956096511440f05af.tif,ImageSets\Com\44618ae481fa5e5956096511440f05af.tif,242,234,Commercial Zones,Office Campus
+Res,446ff84d8b41cc407adc0c4ea6416a4d.tif,ImageSets\Res\446ff84d8b41cc407adc0c4ea6416a4d.tif,195,149,Residential Districts,Villas and High-end Residences
+Ind,4479f450b55759b33918724074e5335a.tif,ImageSets\Ind\4479f450b55759b33918724074e5335a.tif,323,320,Industrial Land,Industrial Park and Factory
+Com,447afaaf966eb93430d7c802930f30bd.tif,ImageSets\Com\447afaaf966eb93430d7c802930f30bd.tif,140,198,Commercial Zones,Office Campus
+Com,44bfdc8cc9444f7c1fa4309c8b272f82.tif,ImageSets\Com\44bfdc8cc9444f7c1fa4309c8b272f82.tif,1587,1023,Commercial Zones,Commercial Entertainment
+Res,44ca3329f9e38b5e5ed3959546918737.tif,ImageSets\Res\44ca3329f9e38b5e5ed3959546918737.tif,185,196,Residential Districts,High-rise Residential Buildings
+Com,44e9353c8f9d02a1aa0cb60abc3cdb94.tif,ImageSets\Com\44e9353c8f9d02a1aa0cb60abc3cdb94.tif,333,280,Commercial Zones,Office Campus
+Agr,44edbac7b8d86a8749b0d5853ac9358b.tif,ImageSets\Agr\44edbac7b8d86a8749b0d5853ac9358b.tif,465,193,Agriculture and Nature,Farmland
+Res,454549346267453156cfbe622ad0518e.tif,ImageSets\Res\454549346267453156cfbe622ad0518e.tif,136,230,Residential Districts,High-rise Residential Buildings
+Pub,45628bef597cc7ecd6483a311eba0259.tif,ImageSets\Pub\45628bef597cc7ecd6483a311eba0259.tif,108,125,Public Services,Educational and Research Institutions
+Res,45c241d0c02d6e31d321f7648e2fe5c6.tif,ImageSets\Res\45c241d0c02d6e31d321f7648e2fe5c6.tif,144,302,Residential Districts,High-rise Residential Buildings
+Agr,45cb07e9875cab674f6293363f20aad6.tif,ImageSets\Agr\45cb07e9875cab674f6293363f20aad6.tif,83,102,Agriculture and Nature,Farmland
+Ind,45e1052f89067e21c15b6a3936313754.tif,ImageSets\Ind\45e1052f89067e21c15b6a3936313754.tif,215,230,Industrial Land,Industrial Park and Factory
+Ind,45f39ed422238aa0e2ca2f90d2443677.tif,ImageSets\Ind\45f39ed422238aa0e2ca2f90d2443677.tif,313,293,Industrial Land,Industrial Park and Factory
+Ind,469090c043f55654106ff91714dc65d7.tif,ImageSets\Ind\469090c043f55654106ff91714dc65d7.tif,253,321,Industrial Land,Industrial Park and Factory
+Res,46c3d23fff31bc511bc98d8cd6c27129.tif,ImageSets\Res\46c3d23fff31bc511bc98d8cd6c27129.tif,133,132,Residential Districts,High-rise Residential Buildings
+Agr,46d4983769f08ebf21240ee76cf7bfc2.tif,ImageSets\Agr\46d4983769f08ebf21240ee76cf7bfc2.tif,215,206,Agriculture and Nature,Mountain
+Pub,4742ea8e58a03764680b124279f4d8bc.tif,ImageSets\Pub\4742ea8e58a03764680b124279f4d8bc.tif,149,317,Public Services,Parks and Squares
+Res,4892d0e975895a1a1202f69965a1e451.tif,ImageSets\Res\4892d0e975895a1a1202f69965a1e451.tif,266,155,Residential Districts,High-rise Residential Buildings
+Agr,489891b556d2289880f04ed96b4ea9ae.tif,ImageSets\Agr\489891b556d2289880f04ed96b4ea9ae.tif,979,873,Agriculture and Nature,Farmland
+Agr,49c44b83e51332e361d60fcc20ef965b.tif,ImageSets\Agr\49c44b83e51332e361d60fcc20ef965b.tif,202,204,Agriculture and Nature,Farmland
+Agr,49e846ef973b96aa5e1c328c43d53f5c.tif,ImageSets\Agr\49e846ef973b96aa5e1c328c43d53f5c.tif,337,432,Agriculture and Nature,Mountain
+Com,4a551c08737723249fac83f8bb56194f.tif,ImageSets\Com\4a551c08737723249fac83f8bb56194f.tif,233,183,Commercial Zones,Office Campus
+Res,4a5943e86532acb32e696ad8c4cb6ad8.tif,ImageSets\Res\4a5943e86532acb32e696ad8c4cb6ad8.tif,454,313,Residential Districts,High-rise Residential Buildings
+Ind,4a77f5a1633719e97b8cbde859b4df36.tif,ImageSets\Ind\4a77f5a1633719e97b8cbde859b4df36.tif,294,248,Industrial Land,Industrial Park and Factory
+Ind,4ab669341041a81a0898790a48352f28.tif,ImageSets\Ind\4ab669341041a81a0898790a48352f28.tif,334,319,Industrial Land,Industrial Park and Factory
+Res,4adae3b895913d3f5300026a67401953.tif,ImageSets\Res\4adae3b895913d3f5300026a67401953.tif,329,310,Residential Districts,High-rise Residential Buildings
+Pub,4b28b202050eb3f25ab6aff0afa77dbf.tif,ImageSets\Pub\4b28b202050eb3f25ab6aff0afa77dbf.tif,305,314,Public Services,Educational and Research Institutions
+Ind,4b482e83ad66b926eaaa2a325d6a4b0c.tif,ImageSets\Ind\4b482e83ad66b926eaaa2a325d6a4b0c.tif,165,170,Industrial Land,Industrial Park and Factory
+Ind,4b58aff19466f76c6d1eb447c7b1326f.tif,ImageSets\Ind\4b58aff19466f76c6d1eb447c7b1326f.tif,269,403,Industrial Land,Industrial Park and Factory
+Ind,4bbe78ae07739c8e1ffd906eb9b750c2.tif,ImageSets\Ind\4bbe78ae07739c8e1ffd906eb9b750c2.tif,420,286,Industrial Land,Industrial Park and Factory
+Ind,4bff4edfeae3ca0d02daf4c6c2ef23e1.tif,ImageSets\Ind\4bff4edfeae3ca0d02daf4c6c2ef23e1.tif,282,380,Industrial Land,Industrial Park and Factory
+Com,4cbbdf09102bcc4b82442ff16c81d09b.tif,ImageSets\Com\4cbbdf09102bcc4b82442ff16c81d09b.tif,130,233,Commercial Zones,Office Campus
+Pub,4cd0204b19f355a99615f2a920ffb642.tif,ImageSets\Pub\4cd0204b19f355a99615f2a920ffb642.tif,308,255,Public Services,Parks and Squares
+Agr,4ced6e4cd471e6896a8944ce41eb63cc.tif,ImageSets\Agr\4ced6e4cd471e6896a8944ce41eb63cc.tif,1287,3033,Agriculture and Nature,Mountain
+Com,4d15796bddbc77f34e0e8a1067e3777b.tif,ImageSets\Com\4d15796bddbc77f34e0e8a1067e3777b.tif,126,142,Commercial Zones,Business Tower
+Agr,4da684e958aa2614a263230dd1fe0b27.tif,ImageSets\Agr\4da684e958aa2614a263230dd1fe0b27.tif,510,664,Agriculture and Nature,Farmland
+Ind,4df65b62019b4aa965d0aa45507bad0d.tif,ImageSets\Ind\4df65b62019b4aa965d0aa45507bad0d.tif,811,541,Industrial Land,Industrial Park and Factory
+Ind,4e00f8a5b1e00589226a52c8d19268d2.tif,ImageSets\Ind\4e00f8a5b1e00589226a52c8d19268d2.tif,166,213,Industrial Land,Industrial Park and Factory
+Agr,4e4c5a3bd2589c3e7cfe13f72e44af52.tif,ImageSets\Agr\4e4c5a3bd2589c3e7cfe13f72e44af52.tif,213,229,Agriculture and Nature,Forestland and Grassland
+Pub,4ec172ec84f7308ccfbc41f39288c19b.tif,ImageSets\Pub\4ec172ec84f7308ccfbc41f39288c19b.tif,150,232,Public Services,Educational and Research Institutions
+Ind,4f29d74f87e5ae6d82412673e245955a.tif,ImageSets\Ind\4f29d74f87e5ae6d82412673e245955a.tif,296,241,Industrial Land,Industrial Park and Factory
+Ind,4f59b6400c230f09fbffa697ff5f12fa.tif,ImageSets\Ind\4f59b6400c230f09fbffa697ff5f12fa.tif,459,448,Industrial Land,Industrial Park and Factory
+Pub,4f9695bc2854ced74b36b60da5f67e79.tif,ImageSets\Pub\4f9695bc2854ced74b36b60da5f67e79.tif,115,138,Public Services,Educational and Research Institutions
+Pub,4f9a732b23dcf676d963cd520a3b4847.tif,ImageSets\Pub\4f9a732b23dcf676d963cd520a3b4847.tif,153,182,Public Services,Educational and Research Institutions
+Pub,4fd5a26e8e37c0cac2a8ed8f83d4547b.tif,ImageSets\Pub\4fd5a26e8e37c0cac2a8ed8f83d4547b.tif,246,246,Public Services,Educational and Research Institutions
+Com,4ff6fb0cc3e957cab39bf2356c4fd2c7.tif,ImageSets\Com\4ff6fb0cc3e957cab39bf2356c4fd2c7.tif,162,104,Commercial Zones,Business Tower
+Com,5033ecfbc4e6c781a88a38be335cb853.tif,ImageSets\Com\5033ecfbc4e6c781a88a38be335cb853.tif,335,189,Commercial Zones,Office Campus
+Agr,5052ced4f1ec9daa2a39f6cb81d76408.tif,ImageSets\Agr\5052ced4f1ec9daa2a39f6cb81d76408.tif,260,139,Agriculture and Nature,Farmland
+Ind,508826d1e1aa84e42209274effe003ca.tif,ImageSets\Ind\508826d1e1aa84e42209274effe003ca.tif,134,155,Industrial Land,Construction Site
+Res,50e2ddedb4549aebeff739f5ed788455.tif,ImageSets\Res\50e2ddedb4549aebeff739f5ed788455.tif,236,561,Residential Districts,High-rise Residential Buildings
+Com,50ec2c89dd7a128d3a5612cfd8221ebe.tif,ImageSets\Com\50ec2c89dd7a128d3a5612cfd8221ebe.tif,122,133,Commercial Zones,Shopping Center and Commercial Street
+Agr,5159b5f42e9f7476d334220676a4e4a2.tif,ImageSets\Agr\5159b5f42e9f7476d334220676a4e4a2.tif,331,240,Agriculture and Nature,Forestland and Grassland
+Ind,51dd753f9e14275026bb9608d4941caa.tif,ImageSets\Ind\51dd753f9e14275026bb9608d4941caa.tif,262,247,Industrial Land,Industrial Park and Factory
+Ind,5210781fe914c8cc42d6d85c6c5fbf66.tif,ImageSets\Ind\5210781fe914c8cc42d6d85c6c5fbf66.tif,226,152,Industrial Land,Industrial Park and Factory
+Pub,52304fa46fdc8ee408893e84fe1301f0.tif,ImageSets\Pub\52304fa46fdc8ee408893e84fe1301f0.tif,585,1057,Public Services,Educational and Research Institutions
+Res,523c187d1cbc8c7c44caeb08e59a2bcb.tif,ImageSets\Res\523c187d1cbc8c7c44caeb08e59a2bcb.tif,254,149,Residential Districts,High-rise Residential Buildings
+Pub,52cdfcd8c073f507320cd6f016553af5.tif,ImageSets\Pub\52cdfcd8c073f507320cd6f016553af5.tif,112,185,Public Services,Educational and Research Institutions
+Pub,532787ea77b91258c1a724b49d84e018.tif,ImageSets\Pub\532787ea77b91258c1a724b49d84e018.tif,361,320,Public Services,Educational and Research Institutions
+Agr,536764b216f01dd8fe17cdfcc30bb2b0.tif,ImageSets\Agr\536764b216f01dd8fe17cdfcc30bb2b0.tif,304,539,Agriculture and Nature,Farmland
+Res,5393092ded96d5878215321ad5e9943c.tif,ImageSets\Res\5393092ded96d5878215321ad5e9943c.tif,140,280,Residential Districts,High-rise Residential Buildings
+Com,53ba57378b7ab2e4921151091e2dcf31.tif,ImageSets\Com\53ba57378b7ab2e4921151091e2dcf31.tif,126,109,Commercial Zones,Business Tower
+Ind,54473ad9f7c467e0f3c2d41ccb435af6.tif,ImageSets\Ind\54473ad9f7c467e0f3c2d41ccb435af6.tif,238,220,Industrial Land,Industrial Park and Factory
+Pub,54fb7ff84e351c161d9d120c8cf68a89.tif,ImageSets\Pub\54fb7ff84e351c161d9d120c8cf68a89.tif,157,201,Public Services,Educational and Research Institutions
+Pub,5555956f257cb8ad87a3ac083244e346.tif,ImageSets\Pub\5555956f257cb8ad87a3ac083244e346.tif,607,642,Public Services,Educational and Research Institutions
+Agr,558f7adab587ff7e337a32c7f97951d9.tif,ImageSets\Agr\558f7adab587ff7e337a32c7f97951d9.tif,903,750,Agriculture and Nature,Mountain
+Agr,56a6f4dfa00964319e4b8718baed338e.tif,ImageSets\Agr\56a6f4dfa00964319e4b8718baed338e.tif,296,206,Agriculture and Nature,Forestland and Grassland
+Agr,56cfe42c0b4533834e8b3684bc8cc2b9.tif,ImageSets\Agr\56cfe42c0b4533834e8b3684bc8cc2b9.tif,489,347,Agriculture and Nature,Farmland
+Pub,56da2cf530affc6c87c601389fef7ecf.tif,ImageSets\Pub\56da2cf530affc6c87c601389fef7ecf.tif,184,162,Public Services,Educational and Research Institutions
+Ind,5738eb3911df4d948f1bd8d79714f9b4.tif,ImageSets\Ind\5738eb3911df4d948f1bd8d79714f9b4.tif,203,240,Industrial Land,Industrial Park and Factory
+Pub,580e04fb0e25959d66af06b7b2b1c6fd.tif,ImageSets\Pub\580e04fb0e25959d66af06b7b2b1c6fd.tif,159,121,Public Services,Educational and Research Institutions
+Com,5853e14576ab899d3ec83738ea055851.tif,ImageSets\Com\5853e14576ab899d3ec83738ea055851.tif,262,279,Commercial Zones,Office Campus
+Ind,58ce86cfa189c112a8f973eb6a3d7124.tif,ImageSets\Ind\58ce86cfa189c112a8f973eb6a3d7124.tif,192,227,Industrial Land,Industrial Park and Factory
+Com,5927f78b59515984e06a47dcc4bcd404.tif,ImageSets\Com\5927f78b59515984e06a47dcc4bcd404.tif,136,117,Commercial Zones,Office Campus
+Res,5952554dfd3e5025135416be7854c52b.tif,ImageSets\Res\5952554dfd3e5025135416be7854c52b.tif,173,208,Residential Districts,High-rise Residential Buildings
+Pub,596eaea892cde7c96bea33d99930de01.tif,ImageSets\Pub\596eaea892cde7c96bea33d99930de01.tif,298,264,Public Services,Educational and Research Institutions
+Pub,599279d929611ea42f8ab5dd171b9db1.tif,ImageSets\Pub\599279d929611ea42f8ab5dd171b9db1.tif,139,136,Public Services,Parks and Squares
+Com,59b4c5efbe477a7587cb84a86e58cf69.tif,ImageSets\Com\59b4c5efbe477a7587cb84a86e58cf69.tif,161,160,Commercial Zones,Office Campus
+Agr,59cdf7ee67d87a770135f0d6d0dbda39.tif,ImageSets\Agr\59cdf7ee67d87a770135f0d6d0dbda39.tif,1482,1268,Agriculture and Nature,Mountain
+Com,5a804f082e0d7220269b3a243bd0eabc.tif,ImageSets\Com\5a804f082e0d7220269b3a243bd0eabc.tif,209,220,Commercial Zones,Office Campus
+Res,5aaf22858152bbaf7a3074e75bdc4c58.tif,ImageSets\Res\5aaf22858152bbaf7a3074e75bdc4c58.tif,161,119,Residential Districts,High-rise Residential Buildings
+Res,5ae7892d2b83015dde7bb6d86c3f3113.tif,ImageSets\Res\5ae7892d2b83015dde7bb6d86c3f3113.tif,221,139,Residential Districts,High-rise Residential Buildings
+Ind,5b2651371ee015bffebb119ebb6a70a0.tif,ImageSets\Ind\5b2651371ee015bffebb119ebb6a70a0.tif,331,103,Industrial Land,Industrial Park and Factory
+Res,5bffceb7d8faace5a049c39b13e161af.tif,ImageSets\Res\5bffceb7d8faace5a049c39b13e161af.tif,215,255,Residential Districts,High-rise Residential Buildings
+Res,5c147fde1054eb80cbcf58399f164bec.tif,ImageSets\Res\5c147fde1054eb80cbcf58399f164bec.tif,310,218,Residential Districts,Rural Homestead
+Res,5c33f24309e185aa9bfa99802a197817.tif,ImageSets\Res\5c33f24309e185aa9bfa99802a197817.tif,117,157,Residential Districts,High-rise Residential Buildings
+Pub,5ccb103d81ce6a600b9ffda808d0b715.tif,ImageSets\Pub\5ccb103d81ce6a600b9ffda808d0b715.tif,561,453,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,5cd5f277db2f18c8d9f897a1c1631e40.tif,ImageSets\Agr\5cd5f277db2f18c8d9f897a1c1631e40.tif,371,177,Agriculture and Nature,Farmland
+Com,5cd7d330692b50bb36bfed4e2c52da9f.tif,ImageSets\Com\5cd7d330692b50bb36bfed4e2c52da9f.tif,235,159,Commercial Zones,Office Campus
+Agr,5d38071aa4c7c668b513d63847dbe0e3.tif,ImageSets\Agr\5d38071aa4c7c668b513d63847dbe0e3.tif,108,231,Agriculture and Nature,Forestland and Grassland
+Res,5d3a7ee56224a1d08acf713475c80efe.tif,ImageSets\Res\5d3a7ee56224a1d08acf713475c80efe.tif,201,299,Residential Districts,Urban Villages
+Com,5dfdde971c7b973f751ba5c4748afa94.tif,ImageSets\Com\5dfdde971c7b973f751ba5c4748afa94.tif,165,161,Commercial Zones,Shopping Center and Commercial Street
+Ind,5e27577c6e0c65125bef1b4f5d149454.tif,ImageSets\Ind\5e27577c6e0c65125bef1b4f5d149454.tif,131,232,Industrial Land,Industrial Park and Factory
+Agr,5f08c498a0cef17f1cc02b8c916f0b9e.tif,ImageSets\Agr\5f08c498a0cef17f1cc02b8c916f0b9e.tif,217,295,Agriculture and Nature,Wasteland
+Res,5f77ed9d7c17dd7ea278ca35267eb1c8.tif,ImageSets\Res\5f77ed9d7c17dd7ea278ca35267eb1c8.tif,217,180,Residential Districts,High-rise Residential Buildings
+Res,604f0b364736b3406af16bd3edd21682.tif,ImageSets\Res\604f0b364736b3406af16bd3edd21682.tif,266,233,Residential Districts,High-rise Residential Buildings
+Com,60a5b402a1b1a5271c8bfa6ed3d31182.tif,ImageSets\Com\60a5b402a1b1a5271c8bfa6ed3d31182.tif,209,113,Commercial Zones,Office Campus
+Pub,60a60ddc1202d318900e71994d5d8303.tif,ImageSets\Pub\60a60ddc1202d318900e71994d5d8303.tif,301,154,Public Services,Parks and Squares
+Ind,60fb523345ecfe0fc03d21292653c06e.tif,ImageSets\Ind\60fb523345ecfe0fc03d21292653c06e.tif,259,179,Industrial Land,Industrial Park and Factory
+Ind,6100095ff9a961fb39c3904999db9c89.tif,ImageSets\Ind\6100095ff9a961fb39c3904999db9c89.tif,111,159,Industrial Land,Industrial Park and Factory
+Res,6140bcf71f458e632403f24f999820d7.tif,ImageSets\Res\6140bcf71f458e632403f24f999820d7.tif,176,147,Residential Districts,High-rise Residential Buildings
+Res,617fbe38d6bf8430416b5f4f58119e23.tif,ImageSets\Res\617fbe38d6bf8430416b5f4f58119e23.tif,256,304,Residential Districts,High-rise Residential Buildings
+Pub,61bd90eca10c21aa8aecc83b9317e515.tif,ImageSets\Pub\61bd90eca10c21aa8aecc83b9317e515.tif,320,162,Public Services,Parks and Squares
+Res,621278fadc85e27c790c7075816d2906.tif,ImageSets\Res\621278fadc85e27c790c7075816d2906.tif,244,180,Residential Districts,High-rise Residential Buildings
+Res,62607021b008c0a7604de4829f8788f0.tif,ImageSets\Res\62607021b008c0a7604de4829f8788f0.tif,190,300,Residential Districts,High-rise Residential Buildings
+Agr,628206f9348afcc1794d68d29ff0638e.tif,ImageSets\Agr\628206f9348afcc1794d68d29ff0638e.tif,165,126,Agriculture and Nature,Forestland and Grassland
+Com,6295a524ed7a6c6465a270287becd4ce.tif,ImageSets\Com\6295a524ed7a6c6465a270287becd4ce.tif,238,273,Commercial Zones,Office Campus
+Res,62a593e4a80b3072d01b84d8b8466168.tif,ImageSets\Res\62a593e4a80b3072d01b84d8b8466168.tif,187,216,Residential Districts,Villas and High-end Residences
+Res,63002eb0309e33daacdec8de2bace2fb.tif,ImageSets\Res\63002eb0309e33daacdec8de2bace2fb.tif,156,123,Residential Districts,High-rise Residential Buildings
+Ind,631ca31c022716f0f9f40e6fc3468654.tif,ImageSets\Ind\631ca31c022716f0f9f40e6fc3468654.tif,235,198,Industrial Land,Industrial Park and Factory
+Res,631cd37729a3ce5026f1d95ed2d96e8e.tif,ImageSets\Res\631cd37729a3ce5026f1d95ed2d96e8e.tif,293,292,Residential Districts,High-rise Residential Buildings
+Res,636985df0ddf4deb73face5b7b4132b9.tif,ImageSets\Res\636985df0ddf4deb73face5b7b4132b9.tif,166,152,Residential Districts,High-rise Residential Buildings
+Ind,636df083b4f02320da2d8ec46d681348.tif,ImageSets\Ind\636df083b4f02320da2d8ec46d681348.tif,437,276,Industrial Land,Industrial Park and Factory
+Com,6374c9f1a290f94f5a3a06a8e94e9ef2.tif,ImageSets\Com\6374c9f1a290f94f5a3a06a8e94e9ef2.tif,191,201,Commercial Zones,Office Campus
+Res,63dd8945ba6c99d872db1124a5637c77.tif,ImageSets\Res\63dd8945ba6c99d872db1124a5637c77.tif,139,130,Residential Districts,Urban Villages
+Ind,63f4ddd6b301917dd436048b9aa3fdd8.tif,ImageSets\Ind\63f4ddd6b301917dd436048b9aa3fdd8.tif,207,264,Industrial Land,Industrial Park and Factory
+Agr,64313019563cb4c458b1d7c060ac7cdb.tif,ImageSets\Agr\64313019563cb4c458b1d7c060ac7cdb.tif,1100,1135,Agriculture and Nature,Farmland
+Agr,64a92e3c010ea68cc33e7cc288670b38.tif,ImageSets\Agr\64a92e3c010ea68cc33e7cc288670b38.tif,308,1039,Agriculture and Nature,Water
+Ind,64b7522d89c0e74895c3deacbfe13292.tif,ImageSets\Ind\64b7522d89c0e74895c3deacbfe13292.tif,322,535,Industrial Land,Industrial Park and Factory
+Res,64d957728a9359ececbfdb97eae24e41.tif,ImageSets\Res\64d957728a9359ececbfdb97eae24e41.tif,157,162,Residential Districts,Rural Homestead
+Ind,64e3031e3abb554266d0339ec0080ae9.tif,ImageSets\Ind\64e3031e3abb554266d0339ec0080ae9.tif,442,279,Industrial Land,Industrial Park and Factory
+Pub,651f669814f1d65b9daec169134c8cb4.tif,ImageSets\Pub\651f669814f1d65b9daec169134c8cb4.tif,335,463,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Ind,658b8f4c83565e600d3b6e4aaf4e1f69.tif,ImageSets\Ind\658b8f4c83565e600d3b6e4aaf4e1f69.tif,178,164,Industrial Land,Construction Site
+Ind,65c0a8e47307b84f75c86cf965b8bd44.tif,ImageSets\Ind\65c0a8e47307b84f75c86cf965b8bd44.tif,413,761,Industrial Land,Industrial Park and Factory
+Com,668393dec07d8085a4275660ea94f76a.tif,ImageSets\Com\668393dec07d8085a4275660ea94f76a.tif,216,209,Commercial Zones,Office Campus
+Agr,67054a2895f9b9d4e2c520b3af365673.tif,ImageSets\Agr\67054a2895f9b9d4e2c520b3af365673.tif,128,245,Agriculture and Nature,Forestland and Grassland
+Com,6718701142ad54604d484ff0c31e96d0.tif,ImageSets\Com\6718701142ad54604d484ff0c31e96d0.tif,151,122,Commercial Zones,Shopping Center and Commercial Street
+Com,672167847f43279834cb6029fc8d2302.tif,ImageSets\Com\672167847f43279834cb6029fc8d2302.tif,208,165,Commercial Zones,Office Campus
+Com,67d263733d06ec2839861e292cd9a4a8.tif,ImageSets\Com\67d263733d06ec2839861e292cd9a4a8.tif,155,159,Commercial Zones,Commercial Market
+Pub,67d91db8effe0858921d7ed68377b81d.tif,ImageSets\Pub\67d91db8effe0858921d7ed68377b81d.tif,427,321,Public Services,Educational and Research Institutions
+Com,67ff2157b445e6ed73f91d7679bfe77e.tif,ImageSets\Com\67ff2157b445e6ed73f91d7679bfe77e.tif,130,103,Commercial Zones,Business Tower
+Agr,6840925aec77f4bc4e4eaf12566ed923.tif,ImageSets\Agr\6840925aec77f4bc4e4eaf12566ed923.tif,3654,3923,Agriculture and Nature,Mountain
+Agr,684ad579fd74317cfa765ff48be4bfeb.tif,ImageSets\Agr\684ad579fd74317cfa765ff48be4bfeb.tif,335,318,Agriculture and Nature,Farmland
+Res,688d1de0fade584143745cb12969ac85.tif,ImageSets\Res\688d1de0fade584143745cb12969ac85.tif,198,215,Residential Districts,High-rise Residential Buildings
+Res,68c15c7891390ed0178469d4c2975dce.tif,ImageSets\Res\68c15c7891390ed0178469d4c2975dce.tif,197,163,Residential Districts,High-rise Residential Buildings
+Pub,68e8b1d61e2cecf049fb9b6befb97a15.tif,ImageSets\Pub\68e8b1d61e2cecf049fb9b6befb97a15.tif,278,277,Public Services,Educational and Research Institutions
+Agr,690908490513530ff157859393fda07e.tif,ImageSets\Agr\690908490513530ff157859393fda07e.tif,845,921,Agriculture and Nature,Farmland
+Res,691d7f7b8662ec8848bfa758e970e072.tif,ImageSets\Res\691d7f7b8662ec8848bfa758e970e072.tif,245,242,Residential Districts,High-rise Residential Buildings
+Res,69335c851b53962f3954ec496b0628f1.tif,ImageSets\Res\69335c851b53962f3954ec496b0628f1.tif,235,320,Residential Districts,High-rise Residential Buildings
+Agr,698a3b641cb70df6b3b25a28e05d287c.tif,ImageSets\Agr\698a3b641cb70df6b3b25a28e05d287c.tif,644,644,Agriculture and Nature,Wasteland
+Agr,69b6506e5d2df98cdb8ff65cbce3e8c2.tif,ImageSets\Agr\69b6506e5d2df98cdb8ff65cbce3e8c2.tif,188,151,Agriculture and Nature,Forestland and Grassland
+Ind,69c8514d54a5c4a9b88e5b22f10d4bc6.tif,ImageSets\Ind\69c8514d54a5c4a9b88e5b22f10d4bc6.tif,159,179,Industrial Land,Industrial Park and Factory
+Agr,6a1124249a241e05ea08d38ac1480cfa.tif,ImageSets\Agr\6a1124249a241e05ea08d38ac1480cfa.tif,342,592,Agriculture and Nature,Water
+Ind,6a3f25fe446a74208d0c68e29e90d4e9.tif,ImageSets\Ind\6a3f25fe446a74208d0c68e29e90d4e9.tif,211,156,Industrial Land,Industrial Park and Factory
+Com,6a7890218fb63a66cfb45ad59269615c.tif,ImageSets\Com\6a7890218fb63a66cfb45ad59269615c.tif,418,192,Commercial Zones,Office Campus
+Res,6ae5681e5df822eecdec0646e2b36268.tif,ImageSets\Res\6ae5681e5df822eecdec0646e2b36268.tif,163,108,Residential Districts,Urban Villages
+Ind,6aed813ec48e5b6eade5931a920e4dcf.tif,ImageSets\Ind\6aed813ec48e5b6eade5931a920e4dcf.tif,272,313,Industrial Land,Construction Site
+Com,6afb4629144409e5e021f6242da881a7.tif,ImageSets\Com\6afb4629144409e5e021f6242da881a7.tif,334,346,Commercial Zones,Commercial Market
+Com,6b1e2a1d63aad2cda74065002c740f24.tif,ImageSets\Com\6b1e2a1d63aad2cda74065002c740f24.tif,114,123,Commercial Zones,Shopping Center and Commercial Street
+Pub,6b37f2441018dd55081704c2f96f6073.tif,ImageSets\Pub\6b37f2441018dd55081704c2f96f6073.tif,152,259,Public Services,Parks and Squares
+Res,6b8d792fe36a6ff31266b0289e6bf868.tif,ImageSets\Res\6b8d792fe36a6ff31266b0289e6bf868.tif,227,236,Residential Districts,High-rise Residential Buildings
+Agr,6bb01fb6489a66a7f1d54c0e6d7e3121.tif,ImageSets\Agr\6bb01fb6489a66a7f1d54c0e6d7e3121.tif,153,189,Agriculture and Nature,Wasteland
+Pub,6c631336bfe3884f37e0b89190f6a151.tif,ImageSets\Pub\6c631336bfe3884f37e0b89190f6a151.tif,204,193,Public Services,Parks and Squares
+Pub,6c7d82976643b71cf100a17beeba1c03.tif,ImageSets\Pub\6c7d82976643b71cf100a17beeba1c03.tif,247,168,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Pub,6c924aab9becfdf99b78396f91044129.tif,ImageSets\Pub\6c924aab9becfdf99b78396f91044129.tif,193,114,Public Services,Educational and Research Institutions
+Agr,6cc6db59ee4705ae8b8d2f656b18619a.tif,ImageSets\Agr\6cc6db59ee4705ae8b8d2f656b18619a.tif,145,180,Agriculture and Nature,Forestland and Grassland
+Com,6cd386f71431270b70d98f646b5b0967.tif,ImageSets\Com\6cd386f71431270b70d98f646b5b0967.tif,148,249,Commercial Zones,Office Campus
+Res,6d033f15cad9a426fb1323ef5dc1979b.tif,ImageSets\Res\6d033f15cad9a426fb1323ef5dc1979b.tif,141,181,Residential Districts,High-rise Residential Buildings
+Res,6d6a761adeaf2b8f24d3d05e670ef32b.tif,ImageSets\Res\6d6a761adeaf2b8f24d3d05e670ef32b.tif,192,166,Residential Districts,High-rise Residential Buildings
+Ind,6e0e7c96f00f45c39a5249eebbeca332.tif,ImageSets\Ind\6e0e7c96f00f45c39a5249eebbeca332.tif,216,150,Industrial Land,Industrial Park and Factory
+Pub,6e5d9855d5a7eddecde2fa6421a1b65f.tif,ImageSets\Pub\6e5d9855d5a7eddecde2fa6421a1b65f.tif,550,330,Public Services,Educational and Research Institutions
+Ind,6f1a573701d74bdbcde5fa1362150808.tif,ImageSets\Ind\6f1a573701d74bdbcde5fa1362150808.tif,224,208,Industrial Land,Industrial Park and Factory
+Res,6f35a3b050fbb038b6e55f7ad4019f3e.tif,ImageSets\Res\6f35a3b050fbb038b6e55f7ad4019f3e.tif,191,150,Residential Districts,Rural Homestead
+Agr,6f3e8c83088c808b9802a06a03956988.tif,ImageSets\Agr\6f3e8c83088c808b9802a06a03956988.tif,397,663,Agriculture and Nature,Forestland and Grassland
+Res,6f481cbb670a00a85fa44a18e344b449.tif,ImageSets\Res\6f481cbb670a00a85fa44a18e344b449.tif,152,180,Residential Districts,High-rise Residential Buildings
+Agr,6fdbcc6bbe47763c75138c18873ccc37.tif,ImageSets\Agr\6fdbcc6bbe47763c75138c18873ccc37.tif,210,139,Agriculture and Nature,Forestland and Grassland
+Res,70300eecb95db9a1b43d400eb6876ea1.tif,ImageSets\Res\70300eecb95db9a1b43d400eb6876ea1.tif,194,174,Residential Districts,High-rise Residential Buildings
+Agr,70878441325363e3aaf45b70c6c811ce.tif,ImageSets\Agr\70878441325363e3aaf45b70c6c811ce.tif,202,195,Agriculture and Nature,Forestland and Grassland
+Ind,70d639cddc32832c5e60b81efd086a96.tif,ImageSets\Ind\70d639cddc32832c5e60b81efd086a96.tif,214,115,Industrial Land,Industrial Park and Factory
+Ind,70e29d1ed97c64a356f77e30d0b1e196.tif,ImageSets\Ind\70e29d1ed97c64a356f77e30d0b1e196.tif,145,162,Industrial Land,Industrial Park and Factory
+Res,70ed2c70baa6293b746d505e4c077b81.tif,ImageSets\Res\70ed2c70baa6293b746d505e4c077b81.tif,310,405,Residential Districts,High-rise Residential Buildings
+Pub,70efc2ce97537fdcb6e2614187efcad8.tif,ImageSets\Pub\70efc2ce97537fdcb6e2614187efcad8.tif,140,124,Public Services,Educational and Research Institutions
+Pub,712e01592c2cb01cee8093a27b51db11.tif,ImageSets\Pub\712e01592c2cb01cee8093a27b51db11.tif,151,147,Public Services,Parks and Squares
+Ind,712f50c90e2f4178d4e9da41a700e9e3.tif,ImageSets\Ind\712f50c90e2f4178d4e9da41a700e9e3.tif,296,221,Industrial Land,Industrial Park and Factory
+Agr,714ce0649f471340be90d3ca2ebc74f4.tif,ImageSets\Agr\714ce0649f471340be90d3ca2ebc74f4.tif,461,377,Agriculture and Nature,Water
+Res,7163e66f81e15f7fa801d95a7579fa82.tif,ImageSets\Res\7163e66f81e15f7fa801d95a7579fa82.tif,138,123,Residential Districts,High-rise Residential Buildings
+Com,717577a7f3963a0ec8d781c503b857c5.tif,ImageSets\Com\717577a7f3963a0ec8d781c503b857c5.tif,183,203,Commercial Zones,Office Campus
+Com,718695df558cc13b719deb42e8123c1b.tif,ImageSets\Com\718695df558cc13b719deb42e8123c1b.tif,119,120,Commercial Zones,Office Campus
+Res,71ff0eafdb2eb002b06c853e188cf622.tif,ImageSets\Res\71ff0eafdb2eb002b06c853e188cf622.tif,123,144,Residential Districts,High-rise Residential Buildings
+Ind,720a8c3864d05a28af904920574a821c.tif,ImageSets\Ind\720a8c3864d05a28af904920574a821c.tif,482,306,Industrial Land,Industrial Park and Factory
+Com,7222940111ded954ba328faadb6ec45c.tif,ImageSets\Com\7222940111ded954ba328faadb6ec45c.tif,179,176,Commercial Zones,Commercial Market
+Ind,722e7493afaf5a7c7d0dfee6b82d528a.tif,ImageSets\Ind\722e7493afaf5a7c7d0dfee6b82d528a.tif,309,402,Industrial Land,Industrial Park and Factory
+Agr,72542a8f76b3d455a657ecea8e3fe495.tif,ImageSets\Agr\72542a8f76b3d455a657ecea8e3fe495.tif,353,369,Agriculture and Nature,Water
+Com,726dc919fb9eca79f70b852490a1168a.tif,ImageSets\Com\726dc919fb9eca79f70b852490a1168a.tif,235,235,Commercial Zones,Office Campus
+Res,7293bc30e93858a58cc5e83104d3852c.tif,ImageSets\Res\7293bc30e93858a58cc5e83104d3852c.tif,370,325,Residential Districts,High-rise Residential Buildings
+Pub,72e12857fe4db549c64592624222337f.tif,ImageSets\Pub\72e12857fe4db549c64592624222337f.tif,355,274,Public Services,Educational and Research Institutions
+Pub,72ef74d03477693bb29349fc5f70a7f4.tif,ImageSets\Pub\72ef74d03477693bb29349fc5f70a7f4.tif,292,367,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,72f46238bd3dbd4115b8d57e1124e795.tif,ImageSets\Agr\72f46238bd3dbd4115b8d57e1124e795.tif,717,539,Agriculture and Nature,Water
+Agr,7333752e4af54dd2d77fdf854725d00f.tif,ImageSets\Agr\7333752e4af54dd2d77fdf854725d00f.tif,265,333,Agriculture and Nature,Wasteland
+Agr,73724d18e81c786c7db791cf66edef5c.tif,ImageSets\Agr\73724d18e81c786c7db791cf66edef5c.tif,281,442,Agriculture and Nature,Farmland
+Agr,7442fc61b303c27a1739720037d7f7ea.tif,ImageSets\Agr\7442fc61b303c27a1739720037d7f7ea.tif,222,239,Agriculture and Nature,Farmland
+Com,746e322e8065ee4d14d998aad43830e1.tif,ImageSets\Com\746e322e8065ee4d14d998aad43830e1.tif,119,126,Commercial Zones,Shopping Center and Commercial Street
+Ind,74a61136bfc9e4963a571276c1534db1.tif,ImageSets\Ind\74a61136bfc9e4963a571276c1534db1.tif,445,406,Industrial Land,Industrial Park and Factory
+Agr,7506f7e9633f5f1b6fb7f4a0fdf9cc55.tif,ImageSets\Agr\7506f7e9633f5f1b6fb7f4a0fdf9cc55.tif,612,392,Agriculture and Nature,Farmland
+Agr,75857ad49a6239d390c613256f268bce.tif,ImageSets\Agr\75857ad49a6239d390c613256f268bce.tif,271,319,Agriculture and Nature,Farmland
+Com,7651808b2709f9f96d567365586e10b1.tif,ImageSets\Com\7651808b2709f9f96d567365586e10b1.tif,175,158,Commercial Zones,Office Campus
+Res,76a5fff335d3a385d45dc53efd50bcef.tif,ImageSets\Res\76a5fff335d3a385d45dc53efd50bcef.tif,214,228,Residential Districts,High-rise Residential Buildings
+Res,7765f46303d3671de3b5308e50d2636e.tif,ImageSets\Res\7765f46303d3671de3b5308e50d2636e.tif,436,411,Residential Districts,High-rise Residential Buildings
+Com,7785c17c0e7e52d7810c4ce1149c50db.tif,ImageSets\Com\7785c17c0e7e52d7810c4ce1149c50db.tif,182,293,Commercial Zones,Office Campus
+Pub,77ce551038deb47c463527fd80003e04.tif,ImageSets\Pub\77ce551038deb47c463527fd80003e04.tif,186,144,Public Services,Educational and Research Institutions
+Res,786eb50e279065e7618f9caab0092dd0.tif,ImageSets\Res\786eb50e279065e7618f9caab0092dd0.tif,126,120,Residential Districts,Urban Villages
+Pub,7871565a3092ed0d5d5386608a87200b.tif,ImageSets\Pub\7871565a3092ed0d5d5386608a87200b.tif,109,131,Public Services,Educational and Research Institutions
+Ind,78b6d9efd9a72723356b78ad34eb472a.tif,ImageSets\Ind\78b6d9efd9a72723356b78ad34eb472a.tif,155,263,Industrial Land,Industrial Park and Factory
+Res,7a1334e41276554c40cd17606f7758ef.tif,ImageSets\Res\7a1334e41276554c40cd17606f7758ef.tif,269,228,Residential Districts,High-rise Residential Buildings
+Com,7a30fa5dde362527e4fc47c826eac5c8.tif,ImageSets\Com\7a30fa5dde362527e4fc47c826eac5c8.tif,196,168,Commercial Zones,Shopping Center and Commercial Street
+Ind,7a38b2920055d00f4ec6409b1f2b4c54.tif,ImageSets\Ind\7a38b2920055d00f4ec6409b1f2b4c54.tif,250,216,Industrial Land,Industrial Park and Factory
+Pub,7a4c12baadb5624919ed88bfa34748ca.tif,ImageSets\Pub\7a4c12baadb5624919ed88bfa34748ca.tif,864,283,Public Services,Educational and Research Institutions
+Ind,7a5c15bf66e2d5d749ae33abae4f6304.tif,ImageSets\Ind\7a5c15bf66e2d5d749ae33abae4f6304.tif,187,208,Industrial Land,Industrial Park and Factory
+Agr,7a84cb77faa559fa0fe59c5c878b325a.tif,ImageSets\Agr\7a84cb77faa559fa0fe59c5c878b325a.tif,1154,427,Agriculture and Nature,Farmland
+Pub,7a8749347f1e8789f856abbdad04d442.tif,ImageSets\Pub\7a8749347f1e8789f856abbdad04d442.tif,830,430,Public Services,Educational and Research Institutions
+Com,7ada75bb3fe163f4eacef61b45737337.tif,ImageSets\Com\7ada75bb3fe163f4eacef61b45737337.tif,119,174,Commercial Zones,Shopping Center and Commercial Street
+Com,7afd8f50da749f7cbf93e490e4908e59.tif,ImageSets\Com\7afd8f50da749f7cbf93e490e4908e59.tif,401,248,Commercial Zones,Office Campus
+Res,7b1ef6264693a10ee7210de32d1c4f18.tif,ImageSets\Res\7b1ef6264693a10ee7210de32d1c4f18.tif,168,118,Residential Districts,Villas and High-end Residences
+Com,7b5898f38ebc8630f732b3f9d29fe925.tif,ImageSets\Com\7b5898f38ebc8630f732b3f9d29fe925.tif,217,168,Commercial Zones,Shopping Center and Commercial Street
+Pub,7ba29beb97c24fb6569df5edf2ae3c9e.tif,ImageSets\Pub\7ba29beb97c24fb6569df5edf2ae3c9e.tif,104,313,Public Services,Parks and Squares
+Res,7ba70df24f89b0efd77654e4f551f115.tif,ImageSets\Res\7ba70df24f89b0efd77654e4f551f115.tif,216,136,Residential Districts,High-rise Residential Buildings
+Ind,7c1427f4c8b15000d09b2db8b27b974f.tif,ImageSets\Ind\7c1427f4c8b15000d09b2db8b27b974f.tif,239,213,Industrial Land,Industrial Park and Factory
+Res,7c579c9480c09a01dcc6c93b5dbe0caa.tif,ImageSets\Res\7c579c9480c09a01dcc6c93b5dbe0caa.tif,263,174,Residential Districts,High-rise Residential Buildings
+Agr,7c7366b92fd982c74f7efb93dc3416fe.tif,ImageSets\Agr\7c7366b92fd982c74f7efb93dc3416fe.tif,387,390,Agriculture and Nature,Farmland
+Com,7cf616f6127dc6a05220924f34645f87.tif,ImageSets\Com\7cf616f6127dc6a05220924f34645f87.tif,220,164,Commercial Zones,Office Campus
+Com,7d326534d3abdcf492f1049f8011b908.tif,ImageSets\Com\7d326534d3abdcf492f1049f8011b908.tif,144,153,Commercial Zones,Commercial Market
+Ind,7d470bda98721497f11359c1525de9e9.tif,ImageSets\Ind\7d470bda98721497f11359c1525de9e9.tif,491,340,Industrial Land,Industrial Park and Factory
+Com,7d6d9c4e91932ef281ece88f7bdc6f0b.tif,ImageSets\Com\7d6d9c4e91932ef281ece88f7bdc6f0b.tif,146,188,Commercial Zones,Business Tower
+Com,7d7e375b2928a61d326a6d81e7b29e9d.tif,ImageSets\Com\7d7e375b2928a61d326a6d81e7b29e9d.tif,398,341,Commercial Zones,Office Campus
+Ind,7d8d95ce2949bd2349664c49746743ef.tif,ImageSets\Ind\7d8d95ce2949bd2349664c49746743ef.tif,388,356,Industrial Land,Industrial Park and Factory
+Res,7e0f2cc9a76d87c0cbf447ce216ae257.tif,ImageSets\Res\7e0f2cc9a76d87c0cbf447ce216ae257.tif,252,261,Residential Districts,High-rise Residential Buildings
+Agr,7e9bea0e021388122683a350ce2f106f.tif,ImageSets\Agr\7e9bea0e021388122683a350ce2f106f.tif,158,182,Agriculture and Nature,Farmland
+Com,7eb1fda7a920a61c32be49c62eddcda7.tif,ImageSets\Com\7eb1fda7a920a61c32be49c62eddcda7.tif,265,251,Commercial Zones,Office Campus
+Ind,7eedb0d99afefba6110b8021d50de41a.tif,ImageSets\Ind\7eedb0d99afefba6110b8021d50de41a.tif,255,250,Industrial Land,Industrial Park and Factory
+Agr,7efd4da73a796364b5e08a70a69a0cc7.tif,ImageSets\Agr\7efd4da73a796364b5e08a70a69a0cc7.tif,410,164,Agriculture and Nature,Farmland
+Res,7f54e0db724c2726c81ca904754c14fe.tif,ImageSets\Res\7f54e0db724c2726c81ca904754c14fe.tif,189,209,Residential Districts,High-rise Residential Buildings
+Agr,7f80a6b6565dc5a9a34a34332a85fd80.tif,ImageSets\Agr\7f80a6b6565dc5a9a34a34332a85fd80.tif,357,214,Agriculture and Nature,Farmland
+Com,7fa606a1e3c97299ff9a1a07458fa926.tif,ImageSets\Com\7fa606a1e3c97299ff9a1a07458fa926.tif,156,165,Commercial Zones,Office Campus
+Res,7fb327e9547e63ea0fdaaf60be986132.tif,ImageSets\Res\7fb327e9547e63ea0fdaaf60be986132.tif,261,254,Residential Districts,High-rise Residential Buildings
+Agr,8002f151055817290bc990dafba62ceb.tif,ImageSets\Agr\8002f151055817290bc990dafba62ceb.tif,765,538,Agriculture and Nature,Wasteland
+Pub,8021c6b070d0e52ff71e8da2c4e9ca42.tif,ImageSets\Pub\8021c6b070d0e52ff71e8da2c4e9ca42.tif,229,164,Public Services,Parks and Squares
+Agr,8041eef8b61a7a887fe6f4125e3050da.tif,ImageSets\Agr\8041eef8b61a7a887fe6f4125e3050da.tif,999,563,Agriculture and Nature,Mountain
+Ind,80d7ebe04b4c28e53a5b090a903bd328.tif,ImageSets\Ind\80d7ebe04b4c28e53a5b090a903bd328.tif,239,182,Industrial Land,Industrial Park and Factory
+Res,80f4e105e1c4e253ad5390515fb0a5ff.tif,ImageSets\Res\80f4e105e1c4e253ad5390515fb0a5ff.tif,217,306,Residential Districts,High-rise Residential Buildings
+Res,81187dadf63694aae2501d5742b73ccf.tif,ImageSets\Res\81187dadf63694aae2501d5742b73ccf.tif,194,184,Residential Districts,High-rise Residential Buildings
+Res,8157019d5a9ed8c490594caac34ca50e.tif,ImageSets\Res\8157019d5a9ed8c490594caac34ca50e.tif,278,380,Residential Districts,High-rise Residential Buildings
+Res,81d1bcd6997cb208ddc0a1b20b811376.tif,ImageSets\Res\81d1bcd6997cb208ddc0a1b20b811376.tif,303,206,Residential Districts,High-rise Residential Buildings
+Agr,820f1c32519e049a10c817f06a4b550b.tif,ImageSets\Agr\820f1c32519e049a10c817f06a4b550b.tif,1091,450,Agriculture and Nature,Water
+Com,827d84fc5600956312357725c82c2f62.tif,ImageSets\Com\827d84fc5600956312357725c82c2f62.tif,126,161,Commercial Zones,Office Campus
+Com,82a1eabe9c9c2f4e890c9d1efde95be1.tif,ImageSets\Com\82a1eabe9c9c2f4e890c9d1efde95be1.tif,281,284,Commercial Zones,Office Campus
+Pub,839b918309928cabac232cc685a5ef4f.tif,ImageSets\Pub\839b918309928cabac232cc685a5ef4f.tif,410,236,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,83a53e2a3456b693fdbdd33298fec710.tif,ImageSets\Agr\83a53e2a3456b693fdbdd33298fec710.tif,417,280,Agriculture and Nature,Farmland
+Res,83b3d9c2a68b6434a9fccc547e1cf8e7.tif,ImageSets\Res\83b3d9c2a68b6434a9fccc547e1cf8e7.tif,102,104,Residential Districts,High-rise Residential Buildings
+Com,83f25dd3e7a3fa94638483bbfd104ef0.tif,ImageSets\Com\83f25dd3e7a3fa94638483bbfd104ef0.tif,131,134,Commercial Zones,Business Tower
+Pub,84436b83730fd4a0e247a9872bfe8570.tif,ImageSets\Pub\84436b83730fd4a0e247a9872bfe8570.tif,263,125,Public Services,Parks and Squares
+Com,8469124fb16249148a3cbe35b514d5a6.tif,ImageSets\Com\8469124fb16249148a3cbe35b514d5a6.tif,265,169,Commercial Zones,Shopping Center and Commercial Street
+Agr,84d07b96f92d1a152ac3db9444103e74.tif,ImageSets\Agr\84d07b96f92d1a152ac3db9444103e74.tif,498,371,Agriculture and Nature,Farmland
+Agr,8532049e4909bebc83878110f8ac803e.tif,ImageSets\Agr\8532049e4909bebc83878110f8ac803e.tif,180,234,Agriculture and Nature,Wasteland
+Ind,8540cbe0a0ab70b28f536b6d519790b2.tif,ImageSets\Ind\8540cbe0a0ab70b28f536b6d519790b2.tif,256,227,Industrial Land,Industrial Park and Factory
+Res,85ff686244cb5e8f8c5598c1123fae11.tif,ImageSets\Res\85ff686244cb5e8f8c5598c1123fae11.tif,165,168,Residential Districts,High-rise Residential Buildings
+Pub,861bffdd057c7f34128f3a46dd5dcb81.tif,ImageSets\Pub\861bffdd057c7f34128f3a46dd5dcb81.tif,268,124,Public Services,Parks and Squares
+Ind,863091f8112798f2f2d33b0c362c99f4.tif,ImageSets\Ind\863091f8112798f2f2d33b0c362c99f4.tif,161,147,Industrial Land,Industrial Park and Factory
+Com,86834e8a68bf0530932e1d682c38564f.tif,ImageSets\Com\86834e8a68bf0530932e1d682c38564f.tif,115,149,Commercial Zones,Office Campus
+Ind,86f98062665d6ed3b191d44b7acb3c92.tif,ImageSets\Ind\86f98062665d6ed3b191d44b7acb3c92.tif,142,134,Industrial Land,Industrial Park and Factory
+Res,8740cad3f622a5edf75886f83214dd01.tif,ImageSets\Res\8740cad3f622a5edf75886f83214dd01.tif,290,316,Residential Districts,High-rise Residential Buildings
+Agr,878760bd1d45a1e262db3433281efd91.tif,ImageSets\Agr\878760bd1d45a1e262db3433281efd91.tif,1063,1343,Agriculture and Nature,Farmland
+Agr,87b7ec14d1c6bab38aeb467a9b697836.tif,ImageSets\Agr\87b7ec14d1c6bab38aeb467a9b697836.tif,1026,414,Agriculture and Nature,Mountain
+Ind,880978987b2d60460f1ec9bf496874ea.tif,ImageSets\Ind\880978987b2d60460f1ec9bf496874ea.tif,219,255,Industrial Land,Industrial Park and Factory
+Res,8818f398a5e92553f386ea1d4185003a.tif,ImageSets\Res\8818f398a5e92553f386ea1d4185003a.tif,125,209,Residential Districts,High-rise Residential Buildings
+Com,8831f74e609f7231ca807ac3c6da764f.tif,ImageSets\Com\8831f74e609f7231ca807ac3c6da764f.tif,123,137,Commercial Zones,Shopping Center and Commercial Street
+Ind,884327b4ffa361725b0310b35f515637.tif,ImageSets\Ind\884327b4ffa361725b0310b35f515637.tif,206,216,Industrial Land,Industrial Park and Factory
+Pub,88740cf0add22fc89f6156480d857f0e.tif,ImageSets\Pub\88740cf0add22fc89f6156480d857f0e.tif,113,105,Public Services,Educational and Research Institutions
+Res,8877cd6f5afd136c368a4df03758b142.tif,ImageSets\Res\8877cd6f5afd136c368a4df03758b142.tif,172,147,Residential Districts,High-rise Residential Buildings
+Com,88ffa815e32a3995ca2337cab78b0c9f.tif,ImageSets\Com\88ffa815e32a3995ca2337cab78b0c9f.tif,225,197,Commercial Zones,Commercial Market
+Agr,890a8f5b91227e657276fa7c667191a2.tif,ImageSets\Agr\890a8f5b91227e657276fa7c667191a2.tif,285,203,Agriculture and Nature,Farmland
+Res,8a1f44601d698083cef46a87b9cd1ea0.tif,ImageSets\Res\8a1f44601d698083cef46a87b9cd1ea0.tif,175,184,Residential Districts,High-rise Residential Buildings
+Ind,8a2eff109c2b4f17723942aef5253464.tif,ImageSets\Ind\8a2eff109c2b4f17723942aef5253464.tif,331,273,Industrial Land,Industrial Park and Factory
+Com,8c0c55e9160f7b336e2c8f65077cd515.tif,ImageSets\Com\8c0c55e9160f7b336e2c8f65077cd515.tif,223,219,Commercial Zones,Office Campus
+Agr,8c3eec9dd2dd4ce8b7ca57ff3c141444.tif,ImageSets\Agr\8c3eec9dd2dd4ce8b7ca57ff3c141444.tif,281,331,Agriculture and Nature,Forestland and Grassland
+Agr,8c607887278b0e5e0abb9e0cebcedd41.tif,ImageSets\Agr\8c607887278b0e5e0abb9e0cebcedd41.tif,198,206,Agriculture and Nature,Forestland and Grassland
+Ind,8cfbb64491e7d00d948586d50afd54ca.tif,ImageSets\Ind\8cfbb64491e7d00d948586d50afd54ca.tif,235,272,Industrial Land,Industrial Park and Factory
+Com,8d43159072d2e035784634ee6595ada0.tif,ImageSets\Com\8d43159072d2e035784634ee6595ada0.tif,167,139,Commercial Zones,Office Campus
+Res,8da1c4158ae6025dfa7366088366ba3b.tif,ImageSets\Res\8da1c4158ae6025dfa7366088366ba3b.tif,180,113,Residential Districts,High-rise Residential Buildings
+Res,8db7492761947600fdf8dcd8d13a4fd0.tif,ImageSets\Res\8db7492761947600fdf8dcd8d13a4fd0.tif,297,240,Residential Districts,High-rise Residential Buildings
+Com,8ddc5e2bc69a7feedaad7361f1d92820.tif,ImageSets\Com\8ddc5e2bc69a7feedaad7361f1d92820.tif,198,179,Commercial Zones,Commercial Entertainment
+Agr,8ddda8bedab5a898f8098364b62563f4.tif,ImageSets\Agr\8ddda8bedab5a898f8098364b62563f4.tif,169,130,Agriculture and Nature,Water
+Pub,8de07023fa1dbb28b4a8247be05f71ff.tif,ImageSets\Pub\8de07023fa1dbb28b4a8247be05f71ff.tif,287,326,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Ind,8e64692f72370149ae75f6190f1a5c41.tif,ImageSets\Ind\8e64692f72370149ae75f6190f1a5c41.tif,163,148,Industrial Land,Industrial Park and Factory
+Res,8ea1336f41611778d26e9c0c753572ef.tif,ImageSets\Res\8ea1336f41611778d26e9c0c753572ef.tif,429,294,Residential Districts,High-rise Residential Buildings
+Agr,8f19d1b8979d892e2037109ad86fa4bf.tif,ImageSets\Agr\8f19d1b8979d892e2037109ad86fa4bf.tif,3738,3236,Agriculture and Nature,Mountain
+Res,8f1b6c062c7cac66478534cb6995a8a6.tif,ImageSets\Res\8f1b6c062c7cac66478534cb6995a8a6.tif,160,177,Residential Districts,High-rise Residential Buildings
+Com,8f3eaacad01d9b964e81add772f4eae9.tif,ImageSets\Com\8f3eaacad01d9b964e81add772f4eae9.tif,581,517,Commercial Zones,Office Campus
+Agr,8f6ff41b6187e310d7da87c8c5a9ca8d.tif,ImageSets\Agr\8f6ff41b6187e310d7da87c8c5a9ca8d.tif,211,140,Agriculture and Nature,Forestland and Grassland
+Ind,8fa227b2f01807b83a027898a74a86dd.tif,ImageSets\Ind\8fa227b2f01807b83a027898a74a86dd.tif,378,227,Industrial Land,Industrial Park and Factory
+Pub,8fc6889d386b5cfee73551d6bf8422d5.tif,ImageSets\Pub\8fc6889d386b5cfee73551d6bf8422d5.tif,367,357,Public Services,Educational and Research Institutions
+Ind,8fe85a188be7c24f12134a4688d90dac.tif,ImageSets\Ind\8fe85a188be7c24f12134a4688d90dac.tif,207,190,Industrial Land,Industrial Park and Factory
+Res,8ff6a0a22d2382bc0361ffe0f4f19817.tif,ImageSets\Res\8ff6a0a22d2382bc0361ffe0f4f19817.tif,140,196,Residential Districts,High-rise Residential Buildings
+Pub,9155fc9da3a068046313c8f83f4bfa1a.tif,ImageSets\Pub\9155fc9da3a068046313c8f83f4bfa1a.tif,343,188,Public Services,Parks and Squares
+Ind,9178cc6d35968f3125bd7b029d3d329f.tif,ImageSets\Ind\9178cc6d35968f3125bd7b029d3d329f.tif,207,160,Industrial Land,Industrial Park and Factory
+Ind,91b12067a48dbbc0d4a108a2e52ee246.tif,ImageSets\Ind\91b12067a48dbbc0d4a108a2e52ee246.tif,171,165,Industrial Land,Industrial Park and Factory
+Res,9205df235c380d32097fd1ff8a4f4e22.tif,ImageSets\Res\9205df235c380d32097fd1ff8a4f4e22.tif,222,257,Residential Districts,Villas and High-end Residences
+Pub,922c9d5e052f9956171ec46af168d6c8.tif,ImageSets\Pub\922c9d5e052f9956171ec46af168d6c8.tif,125,165,Public Services,Educational and Research Institutions
+Ind,9305c03e727d5e833477be23e10e43ab.tif,ImageSets\Ind\9305c03e727d5e833477be23e10e43ab.tif,167,172,Industrial Land,Industrial Park and Factory
+Agr,93771c6ab891d367fd68f3e3bc5fb065.tif,ImageSets\Agr\93771c6ab891d367fd68f3e3bc5fb065.tif,1110,927,Agriculture and Nature,Mountain
+Agr,93bc6873bb39f94fc8cb95ba8124a370.tif,ImageSets\Agr\93bc6873bb39f94fc8cb95ba8124a370.tif,154,136,Agriculture and Nature,Forestland and Grassland
+Ind,9456397d670b69d6b17836c21b1bdb22.tif,ImageSets\Ind\9456397d670b69d6b17836c21b1bdb22.tif,614,441,Industrial Land,Industrial Park and Factory
+Com,94694fcbbe9469745a5f595854208c6b.tif,ImageSets\Com\94694fcbbe9469745a5f595854208c6b.tif,263,212,Commercial Zones,Office Campus
+Agr,94b736fc85fe1f0f840234f3d8528f64.tif,ImageSets\Agr\94b736fc85fe1f0f840234f3d8528f64.tif,365,366,Agriculture and Nature,Wasteland
+Ind,94bb680c9746f5d55737ca9e9b5a13d1.tif,ImageSets\Ind\94bb680c9746f5d55737ca9e9b5a13d1.tif,124,238,Industrial Land,Construction Site
+Ind,94edaac468a48fd9760ea67aa39aa0e4.tif,ImageSets\Ind\94edaac468a48fd9760ea67aa39aa0e4.tif,439,141,Industrial Land,Industrial Park and Factory
+Agr,95949406729730be25646c25912157b6.tif,ImageSets\Agr\95949406729730be25646c25912157b6.tif,253,521,Agriculture and Nature,Forestland and Grassland
+Res,95aef3376a00d632a363b1f0d1542476.tif,ImageSets\Res\95aef3376a00d632a363b1f0d1542476.tif,266,249,Residential Districts,High-rise Residential Buildings
+Res,95bf921cef91adfd987557aa7ab161ea.tif,ImageSets\Res\95bf921cef91adfd987557aa7ab161ea.tif,389,206,Residential Districts,High-rise Residential Buildings
+Pub,9640104543b884ceefca02c59242da19.tif,ImageSets\Pub\9640104543b884ceefca02c59242da19.tif,131,164,Public Services,Educational and Research Institutions
+Agr,9655fb323609224e36fddacbcd0de809.tif,ImageSets\Agr\9655fb323609224e36fddacbcd0de809.tif,470,479,Agriculture and Nature,Wasteland
+Res,9684d7e61c09a45905d401651d98fea5.tif,ImageSets\Res\9684d7e61c09a45905d401651d98fea5.tif,171,179,Residential Districts,High-rise Residential Buildings
+Res,96fb5294b1daa33862cd27957df015aa.tif,ImageSets\Res\96fb5294b1daa33862cd27957df015aa.tif,112,177,Residential Districts,Villas and High-end Residences
+Pub,9704808c5b7c57d1863bff30871292ff.tif,ImageSets\Pub\9704808c5b7c57d1863bff30871292ff.tif,188,297,Public Services,Educational and Research Institutions
+Res,971a70a6e118238d784d23f91901715a.tif,ImageSets\Res\971a70a6e118238d784d23f91901715a.tif,418,326,Residential Districts,High-rise Residential Buildings
+Agr,9723a457ae8a9504d9528af7e7462b42.tif,ImageSets\Agr\9723a457ae8a9504d9528af7e7462b42.tif,121,123,Agriculture and Nature,Forestland and Grassland
+Pub,972cea364829497b1622ac60bd477417.tif,ImageSets\Pub\972cea364829497b1622ac60bd477417.tif,689,1095,Public Services,Educational and Research Institutions
+Ind,97539f57ed1fcc066e0ab6f82da484ea.tif,ImageSets\Ind\97539f57ed1fcc066e0ab6f82da484ea.tif,114,146,Industrial Land,Industrial Park and Factory
+Agr,982fcfe6d365fd65a4a38c59bc2913a6.tif,ImageSets\Agr\982fcfe6d365fd65a4a38c59bc2913a6.tif,324,344,Agriculture and Nature,Mountain
+Res,98353859880827546b7eab40cd0ede44.tif,ImageSets\Res\98353859880827546b7eab40cd0ede44.tif,385,427,Residential Districts,High-rise Residential Buildings
+Pub,983de94f6622305f52488d8eb178bc2e.tif,ImageSets\Pub\983de94f6622305f52488d8eb178bc2e.tif,185,85,Public Services,Parks and Squares
+Com,9912bfbd9d3501160b06afdcd0074108.tif,ImageSets\Com\9912bfbd9d3501160b06afdcd0074108.tif,168,140,Commercial Zones,Commercial Market
+Res,99586e08658121d793d9385245ada43c.tif,ImageSets\Res\99586e08658121d793d9385245ada43c.tif,360,286,Residential Districts,High-rise Residential Buildings
+Ind,99cf51413062e15be632cc052fc05e14.tif,ImageSets\Ind\99cf51413062e15be632cc052fc05e14.tif,252,296,Industrial Land,Industrial Park and Factory
+Agr,9a349e04df3fea0f62cad938776b8057.tif,ImageSets\Agr\9a349e04df3fea0f62cad938776b8057.tif,1684,1181,Agriculture and Nature,Farmland
+Pub,9a420b1f92c2a8bead1265eab64a0d70.tif,ImageSets\Pub\9a420b1f92c2a8bead1265eab64a0d70.tif,195,169,Public Services,Educational and Research Institutions
+Pub,9a740e7b5391a8af20424a9ad2ed2712.tif,ImageSets\Pub\9a740e7b5391a8af20424a9ad2ed2712.tif,234,220,Public Services,Educational and Research Institutions
+Agr,9a765952834716c6128ed3406692d062.tif,ImageSets\Agr\9a765952834716c6128ed3406692d062.tif,351,227,Agriculture and Nature,Forestland and Grassland
+Pub,9aca9b6832d8ca13b545c10d689df917.tif,ImageSets\Pub\9aca9b6832d8ca13b545c10d689df917.tif,312,382,Public Services,Educational and Research Institutions
+Res,9ae98d8f464475c2197dca02a023e0f4.tif,ImageSets\Res\9ae98d8f464475c2197dca02a023e0f4.tif,146,132,Residential Districts,High-rise Residential Buildings
+Pub,9b0bb8f91fc7080979ae23f264b0deb4.tif,ImageSets\Pub\9b0bb8f91fc7080979ae23f264b0deb4.tif,208,198,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Res,9b813c9390ff5f6a6e2889a469e507ff.tif,ImageSets\Res\9b813c9390ff5f6a6e2889a469e507ff.tif,209,120,Residential Districts,High-rise Residential Buildings
+Com,9c16b0337b2081be2154a66c5313357f.tif,ImageSets\Com\9c16b0337b2081be2154a66c5313357f.tif,149,162,Commercial Zones,Business Tower
+Pub,9c475be3619c542e3856483f02ca9296.tif,ImageSets\Pub\9c475be3619c542e3856483f02ca9296.tif,801,320,Public Services,Parks and Squares
+Res,9c6b3240864171c29cc81beefd4e2168.tif,ImageSets\Res\9c6b3240864171c29cc81beefd4e2168.tif,433,432,Residential Districts,Urban Villages
+Agr,9ca114ebae13f4b24337a9a5dc215ef5.tif,ImageSets\Agr\9ca114ebae13f4b24337a9a5dc215ef5.tif,974,764,Agriculture and Nature,Farmland
+Agr,9cb633d1556be937c47da3315c181a02.tif,ImageSets\Agr\9cb633d1556be937c47da3315c181a02.tif,1449,1886,Agriculture and Nature,Mountain
+Ind,9cea5ec441bc3f48934f258cc96b340a.tif,ImageSets\Ind\9cea5ec441bc3f48934f258cc96b340a.tif,289,306,Industrial Land,Industrial Park and Factory
+Pub,9d22b4e1f2aee9f15ea731bf971480f1.tif,ImageSets\Pub\9d22b4e1f2aee9f15ea731bf971480f1.tif,217,193,Public Services,Educational and Research Institutions
+Pub,9d399ed76ab62931c5a679c5d342a37c.tif,ImageSets\Pub\9d399ed76ab62931c5a679c5d342a37c.tif,229,193,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,9d91278e6cab8b6a9284729235bfa48f.tif,ImageSets\Agr\9d91278e6cab8b6a9284729235bfa48f.tif,468,544,Agriculture and Nature,Water
+Ind,9dae9bbcfebd5c3cd8053070c67bb39b.tif,ImageSets\Ind\9dae9bbcfebd5c3cd8053070c67bb39b.tif,114,116,Industrial Land,Construction Site
+Agr,9dff5115d4b9db7a30d32746ac4a5cf5.tif,ImageSets\Agr\9dff5115d4b9db7a30d32746ac4a5cf5.tif,865,524,Agriculture and Nature,Farmland
+Ind,9e177258c6eeafedccfe9bfc1e7ce4da.tif,ImageSets\Ind\9e177258c6eeafedccfe9bfc1e7ce4da.tif,204,251,Industrial Land,Construction Site
+Agr,9e9b92e5d8f39fcd79fa4ee50ec019b6.tif,ImageSets\Agr\9e9b92e5d8f39fcd79fa4ee50ec019b6.tif,253,325,Agriculture and Nature,Forestland and Grassland
+Ind,9ec3afe98c000f8b50efff27486fa0d8.tif,ImageSets\Ind\9ec3afe98c000f8b50efff27486fa0d8.tif,297,260,Industrial Land,Industrial Park and Factory
+Ind,9f86b4a16328df77e726b41114e75a24.tif,ImageSets\Ind\9f86b4a16328df77e726b41114e75a24.tif,424,247,Industrial Land,Industrial Park and Factory
+Com,9fd0804606f9af56f427fb76462c2e68.tif,ImageSets\Com\9fd0804606f9af56f427fb76462c2e68.tif,200,243,Commercial Zones,Office Campus
+Ind,a012e285bbb3a3f84100298070e6c06d.tif,ImageSets\Ind\a012e285bbb3a3f84100298070e6c06d.tif,117,121,Industrial Land,Industrial Park and Factory
+Com,a04e24a7fe241ed2a16b7f771047dba1.tif,ImageSets\Com\a04e24a7fe241ed2a16b7f771047dba1.tif,159,170,Commercial Zones,Commercial Market
+Agr,a0704a28ba434f93aefa80b004c02d89.tif,ImageSets\Agr\a0704a28ba434f93aefa80b004c02d89.tif,2088,527,Agriculture and Nature,Farmland
+Agr,a0a1f525c3243d84adce773c42fdef25.tif,ImageSets\Agr\a0a1f525c3243d84adce773c42fdef25.tif,194,242,Agriculture and Nature,Wasteland
+Pub,a0e13d6e914023caea5317306b212ffc.tif,ImageSets\Pub\a0e13d6e914023caea5317306b212ffc.tif,316,256,Public Services,Educational and Research Institutions
+Res,a116b41d1911d389fb7267317e53a0cf.tif,ImageSets\Res\a116b41d1911d389fb7267317e53a0cf.tif,114,124,Residential Districts,High-rise Residential Buildings
+Agr,a1e07f56ed82c0da096158c649aff848.tif,ImageSets\Agr\a1e07f56ed82c0da096158c649aff848.tif,1552,2319,Agriculture and Nature,Farmland
+Ind,a22ad2942def88637a72f1ad17ddd6f0.tif,ImageSets\Ind\a22ad2942def88637a72f1ad17ddd6f0.tif,392,342,Industrial Land,Industrial Park and Factory
+Com,a22d4e8c912546f0db6075a491cffac5.tif,ImageSets\Com\a22d4e8c912546f0db6075a491cffac5.tif,346,307,Commercial Zones,Office Campus
+Com,a2812888504fb42f2e95d1c2c90de37b.tif,ImageSets\Com\a2812888504fb42f2e95d1c2c90de37b.tif,196,228,Commercial Zones,Office Campus
+Res,a2c9be40215d0b7c6cc0b448cba3fc2a.tif,ImageSets\Res\a2c9be40215d0b7c6cc0b448cba3fc2a.tif,123,140,Residential Districts,High-rise Residential Buildings
+Com,a2cba6ed813e34b68275c99d2c0839ae.tif,ImageSets\Com\a2cba6ed813e34b68275c99d2c0839ae.tif,173,132,Commercial Zones,Hotel
+Res,a2ceb9046b6826a684142a35c83edf2e.tif,ImageSets\Res\a2ceb9046b6826a684142a35c83edf2e.tif,322,211,Residential Districts,High-rise Residential Buildings
+Pub,a354c46dabed2d89169c7c809cc249ac.tif,ImageSets\Pub\a354c46dabed2d89169c7c809cc249ac.tif,146,151,Public Services,Parks and Squares
+Ind,a37a4dbdfc8b68ae7644869167c06de7.tif,ImageSets\Ind\a37a4dbdfc8b68ae7644869167c06de7.tif,732,696,Industrial Land,Industrial Park and Factory
+Com,a3a760f7f2f881adb1edc3d7fe605f43.tif,ImageSets\Com\a3a760f7f2f881adb1edc3d7fe605f43.tif,195,180,Commercial Zones,Office Campus
+Ind,a3af26378fd1c9ad3ef94d40b6648903.tif,ImageSets\Ind\a3af26378fd1c9ad3ef94d40b6648903.tif,561,178,Industrial Land,Construction Site
+Agr,a46cb987a523b65168b4f6b1a2377e0b.tif,ImageSets\Agr\a46cb987a523b65168b4f6b1a2377e0b.tif,5478,4337,Agriculture and Nature,Mountain
+Agr,a4a2dd1adc7119f1832243d82383637f.tif,ImageSets\Agr\a4a2dd1adc7119f1832243d82383637f.tif,1047,972,Agriculture and Nature,Farmland
+Ind,a54ca81883328d1d266cfcb03b9c6669.tif,ImageSets\Ind\a54ca81883328d1d266cfcb03b9c6669.tif,203,143,Industrial Land,Industrial Park and Factory
+Pub,a5d3e836ec09e61633cef15443702b53.tif,ImageSets\Pub\a5d3e836ec09e61633cef15443702b53.tif,948,696,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Res,a5fc492e0442831ce857be8db210bb4a.tif,ImageSets\Res\a5fc492e0442831ce857be8db210bb4a.tif,271,322,Residential Districts,Urban Villages
+Ind,a6804078b16d5f6774b7fe23888ee1dd.tif,ImageSets\Ind\a6804078b16d5f6774b7fe23888ee1dd.tif,600,498,Industrial Land,Industrial Park and Factory
+Res,a684f1b077a220e1f0191ec37067e447.tif,ImageSets\Res\a684f1b077a220e1f0191ec37067e447.tif,166,138,Residential Districts,High-rise Residential Buildings
+Res,a68b841f9578381f7280ee7f057a31ce.tif,ImageSets\Res\a68b841f9578381f7280ee7f057a31ce.tif,174,231,Residential Districts,High-rise Residential Buildings
+Ind,a68c33a8f3b496e807183b2d5858089c.tif,ImageSets\Ind\a68c33a8f3b496e807183b2d5858089c.tif,188,152,Industrial Land,Industrial Park and Factory
+Ind,a690b477efa9719bb2e577c8fab40f78.tif,ImageSets\Ind\a690b477efa9719bb2e577c8fab40f78.tif,394,189,Industrial Land,Industrial Park and Factory
+Com,a6c61fc84e24c4e4d68db56d40afce9f.tif,ImageSets\Com\a6c61fc84e24c4e4d68db56d40afce9f.tif,157,134,Commercial Zones,Office Campus
+Ind,a744f30c6dec0e78d1178649a166c085.tif,ImageSets\Ind\a744f30c6dec0e78d1178649a166c085.tif,174,141,Industrial Land,Industrial Park and Factory
+Pub,a786d99d1367745325546bbfa59f6e23.tif,ImageSets\Pub\a786d99d1367745325546bbfa59f6e23.tif,175,189,Public Services,Educational and Research Institutions
+Res,a7d575bb5858acdc47424daebe4ac793.tif,ImageSets\Res\a7d575bb5858acdc47424daebe4ac793.tif,565,341,Residential Districts,High-rise Residential Buildings
+Agr,a8008307c7f2270faa42ba4e42e07a4c.tif,ImageSets\Agr\a8008307c7f2270faa42ba4e42e07a4c.tif,223,121,Agriculture and Nature,Forestland and Grassland
+Com,a86821f795f8df296da3a0e9f4300f47.tif,ImageSets\Com\a86821f795f8df296da3a0e9f4300f47.tif,237,216,Commercial Zones,Office Campus
+Res,a91cc69f6074fb3bf49305e8b255e7db.tif,ImageSets\Res\a91cc69f6074fb3bf49305e8b255e7db.tif,206,233,Residential Districts,Villas and High-end Residences
+Res,a990cc9327800e5e4da8b17de23744ff.tif,ImageSets\Res\a990cc9327800e5e4da8b17de23744ff.tif,114,173,Residential Districts,High-rise Residential Buildings
+Com,a9decaf3ac4133651591e1ab8c00c229.tif,ImageSets\Com\a9decaf3ac4133651591e1ab8c00c229.tif,113,110,Commercial Zones,Business Tower
+Com,aa11910a5bf319908619281ec2bcbb6e.tif,ImageSets\Com\aa11910a5bf319908619281ec2bcbb6e.tif,191,140,Commercial Zones,Shopping Center and Commercial Street
+Com,aa20c478eedd0b7b8537a62b0dbe59bf.tif,ImageSets\Com\aa20c478eedd0b7b8537a62b0dbe59bf.tif,269,228,Commercial Zones,Office Campus
+Res,aaedb41ea2ed476789fd64845fbbe720.tif,ImageSets\Res\aaedb41ea2ed476789fd64845fbbe720.tif,107,108,Residential Districts,High-rise Residential Buildings
+Pub,ab36e89620b126675830bf0f1c8c1484.tif,ImageSets\Pub\ab36e89620b126675830bf0f1c8c1484.tif,223,226,Public Services,Educational and Research Institutions
+Agr,ab6807b2d73de3f2691040af290cd9ce.tif,ImageSets\Agr\ab6807b2d73de3f2691040af290cd9ce.tif,490,353,Agriculture and Nature,Farmland
+Pub,ab77a68bfcd37c889eaa5d5e6a77aa99.tif,ImageSets\Pub\ab77a68bfcd37c889eaa5d5e6a77aa99.tif,454,340,Public Services,Parks and Squares
+Ind,ac0083977535bb1a2ed4e6cae4b16ca5.tif,ImageSets\Ind\ac0083977535bb1a2ed4e6cae4b16ca5.tif,231,274,Industrial Land,Industrial Park and Factory
+Pub,ac01ef258f17de710a65405ffe409944.tif,ImageSets\Pub\ac01ef258f17de710a65405ffe409944.tif,186,216,Public Services,Educational and Research Institutions
+Res,ac7d2414c6c93d17433bee5fdc182de1.tif,ImageSets\Res\ac7d2414c6c93d17433bee5fdc182de1.tif,176,178,Residential Districts,High-rise Residential Buildings
+Pub,ad1f26b7c8c66bf380bfce974c51c663.tif,ImageSets\Pub\ad1f26b7c8c66bf380bfce974c51c663.tif,154,165,Public Services,Parks and Squares
+Agr,ad675d7b00a8b6a7c700ed9a692f44c4.tif,ImageSets\Agr\ad675d7b00a8b6a7c700ed9a692f44c4.tif,216,205,Agriculture and Nature,Forestland and Grassland
+Agr,adc8623f6f3e720c396ed6383d753b34.tif,ImageSets\Agr\adc8623f6f3e720c396ed6383d753b34.tif,312,197,Agriculture and Nature,Forestland and Grassland
+Ind,add847d83dc3c2b2a06233cf57a18241.tif,ImageSets\Ind\add847d83dc3c2b2a06233cf57a18241.tif,170,189,Industrial Land,Industrial Park and Factory
+Res,af3e38234ab9edf5b8f45b7f8b1f899e.tif,ImageSets\Res\af3e38234ab9edf5b8f45b7f8b1f899e.tif,158,285,Residential Districts,High-rise Residential Buildings
+Res,af60fee10535d1e041a3f26fdad0bfef.tif,ImageSets\Res\af60fee10535d1e041a3f26fdad0bfef.tif,172,231,Residential Districts,High-rise Residential Buildings
+Pub,af64a6e486e572017d8b449655e133b9.tif,ImageSets\Pub\af64a6e486e572017d8b449655e133b9.tif,176,119,Public Services,Educational and Research Institutions
+Ind,af780d3c9eedc663120183c0667b6b52.tif,ImageSets\Ind\af780d3c9eedc663120183c0667b6b52.tif,126,132,Industrial Land,Industrial Park and Factory
+Pub,afa4172029db28ef14605627b4491a91.tif,ImageSets\Pub\afa4172029db28ef14605627b4491a91.tif,138,120,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Com,afab00ea33f1330cfea5eb155a5d5885.tif,ImageSets\Com\afab00ea33f1330cfea5eb155a5d5885.tif,184,177,Commercial Zones,Business Tower
+Ind,afba54383f60c998061a90576935f704.tif,ImageSets\Ind\afba54383f60c998061a90576935f704.tif,200,210,Industrial Land,Industrial Park and Factory
+Res,afe119376ec8d4065882a28c7c892416.tif,ImageSets\Res\afe119376ec8d4065882a28c7c892416.tif,233,237,Residential Districts,Villas and High-end Residences
+Pub,afe1625fc1ac7f0420749d3b708538fa.tif,ImageSets\Pub\afe1625fc1ac7f0420749d3b708538fa.tif,251,172,Public Services,Educational and Research Institutions
+Ind,b01f86e3bfd48886de785d5e3f532f2b.tif,ImageSets\Ind\b01f86e3bfd48886de785d5e3f532f2b.tif,722,903,Industrial Land,Industrial Park and Factory
+Com,b025a99af0f41723b8fd8d460edffefe.tif,ImageSets\Com\b025a99af0f41723b8fd8d460edffefe.tif,126,153,Commercial Zones,Business Tower
+Pub,b03ba0f8f4a1833e68d82891d85da7a1.tif,ImageSets\Pub\b03ba0f8f4a1833e68d82891d85da7a1.tif,135,147,Public Services,Parks and Squares
+Agr,b0709bcb663389fbae1c9b22424d28aa.tif,ImageSets\Agr\b0709bcb663389fbae1c9b22424d28aa.tif,804,575,Agriculture and Nature,Farmland
+Ind,b10addca1ba788c33367800d14b64adf.tif,ImageSets\Ind\b10addca1ba788c33367800d14b64adf.tif,726,1199,Industrial Land,Industrial Park and Factory
+Ind,b120c78878ade6e3e82a0b11d82fb9dd.tif,ImageSets\Ind\b120c78878ade6e3e82a0b11d82fb9dd.tif,144,136,Industrial Land,Industrial Park and Factory
+Com,b22bbc72f6946d5c3b8bf1d4b9df8589.tif,ImageSets\Com\b22bbc72f6946d5c3b8bf1d4b9df8589.tif,425,266,Commercial Zones,Office Campus
+Com,b22d8a5eac266c0ba653720736db15ec.tif,ImageSets\Com\b22d8a5eac266c0ba653720736db15ec.tif,299,240,Commercial Zones,Office Campus
+Agr,b2afc22d8289253fb802606acc666a78.tif,ImageSets\Agr\b2afc22d8289253fb802606acc666a78.tif,200,306,Agriculture and Nature,Farmland
+Res,b2c189960fed0941b70da9603117d873.tif,ImageSets\Res\b2c189960fed0941b70da9603117d873.tif,257,174,Residential Districts,High-rise Residential Buildings
+Agr,b2fc2eaf33dcad570a67bf6bb76d0245.tif,ImageSets\Agr\b2fc2eaf33dcad570a67bf6bb76d0245.tif,160,162,Agriculture and Nature,Wasteland
+Res,b31abb058112f4e5d77b19eb77775673.tif,ImageSets\Res\b31abb058112f4e5d77b19eb77775673.tif,127,156,Residential Districts,High-rise Residential Buildings
+Res,b36d8fa24fdb3868fd166e22c4bf26d1.tif,ImageSets\Res\b36d8fa24fdb3868fd166e22c4bf26d1.tif,285,329,Residential Districts,High-rise Residential Buildings
+Agr,b38bdd11fa22778ac015f4e748095f5d.tif,ImageSets\Agr\b38bdd11fa22778ac015f4e748095f5d.tif,154,594,Agriculture and Nature,Forestland and Grassland
+Pub,b3904de855ec8f4c98ab20dfc378e874.tif,ImageSets\Pub\b3904de855ec8f4c98ab20dfc378e874.tif,599,782,Public Services,Parks and Squares
+Res,b42aac5a1fab092508146528ddb4b482.tif,ImageSets\Res\b42aac5a1fab092508146528ddb4b482.tif,389,125,Residential Districts,Urban Villages
+Res,b4a14ec986982a517682c86984695367.tif,ImageSets\Res\b4a14ec986982a517682c86984695367.tif,167,137,Residential Districts,High-rise Residential Buildings
+Ind,b4fa573ea8ebd8b68a033901abdc04d8.tif,ImageSets\Ind\b4fa573ea8ebd8b68a033901abdc04d8.tif,655,233,Industrial Land,Industrial Park and Factory
+Agr,b52cc7b990a5463ff19d3b90e2f02b76.tif,ImageSets\Agr\b52cc7b990a5463ff19d3b90e2f02b76.tif,301,561,Agriculture and Nature,Wasteland
+Agr,b5510c9bcd41a44634cd5c1df16629e6.tif,ImageSets\Agr\b5510c9bcd41a44634cd5c1df16629e6.tif,773,604,Agriculture and Nature,Farmland
+Com,b5643c5a7c97cfca8fe4051ed81e14be.tif,ImageSets\Com\b5643c5a7c97cfca8fe4051ed81e14be.tif,144,208,Commercial Zones,Shopping Center and Commercial Street
+Agr,b592d8356889921defd3cf48023a4296.tif,ImageSets\Agr\b592d8356889921defd3cf48023a4296.tif,1193,1265,Agriculture and Nature,Farmland
+Agr,b5b9ea898a491e2ca831def7745e52e3.tif,ImageSets\Agr\b5b9ea898a491e2ca831def7745e52e3.tif,489,431,Agriculture and Nature,Farmland
+Res,b5becfe5902d2314aa2de30d36e48c2d.tif,ImageSets\Res\b5becfe5902d2314aa2de30d36e48c2d.tif,136,186,Residential Districts,High-rise Residential Buildings
+Ind,b5f0923561c0a2ef087d56c9ab0b53d0.tif,ImageSets\Ind\b5f0923561c0a2ef087d56c9ab0b53d0.tif,181,126,Industrial Land,Industrial Park and Factory
+Agr,b64806c0705bd027ff8ea32408ce1552.tif,ImageSets\Agr\b64806c0705bd027ff8ea32408ce1552.tif,439,288,Agriculture and Nature,Farmland
+Res,b65d0609cd10569a0fec34a43d6633ee.tif,ImageSets\Res\b65d0609cd10569a0fec34a43d6633ee.tif,302,186,Residential Districts,Urban Villages
+Agr,b65ed02830b0f1588c10a4d4ad21d305.tif,ImageSets\Agr\b65ed02830b0f1588c10a4d4ad21d305.tif,598,325,Agriculture and Nature,Farmland
+Pub,b7506efa48205d43121672d688d0e2f6.tif,ImageSets\Pub\b7506efa48205d43121672d688d0e2f6.tif,163,138,Public Services,Parks and Squares
+Res,b79519973345dfb683365616edce19a6.tif,ImageSets\Res\b79519973345dfb683365616edce19a6.tif,178,277,Residential Districts,High-rise Residential Buildings
+Agr,b7d981b3b40843781d6dd1932e043c57.tif,ImageSets\Agr\b7d981b3b40843781d6dd1932e043c57.tif,138,149,Agriculture and Nature,Farmland
+Res,b8a9db77232099cd24323f0f601d9ba4.tif,ImageSets\Res\b8a9db77232099cd24323f0f601d9ba4.tif,232,197,Residential Districts,High-rise Residential Buildings
+Pub,b996e7b4d83f090407580ee81760d3eb.tif,ImageSets\Pub\b996e7b4d83f090407580ee81760d3eb.tif,451,220,Public Services,Educational and Research Institutions
+Agr,b9abd463760a8b306e6e32be9f3866ee.tif,ImageSets\Agr\b9abd463760a8b306e6e32be9f3866ee.tif,158,265,Agriculture and Nature,Farmland
+Ind,ba4bfe482032d927f145cfb0e099929a.tif,ImageSets\Ind\ba4bfe482032d927f145cfb0e099929a.tif,141,211,Industrial Land,Industrial Park and Factory
+Pub,ba571cc1d508242166640ae05d579879.tif,ImageSets\Pub\ba571cc1d508242166640ae05d579879.tif,307,146,Public Services,Educational and Research Institutions
+Res,ba6e9275a61ccad4a4fc2cd86196c122.tif,ImageSets\Res\ba6e9275a61ccad4a4fc2cd86196c122.tif,315,318,Residential Districts,Urban Villages
+Ind,ba95212bb4669786abff41f0b7f316bb.tif,ImageSets\Ind\ba95212bb4669786abff41f0b7f316bb.tif,474,789,Industrial Land,Industrial Park and Factory
+Res,bae79f149b6ff9f6143e12e1acc302ce.tif,ImageSets\Res\bae79f149b6ff9f6143e12e1acc302ce.tif,202,167,Residential Districts,High-rise Residential Buildings
+Agr,bb1ae72bf15a3c47489d15141ee9fded.tif,ImageSets\Agr\bb1ae72bf15a3c47489d15141ee9fded.tif,430,362,Agriculture and Nature,Water
+Res,bb2a3adbb74c8e58ad60b9ba2083c041.tif,ImageSets\Res\bb2a3adbb74c8e58ad60b9ba2083c041.tif,201,195,Residential Districts,High-rise Residential Buildings
+Ind,bb6dbc27954cae4078ace035e0fcfd3b.tif,ImageSets\Ind\bb6dbc27954cae4078ace035e0fcfd3b.tif,292,365,Industrial Land,Industrial Park and Factory
+Com,bbe82dddeb09ea2068d4f2902fe41728.tif,ImageSets\Com\bbe82dddeb09ea2068d4f2902fe41728.tif,108,122,Commercial Zones,Shopping Center and Commercial Street
+Res,bc95998de8238041a47b73d77f3b240c.tif,ImageSets\Res\bc95998de8238041a47b73d77f3b240c.tif,111,160,Residential Districts,High-rise Residential Buildings
+Pub,bceb51bd2143b82ad9dc14ac1e393571.tif,ImageSets\Pub\bceb51bd2143b82ad9dc14ac1e393571.tif,612,379,Public Services,Educational and Research Institutions
+Res,bd3af3c62e9119fc8e807db6f9b6a93b.tif,ImageSets\Res\bd3af3c62e9119fc8e807db6f9b6a93b.tif,254,200,Residential Districts,High-rise Residential Buildings
+Pub,bdbc5476ae6f5b60576d15c85fa65f2a.tif,ImageSets\Pub\bdbc5476ae6f5b60576d15c85fa65f2a.tif,162,447,Public Services,Parks and Squares
+Res,bdc71a06f0c9c424a2c17c62350dcf93.tif,ImageSets\Res\bdc71a06f0c9c424a2c17c62350dcf93.tif,137,185,Residential Districts,High-rise Residential Buildings
+Ind,bdf4c6139efa8938f79f8723e9a8ba72.tif,ImageSets\Ind\bdf4c6139efa8938f79f8723e9a8ba72.tif,346,176,Industrial Land,Industrial Park and Factory
+Com,be1889e8f9c0ab087c4e49bd62e17ee1.tif,ImageSets\Com\be1889e8f9c0ab087c4e49bd62e17ee1.tif,173,161,Commercial Zones,Office Campus
+Agr,be3a6472ab56f91f1c13fdca60bd8367.tif,ImageSets\Agr\be3a6472ab56f91f1c13fdca60bd8367.tif,315,382,Agriculture and Nature,Wasteland
+Res,be5c8b9cfa84cf834f44b8fc6b4657d3.tif,ImageSets\Res\be5c8b9cfa84cf834f44b8fc6b4657d3.tif,143,144,Residential Districts,Urban Villages
+Pub,be618c903fdddd0ba3f43f6c142b884d.tif,ImageSets\Pub\be618c903fdddd0ba3f43f6c142b884d.tif,118,110,Public Services,Parks and Squares
+Agr,bea16193d277e5f3ee1a7c12c6ab53c0.tif,ImageSets\Agr\bea16193d277e5f3ee1a7c12c6ab53c0.tif,177,193,Agriculture and Nature,Forestland and Grassland
+Agr,bf06ee851e77e6da2484cdee5087e54b.tif,ImageSets\Agr\bf06ee851e77e6da2484cdee5087e54b.tif,217,259,Agriculture and Nature,Farmland
+Pub,bf1777ca030004778ad50fb29d5c1d46.tif,ImageSets\Pub\bf1777ca030004778ad50fb29d5c1d46.tif,333,436,Public Services,Parks and Squares
+Res,bf3515d1cc037a4e04f447b730ee30a1.tif,ImageSets\Res\bf3515d1cc037a4e04f447b730ee30a1.tif,286,465,Residential Districts,High-rise Residential Buildings
+Com,bf44361738a3b169d180c12fbfcd7333.tif,ImageSets\Com\bf44361738a3b169d180c12fbfcd7333.tif,128,168,Commercial Zones,Business Tower
+Ind,bf99827556f07a68432a49aaf3c1d586.tif,ImageSets\Ind\bf99827556f07a68432a49aaf3c1d586.tif,333,242,Industrial Land,Industrial Park and Factory
+Agr,c01c68ff8f9f9e76cb907da9bb17a1d8.tif,ImageSets\Agr\c01c68ff8f9f9e76cb907da9bb17a1d8.tif,229,246,Agriculture and Nature,Wasteland
+Agr,c0451b4d7772c2c6832baba544ed2203.tif,ImageSets\Agr\c0451b4d7772c2c6832baba544ed2203.tif,164,139,Agriculture and Nature,Forestland and Grassland
+Agr,c051e0acc0f8188c3b5b7c3083cc8972.tif,ImageSets\Agr\c051e0acc0f8188c3b5b7c3083cc8972.tif,1053,683,Agriculture and Nature,Farmland
+Pub,c09e66488f6c72dd643c45156a6905f8.tif,ImageSets\Pub\c09e66488f6c72dd643c45156a6905f8.tif,200,146,Public Services,Educational and Research Institutions
+Com,c0b6a7563d5e1fda18703d4ecd40d3fb.tif,ImageSets\Com\c0b6a7563d5e1fda18703d4ecd40d3fb.tif,222,151,Commercial Zones,Shopping Center and Commercial Street
+Com,c0e23880766081ef9fc167e4c5eb8bd6.tif,ImageSets\Com\c0e23880766081ef9fc167e4c5eb8bd6.tif,134,143,Commercial Zones,Office Campus
+Ind,c13ced09c740b91f0c6164b7454b6828.tif,ImageSets\Ind\c13ced09c740b91f0c6164b7454b6828.tif,316,212,Industrial Land,Industrial Park and Factory
+Pub,c16355f939e399830acece92f306a95e.tif,ImageSets\Pub\c16355f939e399830acece92f306a95e.tif,194,158,Public Services,Educational and Research Institutions
+Pub,c1699f659ce1aeaaa50871f004238f08.tif,ImageSets\Pub\c1699f659ce1aeaaa50871f004238f08.tif,317,276,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Com,c19bc054ea305e6580257ac911829ead.tif,ImageSets\Com\c19bc054ea305e6580257ac911829ead.tif,210,154,Commercial Zones,Office Campus
+Res,c1b2e5fc031273491c2554a5dbd98184.tif,ImageSets\Res\c1b2e5fc031273491c2554a5dbd98184.tif,124,132,Residential Districts,High-rise Residential Buildings
+Ind,c2a281af84ce561b717ed8dbedd9c89d.tif,ImageSets\Ind\c2a281af84ce561b717ed8dbedd9c89d.tif,195,118,Industrial Land,Industrial Park and Factory
+Agr,c2a8c2bea083c942ca28ff971c4dc94a.tif,ImageSets\Agr\c2a8c2bea083c942ca28ff971c4dc94a.tif,1581,2944,Agriculture and Nature,Farmland
+Res,c2f47d41036e124e528e1ca4a777cb78.tif,ImageSets\Res\c2f47d41036e124e528e1ca4a777cb78.tif,191,193,Residential Districts,High-rise Residential Buildings
+Res,c307edc88b12d3a9edd0a7a66eb287e8.tif,ImageSets\Res\c307edc88b12d3a9edd0a7a66eb287e8.tif,128,123,Residential Districts,Villas and High-end Residences
+Res,c416c9799e93fc0a9f922a682cdd96d5.tif,ImageSets\Res\c416c9799e93fc0a9f922a682cdd96d5.tif,205,233,Residential Districts,High-rise Residential Buildings
+Ind,c41fb5d1d1c566eaae4a4606f09e93ef.tif,ImageSets\Ind\c41fb5d1d1c566eaae4a4606f09e93ef.tif,375,379,Industrial Land,Industrial Park and Factory
+Agr,c4b1edf22e5339d65f92c61ea3173ef4.tif,ImageSets\Agr\c4b1edf22e5339d65f92c61ea3173ef4.tif,220,317,Agriculture and Nature,Water
+Agr,c52a7839ce396eae50100b384b2d38fa.tif,ImageSets\Agr\c52a7839ce396eae50100b384b2d38fa.tif,903,992,Agriculture and Nature,Farmland
+Com,c55fa7409eabd0a07924be3b1ca7950d.tif,ImageSets\Com\c55fa7409eabd0a07924be3b1ca7950d.tif,91,173,Commercial Zones,Office Campus
+Pub,c5693a75b9043619c70414ce6d714e33.tif,ImageSets\Pub\c5693a75b9043619c70414ce6d714e33.tif,1027,865,Public Services,Parks and Squares
+Agr,c5953d7582b5d292bccb7db9c5968ea1.tif,ImageSets\Agr\c5953d7582b5d292bccb7db9c5968ea1.tif,1269,821,Agriculture and Nature,Farmland
+Ind,c59b30a5cdf0febc00175f9cdee7dc6c.tif,ImageSets\Ind\c59b30a5cdf0febc00175f9cdee7dc6c.tif,184,278,Industrial Land,Industrial Park and Factory
+Pub,c5ab06cf32be39e7838c98d2cb4649eb.tif,ImageSets\Pub\c5ab06cf32be39e7838c98d2cb4649eb.tif,128,137,Public Services,Educational and Research Institutions
+Com,c5c4b2d8efdc34ff1ddf12737d3a790f.tif,ImageSets\Com\c5c4b2d8efdc34ff1ddf12737d3a790f.tif,126,119,Commercial Zones,Commercial Market
+Agr,c5d04ee1c508d75ac5f1f58a0857de08.tif,ImageSets\Agr\c5d04ee1c508d75ac5f1f58a0857de08.tif,203,232,Agriculture and Nature,Farmland
+Ind,c5dd1f601925004ced2582eab75c9a18.tif,ImageSets\Ind\c5dd1f601925004ced2582eab75c9a18.tif,922,225,Industrial Land,Industrial Park and Factory
+Pub,c5e8bc430b30affb4824e4bb398eae64.tif,ImageSets\Pub\c5e8bc430b30affb4824e4bb398eae64.tif,350,447,Public Services,Parks and Squares
+Pub,c625133a6867e01bfc5add428135f247.tif,ImageSets\Pub\c625133a6867e01bfc5add428135f247.tif,218,179,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Com,c62d983515d1e572a6c3f7f2542fd05d.tif,ImageSets\Com\c62d983515d1e572a6c3f7f2542fd05d.tif,352,230,Commercial Zones,Office Campus
+Com,c641fce3cddb23426478654f280405a4.tif,ImageSets\Com\c641fce3cddb23426478654f280405a4.tif,349,254,Commercial Zones,Office Campus
+Agr,c6d14ae197506c5cb007bce0c5bb1ea8.tif,ImageSets\Agr\c6d14ae197506c5cb007bce0c5bb1ea8.tif,2326,1858,Agriculture and Nature,Farmland
+Pub,c70084ca3f8889c8649c1bf2a8a917ff.tif,ImageSets\Pub\c70084ca3f8889c8649c1bf2a8a917ff.tif,102,108,Public Services,Parks and Squares
+Ind,c77986c145ee1a1deb8b3149030983f2.tif,ImageSets\Ind\c77986c145ee1a1deb8b3149030983f2.tif,311,283,Industrial Land,Industrial Park and Factory
+Ind,c7a58f6961ff432a2cff4efc31c05501.tif,ImageSets\Ind\c7a58f6961ff432a2cff4efc31c05501.tif,270,198,Industrial Land,Industrial Park and Factory
+Agr,c7e5b18ff76a7d4025852b9741d8813a.tif,ImageSets\Agr\c7e5b18ff76a7d4025852b9741d8813a.tif,677,295,Agriculture and Nature,Farmland
+Ind,c91ada0035b842c3721dfcbd13fadc07.tif,ImageSets\Ind\c91ada0035b842c3721dfcbd13fadc07.tif,289,231,Industrial Land,Industrial Park and Factory
+Pub,c9dff07b7704a982455fc3b59e7dc8bb.tif,ImageSets\Pub\c9dff07b7704a982455fc3b59e7dc8bb.tif,160,472,Public Services,Parks and Squares
+Ind,c9f15168d92d8866c5c792dd668fa890.tif,ImageSets\Ind\c9f15168d92d8866c5c792dd668fa890.tif,227,151,Industrial Land,Industrial Park and Factory
+Com,ca29796b0ed8282d74220431fe6d7c9a.tif,ImageSets\Com\ca29796b0ed8282d74220431fe6d7c9a.tif,213,224,Commercial Zones,Office Campus
+Res,ca7b4d0eee11abd77e9fe63018681cc9.tif,ImageSets\Res\ca7b4d0eee11abd77e9fe63018681cc9.tif,244,108,Residential Districts,High-rise Residential Buildings
+Pub,cabbfc0d1b3f7930464ad4124663333f.tif,ImageSets\Pub\cabbfc0d1b3f7930464ad4124663333f.tif,171,179,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Pub,caf0a6375067eb85822cf058ec0e3bf4.tif,ImageSets\Pub\caf0a6375067eb85822cf058ec0e3bf4.tif,437,468,Public Services,Educational and Research Institutions
+Agr,cb3ef6a7e95604e929a98f496b9e5a69.tif,ImageSets\Agr\cb3ef6a7e95604e929a98f496b9e5a69.tif,1268,620,Agriculture and Nature,Farmland
+Res,cb4ec14d438a550c8e2f31c0cda60ce7.tif,ImageSets\Res\cb4ec14d438a550c8e2f31c0cda60ce7.tif,166,144,Residential Districts,High-rise Residential Buildings
+Pub,cb8e0ff9ff91aa45f2a9dcc17bcf744b.tif,ImageSets\Pub\cb8e0ff9ff91aa45f2a9dcc17bcf744b.tif,294,246,Public Services,Educational and Research Institutions
+Pub,cbb8a55be94b0c421e6bf78d4e7ec463.tif,ImageSets\Pub\cbb8a55be94b0c421e6bf78d4e7ec463.tif,329,163,Public Services,Educational and Research Institutions
+Pub,cbecdfc08bc563e7dcb7fb7261e7bac5.tif,ImageSets\Pub\cbecdfc08bc563e7dcb7fb7261e7bac5.tif,570,451,Public Services,Parks and Squares
+Ind,cbf7e9b84852871d5557910a09749d15.tif,ImageSets\Ind\cbf7e9b84852871d5557910a09749d15.tif,420,419,Industrial Land,Industrial Park and Factory
+Res,cc871138d270c79ab7eec06f993b3521.tif,ImageSets\Res\cc871138d270c79ab7eec06f993b3521.tif,142,208,Residential Districts,High-rise Residential Buildings
+Agr,cc9078be330c620138ef190cda7676de.tif,ImageSets\Agr\cc9078be330c620138ef190cda7676de.tif,451,991,Agriculture and Nature,Farmland
+Ind,cc99e66dea6a8e8248b8293f3c3e810e.tif,ImageSets\Ind\cc99e66dea6a8e8248b8293f3c3e810e.tif,165,480,Industrial Land,Industrial Park and Factory
+Ind,ccc0ae0f5389aed57843f1de6967ca4b.tif,ImageSets\Ind\ccc0ae0f5389aed57843f1de6967ca4b.tif,344,246,Industrial Land,Industrial Park and Factory
+Com,ccc754160e54c9fee6abf80056b3ec1e.tif,ImageSets\Com\ccc754160e54c9fee6abf80056b3ec1e.tif,140,134,Commercial Zones,Commercial Market
+Com,ccd86daeb294c196664b5a16a80d19cc.tif,ImageSets\Com\ccd86daeb294c196664b5a16a80d19cc.tif,165,150,Commercial Zones,Business Tower
+Com,ccdbb8dc899790659b371a43df966f31.tif,ImageSets\Com\ccdbb8dc899790659b371a43df966f31.tif,141,140,Commercial Zones,Office Campus
+Agr,cd370f7d4233c52e228b1a0769552d66.tif,ImageSets\Agr\cd370f7d4233c52e228b1a0769552d66.tif,1029,1373,Agriculture and Nature,Farmland
+Agr,cd759c6d653217e46c4abc08cbe478a1.tif,ImageSets\Agr\cd759c6d653217e46c4abc08cbe478a1.tif,204,290,Agriculture and Nature,Farmland
+Agr,cda8914e073fced20f459e099c3dd458.tif,ImageSets\Agr\cda8914e073fced20f459e099c3dd458.tif,969,1061,Agriculture and Nature,Mountain
+Pub,ce1008e511a9efee7f4afb8163c3e8e9.tif,ImageSets\Pub\ce1008e511a9efee7f4afb8163c3e8e9.tif,176,135,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,cec8bed90a6539dd13eb057df1ddff8c.tif,ImageSets\Agr\cec8bed90a6539dd13eb057df1ddff8c.tif,169,176,Agriculture and Nature,Forestland and Grassland
+Agr,cf4d32cc1c29b82220b7583b28f1f7b4.tif,ImageSets\Agr\cf4d32cc1c29b82220b7583b28f1f7b4.tif,231,196,Agriculture and Nature,Farmland
+Ind,cf624a49d685d10ca27c346ceddf5a16.tif,ImageSets\Ind\cf624a49d685d10ca27c346ceddf5a16.tif,179,215,Industrial Land,Industrial Park and Factory
+Res,cf7fd3bbb5b18a37e36b83e27d50b8e7.tif,ImageSets\Res\cf7fd3bbb5b18a37e36b83e27d50b8e7.tif,154,136,Residential Districts,High-rise Residential Buildings
+Res,cf9ecc7c32454cf24a215013f29d8003.tif,ImageSets\Res\cf9ecc7c32454cf24a215013f29d8003.tif,257,233,Residential Districts,Villas and High-end Residences
+Ind,cfeaae507adc0dc93067299031406de4.tif,ImageSets\Ind\cfeaae507adc0dc93067299031406de4.tif,181,230,Industrial Land,Industrial Park and Factory
+Ind,cfeee20f592cee6fc3e7815d080b2d6e.tif,ImageSets\Ind\cfeee20f592cee6fc3e7815d080b2d6e.tif,439,415,Industrial Land,Industrial Park and Factory
+Com,d01e51ed5ed35699c8b5fa069abab327.tif,ImageSets\Com\d01e51ed5ed35699c8b5fa069abab327.tif,179,108,Commercial Zones,Shopping Center and Commercial Street
+Pub,d035685dd07a99d6d875e51fe4dd601c.tif,ImageSets\Pub\d035685dd07a99d6d875e51fe4dd601c.tif,226,284,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Com,d0890174be390515a5083ca3e44045a7.tif,ImageSets\Com\d0890174be390515a5083ca3e44045a7.tif,121,144,Commercial Zones,Business Tower
+Res,d0c4d5d68d18d50ae36b4c81b8038800.tif,ImageSets\Res\d0c4d5d68d18d50ae36b4c81b8038800.tif,314,229,Residential Districts,High-rise Residential Buildings
+Pub,d0c6c609e34e92c211d98e343fd46c63.tif,ImageSets\Pub\d0c6c609e34e92c211d98e343fd46c63.tif,314,382,Public Services,Educational and Research Institutions
+Com,d0ea847a355c0835ed9bb639e0e9b35c.tif,ImageSets\Com\d0ea847a355c0835ed9bb639e0e9b35c.tif,181,171,Commercial Zones,Office Campus
+Pub,d10c36f64803274f55aa47539f27f9f1.tif,ImageSets\Pub\d10c36f64803274f55aa47539f27f9f1.tif,404,778,Public Services,Educational and Research Institutions
+Agr,d1b842113a386ceaad4abd89631997f6.tif,ImageSets\Agr\d1b842113a386ceaad4abd89631997f6.tif,667,460,Agriculture and Nature,Farmland
+Res,d23b3bf5cdcbc2f24209acab869c1866.tif,ImageSets\Res\d23b3bf5cdcbc2f24209acab869c1866.tif,296,200,Residential Districts,High-rise Residential Buildings
+Pub,d29dda8a616921ea961e8ed49d925b21.tif,ImageSets\Pub\d29dda8a616921ea961e8ed49d925b21.tif,129,136,Public Services,Parks and Squares
+Ind,d315fd7f82da18623d3ddaf09165c4b9.tif,ImageSets\Ind\d315fd7f82da18623d3ddaf09165c4b9.tif,175,177,Industrial Land,Industrial Park and Factory
+Ind,d32af335fcfb93faa68b1d71fe334078.tif,ImageSets\Ind\d32af335fcfb93faa68b1d71fe334078.tif,246,266,Industrial Land,Industrial Park and Factory
+Ind,d36eba11173cf07dc0e5f80b0c2f9773.tif,ImageSets\Ind\d36eba11173cf07dc0e5f80b0c2f9773.tif,222,393,Industrial Land,Industrial Park and Factory
+Agr,d391ba20afacd3db9c05a72e080efca8.tif,ImageSets\Agr\d391ba20afacd3db9c05a72e080efca8.tif,597,420,Agriculture and Nature,Farmland
+Com,d3a8fac3238687de31fed6271f1730d3.tif,ImageSets\Com\d3a8fac3238687de31fed6271f1730d3.tif,314,175,Commercial Zones,Office Campus
+Res,d3b9749d1757960fbc01cd3bfcf0617f.tif,ImageSets\Res\d3b9749d1757960fbc01cd3bfcf0617f.tif,238,163,Residential Districts,Rural Homestead
+Pub,d3cb5ec47f639c88d9a7040059fa227b.tif,ImageSets\Pub\d3cb5ec47f639c88d9a7040059fa227b.tif,116,146,Public Services,Parks and Squares
+Com,d3ea011fd5c57d9d4e0171340492e8c0.tif,ImageSets\Com\d3ea011fd5c57d9d4e0171340492e8c0.tif,139,154,Commercial Zones,Shopping Center and Commercial Street
+Pub,d45694b0c09c6df6061ea9058e4fc031.tif,ImageSets\Pub\d45694b0c09c6df6061ea9058e4fc031.tif,411,215,Public Services,Parks and Squares
+Ind,d4df963c0c92270182b11a2c3f8c672f.tif,ImageSets\Ind\d4df963c0c92270182b11a2c3f8c672f.tif,373,260,Industrial Land,Industrial Park and Factory
+Ind,d57bc63abab67762bff24f5ac6b92668.tif,ImageSets\Ind\d57bc63abab67762bff24f5ac6b92668.tif,227,187,Industrial Land,Industrial Park and Factory
+Pub,d583217869955c251ac10b9e9ba3523d.tif,ImageSets\Pub\d583217869955c251ac10b9e9ba3523d.tif,213,226,Public Services,Educational and Research Institutions
+Com,d598b7e891994f4ca9c4a974ad759cef.tif,ImageSets\Com\d598b7e891994f4ca9c4a974ad759cef.tif,101,132,Commercial Zones,Business Tower
+Com,d5a39449dd47f7b0a739ad88675a506e.tif,ImageSets\Com\d5a39449dd47f7b0a739ad88675a506e.tif,258,346,Commercial Zones,Office Campus
+Com,d5f2171d9e65b5b10d548bfb4857b655.tif,ImageSets\Com\d5f2171d9e65b5b10d548bfb4857b655.tif,539,281,Commercial Zones,Office Campus
+Ind,d5fe3a5a7d9e552bd4942682e3412f49.tif,ImageSets\Ind\d5fe3a5a7d9e552bd4942682e3412f49.tif,514,219,Industrial Land,Industrial Park and Factory
+Com,d60d7a0543b477042ddce14919a54890.tif,ImageSets\Com\d60d7a0543b477042ddce14919a54890.tif,210,132,Commercial Zones,Office Campus
+Agr,d7619d9522eeefc39f3ed3045fc9ac40.tif,ImageSets\Agr\d7619d9522eeefc39f3ed3045fc9ac40.tif,232,354,Agriculture and Nature,Farmland
+Pub,d770af61b6db84084e46e7bd638d5945.tif,ImageSets\Pub\d770af61b6db84084e46e7bd638d5945.tif,345,379,Public Services,Parks and Squares
+Pub,d7dae67c21d5705de473986a0f6bf371.tif,ImageSets\Pub\d7dae67c21d5705de473986a0f6bf371.tif,295,208,Public Services,Educational and Research Institutions
+Agr,d86fecbb2be926629c2e6251ec446a79.tif,ImageSets\Agr\d86fecbb2be926629c2e6251ec446a79.tif,2797,4142,Agriculture and Nature,Mountain
+Pub,d8a5fd251e3ad8d5dd0632784fb50f32.tif,ImageSets\Pub\d8a5fd251e3ad8d5dd0632784fb50f32.tif,156,162,Public Services,Non-profit Public Institutions(Museum; Stadium; Hospital)
+Agr,d8eed633babd9a2e54cc4e9747e79e04.tif,ImageSets\Agr\d8eed633babd9a2e54cc4e9747e79e04.tif,164,162,Agriculture and Nature,Farmland
+Ind,d90a73f5a1b350b79149384df2371fbf.tif,ImageSets\Ind\d90a73f5a1b350b79149384df2371fbf.tif,258,325,Industrial Land,Industrial Park and Factory
+Com,d91f1b74047c1422708cbfcc77edac8c.tif,ImageSets\Com\d91f1b74047c1422708cbfcc77edac8c.tif,289,176,Commercial Zones,Office Campus
+Res,d957c54b1198feb9df4f1c207dcac753.tif,ImageSets\Res\d957c54b1198feb9df4f1c207dcac753.tif,239,186,Residential Districts,High-rise Residential Buildings
+Com,d960d15c5e7996d8cea590668f337557.tif,ImageSets\Com\d960d15c5e7996d8cea590668f337557.tif,174,235,Commercial Zones,Office Campus
+Res,d985bf49a72109b1737f9e43c61e7c3b.tif,ImageSets\Res\d985bf49a72109b1737f9e43c61e7c3b.tif,241,317,Residential Districts,High-rise Residential Buildings
+Pub,d9e91a76dedaab80967c1a84266b2f7c.tif,ImageSets\Pub\d9e91a76dedaab80967c1a84266b2f7c.tif,180,179,Public Services,Educational and Research Institutions
+Agr,da4d08fa8e99bf3e0c5ed21491015be7.tif,ImageSets\Agr\da4d08fa8e99bf3e0c5ed21491015be7.tif,161,163,Agriculture and Nature,Forestland and Grassland
+Ind,dacbb1cc0f7b5a951f5ca6882bcb34ca.tif,ImageSets\Ind\dacbb1cc0f7b5a951f5ca6882bcb34ca.tif,261,259,Industrial Land,Industrial Park and Factory
+Agr,dad0fb3108c64dbd85f55cb79bef2286.tif,ImageSets\Agr\dad0fb3108c64dbd85f55cb79bef2286.tif,1602,2109,Agriculture and Nature,Farmland
+Pub,dae2d5ebcf242ccebe603b2877778deb.tif,ImageSets\Pub\dae2d5ebcf242ccebe603b2877778deb.tif,537,715,Public Services,Educational and Research Institutions
+Pub,db0a344e5ba4389133dc7902f2d969c2.tif,ImageSets\Pub\db0a344e5ba4389133dc7902f2d969c2.tif,134,195,Public Services,Educational and Research Institutions
+Ind,db6ca27997d7972b6d0c7a9d68e89463.tif,ImageSets\Ind\db6ca27997d7972b6d0c7a9d68e89463.tif,236,209,Industrial Land,Industrial Park and Factory
+Pub,dc11ab69c64fa58f860fabca8350f6f2.tif,ImageSets\Pub\dc11ab69c64fa58f860fabca8350f6f2.tif,325,570,Public Services,Educational and Research Institutions
+Res,dc15adb9d2eb51c8e4444a314ff7eed8.tif,ImageSets\Res\dc15adb9d2eb51c8e4444a314ff7eed8.tif,133,126,Residential Districts,High-rise Residential Buildings
+Com,dc7474039cb9d062330dcac3e13f8c98.tif,ImageSets\Com\dc7474039cb9d062330dcac3e13f8c98.tif,114,112,Commercial Zones,Office Campus
+Com,dca07c9a7d0426ba8b7dfcbaa55ba139.tif,ImageSets\Com\dca07c9a7d0426ba8b7dfcbaa55ba139.tif,126,185,Commercial Zones,Shopping Center and Commercial Street
+Ind,dcc6f7e0b104eb9e6c0823e1e368b9a9.tif,ImageSets\Ind\dcc6f7e0b104eb9e6c0823e1e368b9a9.tif,172,258,Industrial Land,Industrial Park and Factory
+Ind,dcd77aca7ed183eb7a8a8163a81c6c66.tif,ImageSets\Ind\dcd77aca7ed183eb7a8a8163a81c6c66.tif,159,177,Industrial Land,Industrial Park and Factory
+Com,dd17dfad62ebae8116fe1cd173aa200a.tif,ImageSets\Com\dd17dfad62ebae8116fe1cd173aa200a.tif,136,97,Commercial Zones,Shopping Center and Commercial Street
+Com,dd9398a971af625448a170b802996842.tif,ImageSets\Com\dd9398a971af625448a170b802996842.tif,630,735,Commercial Zones,Commercial Entertainment
+Res,dd9a6498331d9de352d61d93a1728e1e.tif,ImageSets\Res\dd9a6498331d9de352d61d93a1728e1e.tif,175,221,Residential Districts,High-rise Residential Buildings
+Com,ddea31d4e7d3c87628ce3a1128c03805.tif,ImageSets\Com\ddea31d4e7d3c87628ce3a1128c03805.tif,186,142,Commercial Zones,Shopping Center and Commercial Street
+Ind,ddff3d53f9efc9a365bb6b2902b6c1d9.tif,ImageSets\Ind\ddff3d53f9efc9a365bb6b2902b6c1d9.tif,283,238,Industrial Land,Industrial Park and Factory
+Com,de2e6f1854c3dfa8e0a1ae28a3d4a934.tif,ImageSets\Com\de2e6f1854c3dfa8e0a1ae28a3d4a934.tif,227,211,Commercial Zones,Office Campus
+Ind,de406cbb9c2ceb4f12a268498e825f4f.tif,ImageSets\Ind\de406cbb9c2ceb4f12a268498e825f4f.tif,266,261,Industrial Land,Industrial Park and Factory
+Res,de5bcd82461d6083333595c67fcff828.tif,ImageSets\Res\de5bcd82461d6083333595c67fcff828.tif,508,643,Residential Districts,High-rise Residential Buildings
+Com,de6c8fba754163d2f51d3faeb97fd1fc.tif,ImageSets\Com\de6c8fba754163d2f51d3faeb97fd1fc.tif,119,150,Commercial Zones,Office Campus
+Pub,dea88fc4e13a608c2cfe62de022dba1e.tif,ImageSets\Pub\dea88fc4e13a608c2cfe62de022dba1e.tif,170,235,Public Services,Educational and Research Institutions
+Agr,deaf77105e10420fbe7cf1653ff02e35.tif,ImageSets\Agr\deaf77105e10420fbe7cf1653ff02e35.tif,1017,1545,Agriculture and Nature,Farmland
+Com,deb3aa766bae2ea7d72566c3c3eb998b.tif,ImageSets\Com\deb3aa766bae2ea7d72566c3c3eb998b.tif,222,255,Commercial Zones,Commercial Market
+Res,def2bf33f00f20cd0106e0c188a119d6.tif,ImageSets\Res\def2bf33f00f20cd0106e0c188a119d6.tif,121,178,Residential Districts,High-rise Residential Buildings
+Pub,df0364391d0503b315b96d9fd3511956.tif,ImageSets\Pub\df0364391d0503b315b96d9fd3511956.tif,834,1005,Public Services,Educational and Research Institutions
+Res,df0d8544b09c6c6cf0ffb38bf1df502d.tif,ImageSets\Res\df0d8544b09c6c6cf0ffb38bf1df502d.tif,136,232,Residential Districts,High-rise Residential Buildings
+Com,df4d047c0313c01be2b3c9d9bb197729.tif,ImageSets\Com\df4d047c0313c01be2b3c9d9bb197729.tif,105,148,Commercial Zones,Business Tower
+Pub,dfc2501fd49c27e8fa0a1ef3c044f3f4.tif,ImageSets\Pub\dfc2501fd49c27e8fa0a1ef3c044f3f4.tif,429,242,Public Services,Educational and Research Institutions
+Pub,dfce66e2bb93f6a47753bcc7fb13eede.tif,ImageSets\Pub\dfce66e2bb93f6a47753bcc7fb13eede.tif,268,178,Public Services,Educational and Research Institutions
+Res,e0578e62cc97c116b97dfe2f2696c395.tif,ImageSets\Res\e0578e62cc97c116b97dfe2f2696c395.tif,107,109,Residential Districts,Urban Villages
+Res,e061131f8dbc8a899a36a85f203f8917.tif,ImageSets\Res\e061131f8dbc8a899a36a85f203f8917.tif,154,169,Residential Districts,High-rise Residential Buildings
+Ind,e0a74421144628314a8e39a406ddf356.tif,ImageSets\Ind\e0a74421144628314a8e39a406ddf356.tif,131,105,Industrial Land,Industrial Park and Factory
+Pub,e0ef06b6771a96060facf42e4602a092.tif,ImageSets\Pub\e0ef06b6771a96060facf42e4602a092.tif,127,141,Public Services,Educational and Research Institutions
+Pub,e0f376f636d686505ded0a3786b606d1.tif,ImageSets\Pub\e0f376f636d686505ded0a3786b606d1.tif,118,1174,Public Services,Parks and Squares
+Ind,e12aedfcfe7f7732d4482cc306dbd5dd.tif,ImageSets\Ind\e12aedfcfe7f7732d4482cc306dbd5dd.tif,469,325,Industrial Land,Industrial Park and Factory
+Pub,e145d8e4ae0872c87b46837eff11600a.tif,ImageSets\Pub\e145d8e4ae0872c87b46837eff11600a.tif,500,236,Public Services,Educational and Research Institutions
+Res,e152167af307b280b53985c967c4be98.tif,ImageSets\Res\e152167af307b280b53985c967c4be98.tif,200,111,Residential Districts,Villas and High-end Residences
+Com,e17d6620ab6174455ceec1fd89c79b8a.tif,ImageSets\Com\e17d6620ab6174455ceec1fd89c79b8a.tif,142,101,Commercial Zones,Office Campus
+Com,e22b60583c2e26cee5dd3c2bc1038003.tif,ImageSets\Com\e22b60583c2e26cee5dd3c2bc1038003.tif,210,201,Commercial Zones,Office Campus
+Ind,e242f26e3178ec26a4699e1af09d8ea7.tif,ImageSets\Ind\e242f26e3178ec26a4699e1af09d8ea7.tif,227,189,Industrial Land,Industrial Park and Factory
+Com,e29b72f8db27361cafa200a9e3df846f.tif,ImageSets\Com\e29b72f8db27361cafa200a9e3df846f.tif,140,127,Commercial Zones,Business Tower
+Ind,e331a9638e6039ee53b80dba6ac92313.tif,ImageSets\Ind\e331a9638e6039ee53b80dba6ac92313.tif,169,179,Industrial Land,Industrial Park and Factory
+Agr,e35b863680f9143c54950523796cdabe.tif,ImageSets\Agr\e35b863680f9143c54950523796cdabe.tif,186,218,Agriculture and Nature,Farmland
+Res,e3e707984f06b834be99a2b7e37cb67f.tif,ImageSets\Res\e3e707984f06b834be99a2b7e37cb67f.tif,277,432,Residential Districts,High-rise Residential Buildings
+Res,e4119cfeb5826d12998d30757838af79.tif,ImageSets\Res\e4119cfeb5826d12998d30757838af79.tif,103,112,Residential Districts,High-rise Residential Buildings
+Ind,e425c978482b8a4bce8f7d198c4809fe.tif,ImageSets\Ind\e425c978482b8a4bce8f7d198c4809fe.tif,122,262,Industrial Land,Industrial Park and Factory
+Res,e427446098503d02cdc8ecfa4419a559.tif,ImageSets\Res\e427446098503d02cdc8ecfa4419a559.tif,249,232,Residential Districts,High-rise Residential Buildings
+Com,e53eea5f5aa42df6b848a627feaa9ccd.tif,ImageSets\Com\e53eea5f5aa42df6b848a627feaa9ccd.tif,329,121,Commercial Zones,Office Campus
+Pub,e5864f271f811740adecd05d8beeaf1a.tif,ImageSets\Pub\e5864f271f811740adecd05d8beeaf1a.tif,131,140,Public Services,Parks and Squares
+Pub,e5bf326e83b3547dec12a3f8aa2b7647.tif,ImageSets\Pub\e5bf326e83b3547dec12a3f8aa2b7647.tif,500,494,Public Services,Parks and Squares
+Res,e5ec6bf25ab60b9161a8b1719067a7fd.tif,ImageSets\Res\e5ec6bf25ab60b9161a8b1719067a7fd.tif,586,148,Residential Districts,Rural Homestead
+Agr,e5f35627d09e19fbf017498138573158.tif,ImageSets\Agr\e5f35627d09e19fbf017498138573158.tif,490,362,Agriculture and Nature,Farmland
+Agr,e68b8f50ded9ca63bbbf70258212cd45.tif,ImageSets\Agr\e68b8f50ded9ca63bbbf70258212cd45.tif,139,130,Agriculture and Nature,Farmland
+Ind,e6aa1b9899842c860f53f741830573d4.tif,ImageSets\Ind\e6aa1b9899842c860f53f741830573d4.tif,357,480,Industrial Land,Industrial Park and Factory
+Pub,e6add6eb5bfbc902dbe9cce7edd4a827.tif,ImageSets\Pub\e6add6eb5bfbc902dbe9cce7edd4a827.tif,356,385,Public Services,Parks and Squares
+Pub,e6c2b509eea5c983ebd5852b484185a4.tif,ImageSets\Pub\e6c2b509eea5c983ebd5852b484185a4.tif,277,257,Public Services,Educational and Research Institutions
+Pub,e726837797fd4ef502712d736694e5fc.tif,ImageSets\Pub\e726837797fd4ef502712d736694e5fc.tif,452,360,Public Services,Parks and Squares
+Com,e73f2a671dfa911c462e73a69053d64a.tif,ImageSets\Com\e73f2a671dfa911c462e73a69053d64a.tif,150,207,Commercial Zones,Office Campus
+Res,e78fb158ee0aac7b1e1f8522a5ec98df.tif,ImageSets\Res\e78fb158ee0aac7b1e1f8522a5ec98df.tif,338,201,Residential Districts,Urban Villages
+Com,e7b04ef8c98d237edc40bd833758ae27.tif,ImageSets\Com\e7b04ef8c98d237edc40bd833758ae27.tif,106,123,Commercial Zones,Business Tower
+Com,e820f87a8657eaa295219f0314bbe2fc.tif,ImageSets\Com\e820f87a8657eaa295219f0314bbe2fc.tif,134,109,Commercial Zones,Business Tower
+Agr,e82f6c65b07e9f3e21c7756b763a3fe1.tif,ImageSets\Agr\e82f6c65b07e9f3e21c7756b763a3fe1.tif,1896,1608,Agriculture and Nature,Farmland
+Com,e834cdde5b20d2aa59eb57657235ef93.tif,ImageSets\Com\e834cdde5b20d2aa59eb57657235ef93.tif,196,216,Commercial Zones,Office Campus
+Agr,e8834cb8cfe5ca86bf9dddb59ec32812.tif,ImageSets\Agr\e8834cb8cfe5ca86bf9dddb59ec32812.tif,1305,921,Agriculture and Nature,Farmland
+Res,e8891392acf8b95f04cf06aa5e5e5af3.tif,ImageSets\Res\e8891392acf8b95f04cf06aa5e5e5af3.tif,228,129,Residential Districts,High-rise Residential Buildings
+Com,e8aaad84accf8539bc073e72a8398a52.tif,ImageSets\Com\e8aaad84accf8539bc073e72a8398a52.tif,208,292,Commercial Zones,Commercial Market
+Agr,e8c71f2bb5eb54d5b61046d0b31506e9.tif,ImageSets\Agr\e8c71f2bb5eb54d5b61046d0b31506e9.tif,220,264,Agriculture and Nature,Farmland
+Res,e91ffd4e09f5f737d2f0ce25d1dc7e37.tif,ImageSets\Res\e91ffd4e09f5f737d2f0ce25d1dc7e37.tif,145,150,Residential Districts,High-rise Residential Buildings
+Res,e9511bdc4307b09a0f8f2ce85418e583.tif,ImageSets\Res\e9511bdc4307b09a0f8f2ce85418e583.tif,259,268,Residential Districts,High-rise Residential Buildings
+Agr,e9603962b5ba85258acf5d16126eba1e.tif,ImageSets\Agr\e9603962b5ba85258acf5d16126eba1e.tif,208,182,Agriculture and Nature,Wasteland
+Pub,e9622287938e8c26c1b0c8cba86c2243.tif,ImageSets\Pub\e9622287938e8c26c1b0c8cba86c2243.tif,106,226,Public Services,Educational and Research Institutions
+Pub,ea40bf68df3365f2cb8a59c961578cde.tif,ImageSets\Pub\ea40bf68df3365f2cb8a59c961578cde.tif,119,148,Public Services,Parks and Squares
+Res,eac48bf3f378af6edb5dd62efc9ec359.tif,ImageSets\Res\eac48bf3f378af6edb5dd62efc9ec359.tif,213,190,Residential Districts,High-rise Residential Buildings
+Pub,eae1b3e1744f30051d3df29bce20ca8e.tif,ImageSets\Pub\eae1b3e1744f30051d3df29bce20ca8e.tif,259,162,Public Services,Educational and Research Institutions
+Com,eb215c44fb0c0f23121531c06856daa5.tif,ImageSets\Com\eb215c44fb0c0f23121531c06856daa5.tif,1004,627,Commercial Zones,Commercial Entertainment
+Res,eb2b53e5680be78e0bbe5d8940ebab20.tif,ImageSets\Res\eb2b53e5680be78e0bbe5d8940ebab20.tif,370,367,Residential Districts,High-rise Residential Buildings
+Com,eb630eb84631ab6a993863d970efff04.tif,ImageSets\Com\eb630eb84631ab6a993863d970efff04.tif,258,206,Commercial Zones,Business Tower
+Agr,eb8a69175730bdca0b226d911d0d9e70.tif,ImageSets\Agr\eb8a69175730bdca0b226d911d0d9e70.tif,751,688,Agriculture and Nature,Farmland
+Pub,ec04e0b00ec80c47632ee63d0013e940.tif,ImageSets\Pub\ec04e0b00ec80c47632ee63d0013e940.tif,383,322,Public Services,Educational and Research Institutions
+Pub,ec1967f1e51c00c11194d57e67c30aa8.tif,ImageSets\Pub\ec1967f1e51c00c11194d57e67c30aa8.tif,272,403,Public Services,Parks and Squares
+Pub,ec4bd24628cdb3de5c2eee4cdc4da1d3.tif,ImageSets\Pub\ec4bd24628cdb3de5c2eee4cdc4da1d3.tif,166,297,Public Services,Parks and Squares
+Ind,ecbe9417e16580cb499d4cefb01e93f0.tif,ImageSets\Ind\ecbe9417e16580cb499d4cefb01e93f0.tif,164,186,Industrial Land,Industrial Park and Factory
+Ind,ed4107ec5a77cfe6175199969c246b1c.tif,ImageSets\Ind\ed4107ec5a77cfe6175199969c246b1c.tif,412,153,Industrial Land,Industrial Park and Factory
+Pub,ed462680e1e6a38a3c77b194c4b8e777.tif,ImageSets\Pub\ed462680e1e6a38a3c77b194c4b8e777.tif,446,206,Public Services,Parks and Squares
+Com,edfb25956c59793a8d33db231caadb29.tif,ImageSets\Com\edfb25956c59793a8d33db231caadb29.tif,347,273,Commercial Zones,Office Campus
+Agr,ee17eb01ae18771a1ece25315fd121f1.tif,ImageSets\Agr\ee17eb01ae18771a1ece25315fd121f1.tif,115,168,Agriculture and Nature,Farmland
+Pub,ee5bbeed569950ec6d94a10caafc4351.tif,ImageSets\Pub\ee5bbeed569950ec6d94a10caafc4351.tif,231,160,Public Services,Educational and Research Institutions
+Res,ef14ebc1357fff7661dad9cb1550fb1a.tif,ImageSets\Res\ef14ebc1357fff7661dad9cb1550fb1a.tif,438,422,Residential Districts,High-rise Residential Buildings
+Pub,ef256a943a907eccd949115af1d234ce.tif,ImageSets\Pub\ef256a943a907eccd949115af1d234ce.tif,105,127,Public Services,Educational and Research Institutions
+Ind,ef29ff759029382c6e7d15ad9052bb0c.tif,ImageSets\Ind\ef29ff759029382c6e7d15ad9052bb0c.tif,182,219,Industrial Land,Industrial Park and Factory
+Ind,ef62ea49cab62e3979adfaac41baa2f2.tif,ImageSets\Ind\ef62ea49cab62e3979adfaac41baa2f2.tif,197,172,Industrial Land,Industrial Park and Factory
+Com,f01987e7cf7cf5897b0465111bb84d18.tif,ImageSets\Com\f01987e7cf7cf5897b0465111bb84d18.tif,178,175,Commercial Zones,Commercial Market
+Ind,f0b7573220db99d2694a764b92f81b1f.tif,ImageSets\Ind\f0b7573220db99d2694a764b92f81b1f.tif,511,386,Industrial Land,Industrial Park and Factory
+Com,f13e1e3494c6e3edc637106bece8e768.tif,ImageSets\Com\f13e1e3494c6e3edc637106bece8e768.tif,124,112,Commercial Zones,Business Tower
+Agr,f271fe917d83ddef2a9fc927c3059cba.tif,ImageSets\Agr\f271fe917d83ddef2a9fc927c3059cba.tif,479,167,Agriculture and Nature,Forestland and Grassland
+Pub,f277f359b6dc8d6a6f3508524eb45d64.tif,ImageSets\Pub\f277f359b6dc8d6a6f3508524eb45d64.tif,131,118,Public Services,Educational and Research Institutions
+Ind,f308ae0050605ebd3ed4b9621d2039b2.tif,ImageSets\Ind\f308ae0050605ebd3ed4b9621d2039b2.tif,191,184,Industrial Land,Industrial Park and Factory
+Agr,f371e37a81e2423f0033a28a7b96718a.tif,ImageSets\Agr\f371e37a81e2423f0033a28a7b96718a.tif,208,224,Agriculture and Nature,Forestland and Grassland
+Com,f38b6bc0d2899f9c713abad6a52c2b0e.tif,ImageSets\Com\f38b6bc0d2899f9c713abad6a52c2b0e.tif,173,148,Commercial Zones,Shopping Center and Commercial Street
+Ind,f40df90af541c3a277b831a8a098cd6f.tif,ImageSets\Ind\f40df90af541c3a277b831a8a098cd6f.tif,314,283,Industrial Land,Industrial Park and Factory
+Ind,f4a3c6f1fa68a3f99ffef91cdc4639f4.tif,ImageSets\Ind\f4a3c6f1fa68a3f99ffef91cdc4639f4.tif,316,396,Industrial Land,Industrial Park and Factory
+Com,f4aa275c74cfdc327a7092ac3e9b1610.tif,ImageSets\Com\f4aa275c74cfdc327a7092ac3e9b1610.tif,140,118,Commercial Zones,Shopping Center and Commercial Street
+Com,f54e1771e49acfbb99d771e03ae73e30.tif,ImageSets\Com\f54e1771e49acfbb99d771e03ae73e30.tif,166,160,Commercial Zones,Commercial Market
+Res,f5529a893856f9a1579bc6e5e3c98547.tif,ImageSets\Res\f5529a893856f9a1579bc6e5e3c98547.tif,132,165,Residential Districts,High-rise Residential Buildings
+Agr,f55b3f38acdc6aa0a15042f69a136976.tif,ImageSets\Agr\f55b3f38acdc6aa0a15042f69a136976.tif,338,643,Agriculture and Nature,Forestland and Grassland
+Res,f6e08a53a1d1b4b8933af0ce87d055c9.tif,ImageSets\Res\f6e08a53a1d1b4b8933af0ce87d055c9.tif,192,178,Residential Districts,High-rise Residential Buildings
+Ind,f6ef2d9df173af581f0e06c1568f8bba.tif,ImageSets\Ind\f6ef2d9df173af581f0e06c1568f8bba.tif,164,140,Industrial Land,Industrial Park and Factory
+Pub,f7b5a4e8d12273383dc872a068d975d1.tif,ImageSets\Pub\f7b5a4e8d12273383dc872a068d975d1.tif,111,115,Public Services,Educational and Research Institutions
+Res,f869c0a6b2f8367871dfb993c762e2d2.tif,ImageSets\Res\f869c0a6b2f8367871dfb993c762e2d2.tif,254,258,Residential Districts,High-rise Residential Buildings
+Com,f8785333fd46ffcfaa94ca6cff333475.tif,ImageSets\Com\f8785333fd46ffcfaa94ca6cff333475.tif,273,194,Commercial Zones,Office Campus
+Pub,f89ef24c4a254f6fb5d4b847b33fb7bc.tif,ImageSets\Pub\f89ef24c4a254f6fb5d4b847b33fb7bc.tif,194,113,Public Services,Educational and Research Institutions
+Agr,f8b97f7043fec66fd482a9f473ddcc2b.tif,ImageSets\Agr\f8b97f7043fec66fd482a9f473ddcc2b.tif,357,451,Agriculture and Nature,Farmland
+Res,f8c263908959fea8d90b03beb01e2818.tif,ImageSets\Res\f8c263908959fea8d90b03beb01e2818.tif,287,259,Residential Districts,High-rise Residential Buildings
+Agr,f8f1d0d31971466c45bc8602c900f5aa.tif,ImageSets\Agr\f8f1d0d31971466c45bc8602c900f5aa.tif,256,215,Agriculture and Nature,Wasteland
+Pub,f90b7a2b669c955d8e32596dbe8c39b9.tif,ImageSets\Pub\f90b7a2b669c955d8e32596dbe8c39b9.tif,235,214,Public Services,Parks and Squares
+Com,f9266ef6759c1eb607d40dc798093d12.tif,ImageSets\Com\f9266ef6759c1eb607d40dc798093d12.tif,143,143,Commercial Zones,Office Campus
+Pub,f98e737f0ef5e12728a4373fb7b815b4.tif,ImageSets\Pub\f98e737f0ef5e12728a4373fb7b815b4.tif,1177,967,Public Services,Parks and Squares
+Pub,f9d0c15fdfb9943c89ca5d21d3279318.tif,ImageSets\Pub\f9d0c15fdfb9943c89ca5d21d3279318.tif,152,127,Public Services,Educational and Research Institutions
+Ind,f9f136b107240e8caf34c65f6ec0b716.tif,ImageSets\Ind\f9f136b107240e8caf34c65f6ec0b716.tif,285,142,Industrial Land,Industrial Park and Factory
+Ind,fa0b1522206b7073b7d1d1bb16f8e326.tif,ImageSets\Ind\fa0b1522206b7073b7d1d1bb16f8e326.tif,279,250,Industrial Land,Industrial Park and Factory
+Agr,fa135bdaa59419048fd583a625dfca10.tif,ImageSets\Agr\fa135bdaa59419048fd583a625dfca10.tif,1275,1139,Agriculture and Nature,Farmland
+Agr,fa2dd51c4ac27abcdb5e712b6809c5a5.tif,ImageSets\Agr\fa2dd51c4ac27abcdb5e712b6809c5a5.tif,1392,2335,Agriculture and Nature,Farmland
+Ind,fa3910c3a7c8674fca811fc2c1fda484.tif,ImageSets\Ind\fa3910c3a7c8674fca811fc2c1fda484.tif,337,187,Industrial Land,Industrial Park and Factory
+Agr,faaea6b1c5ad7d143dd6c9b4c4090dbb.tif,ImageSets\Agr\faaea6b1c5ad7d143dd6c9b4c4090dbb.tif,161,170,Agriculture and Nature,Farmland
+Res,fb08ced72588dbaf1411c59001c081cd.tif,ImageSets\Res\fb08ced72588dbaf1411c59001c081cd.tif,119,190,Residential Districts,Rural Homestead
+Agr,fb397bce425486bf103fea839faafb30.tif,ImageSets\Agr\fb397bce425486bf103fea839faafb30.tif,176,211,Agriculture and Nature,Forestland and Grassland
+Ind,fb4f215d63867883334d0bef10a579e5.tif,ImageSets\Ind\fb4f215d63867883334d0bef10a579e5.tif,640,616,Industrial Land,Industrial Park and Factory
+Res,fb7aed868ebda85215b1fe8b40cdd05f.tif,ImageSets\Res\fb7aed868ebda85215b1fe8b40cdd05f.tif,174,126,Residential Districts,High-rise Residential Buildings
+Res,fbbd4a1c159f97fc5d2836f812586395.tif,ImageSets\Res\fbbd4a1c159f97fc5d2836f812586395.tif,652,320,Residential Districts,Urban Villages
+Com,fbcd8329103aa07de7108ddf8d333861.tif,ImageSets\Com\fbcd8329103aa07de7108ddf8d333861.tif,131,236,Commercial Zones,Business Tower
+Com,fbd6493b73c1fa901d61db5a57e747ab.tif,ImageSets\Com\fbd6493b73c1fa901d61db5a57e747ab.tif,156,130,Commercial Zones,Business Tower
+Ind,fc2d6b2b1527630e8366f88ce85ad206.tif,ImageSets\Ind\fc2d6b2b1527630e8366f88ce85ad206.tif,252,211,Industrial Land,Industrial Park and Factory
+Pub,fc68948c965d6c8c0ea2071d44c82f02.tif,ImageSets\Pub\fc68948c965d6c8c0ea2071d44c82f02.tif,341,327,Public Services,Parks and Squares
+Res,fc7be032894c37332bc34836545f5260.tif,ImageSets\Res\fc7be032894c37332bc34836545f5260.tif,234,216,Residential Districts,High-rise Residential Buildings
+Ind,fcda9cfd205c7711c54e28c887a26dd2.tif,ImageSets\Ind\fcda9cfd205c7711c54e28c887a26dd2.tif,139,194,Industrial Land,Industrial Park and Factory
+Com,fcde2bfe3b2b7bf447572bb1c8875d07.tif,ImageSets\Com\fcde2bfe3b2b7bf447572bb1c8875d07.tif,123,143,Commercial Zones,Office Campus
+Res,fce6d4d8417b55a9ed9bd492e54df274.tif,ImageSets\Res\fce6d4d8417b55a9ed9bd492e54df274.tif,329,338,Residential Districts,High-rise Residential Buildings
+Ind,fd9e839dafccc4a17e800ff124022a80.tif,ImageSets\Ind\fd9e839dafccc4a17e800ff124022a80.tif,275,192,Industrial Land,Industrial Park and Factory
+Com,fdd3ab1ef1400a2d3715a71b66f4e534.tif,ImageSets\Com\fdd3ab1ef1400a2d3715a71b66f4e534.tif,140,186,Commercial Zones,Office Campus
+Com,fde8d6f650cabe25c0c57275ff12b96c.tif,ImageSets\Com\fde8d6f650cabe25c0c57275ff12b96c.tif,438,273,Commercial Zones,Commercial Market
+Ind,fe1b06c161733e5dccf89f1a710855ce.tif,ImageSets\Ind\fe1b06c161733e5dccf89f1a710855ce.tif,349,523,Industrial Land,Industrial Park and Factory
+Ind,fecce45e5057e87413a343e8fc38b4b8.tif,ImageSets\Ind\fecce45e5057e87413a343e8fc38b4b8.tif,179,155,Industrial Land,Industrial Park and Factory
+Pub,ff766bea014ac444f5a28e62269d5aa5.tif,ImageSets\Pub\ff766bea014ac444f5a28e62269d5aa5.tif,180,142,Public Services,Parks and Squares
+Com,ffca605534e5e84903158e06a1c276d1.tif,ImageSets\Com\ffca605534e5e84903158e06a1c276d1.tif,104,143,Commercial Zones,Shopping Center and Commercial Street
+Agr,fffb429bfc60897351ed3ab805345211.tif,ImageSets\Agr\fffb429bfc60897351ed3ab805345211.tif,190,187,Agriculture and Nature,Farmland

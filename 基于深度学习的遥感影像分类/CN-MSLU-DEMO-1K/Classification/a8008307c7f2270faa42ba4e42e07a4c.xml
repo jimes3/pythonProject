@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Agr</folder>
+	<filename>a8008307c7f2270faa42ba4e42e07a4c.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>223</width>
+		<height>121</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Agriculture and Nature</firstlevel>
+		<secondlevel>Forestland and Grassland</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>

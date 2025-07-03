@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Res</folder>
+	<filename>71ff0eafdb2eb002b06c853e188cf622.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>123</width>
+		<height>144</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Residential Districts</firstlevel>
+		<secondlevel>High-rise Residential Buildings</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>

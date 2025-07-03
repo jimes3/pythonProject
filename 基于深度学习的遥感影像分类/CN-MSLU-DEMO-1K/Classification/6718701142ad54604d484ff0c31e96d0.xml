@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Com</folder>
+	<filename>6718701142ad54604d484ff0c31e96d0.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>151</width>
+		<height>122</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Commercial Zones</firstlevel>
+		<secondlevel>Shopping Center and Commercial Street</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>

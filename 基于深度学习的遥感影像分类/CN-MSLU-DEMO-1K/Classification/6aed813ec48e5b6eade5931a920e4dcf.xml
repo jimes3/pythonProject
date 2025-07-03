@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<classification>
+	<quality>
+		<modelscore>0.0</modelscore>
+		<softscore>0.0</softscore>
+	</quality>
+	<folder>Ind</folder>
+	<filename>6aed813ec48e5b6eade5931a920e4dcf.tif</filename>
+	<source>
+		<database>CN-MSLU-1K</database>
+	</source>
+	<size>
+		<width>272</width>
+		<height>313</height>
+		<depth>3</depth>
+	</size>
+	<category>
+		<firstlevel>Industrial Land</firstlevel>
+		<secondlevel>Construction Site</secondlevel>
+	</category>
+	<geoinfo>
+		<coord>GCJ02</coord>
+		<coord>None</coord>
+	</geoinfo>
+</classification>
