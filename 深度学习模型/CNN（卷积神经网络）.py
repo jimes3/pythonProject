@@ -7,7 +7,7 @@ print(torch.__version__)
 print(torch.cuda.is_available())
 # 设置随机种子保证可重复性
 torch.manual_seed(42)
-
+#哈哈哈
 # 数据准备
 transform = transforms.Compose([
     transforms.ToTensor(),         # 将PIL图像转为Tensor (0-1范围)
