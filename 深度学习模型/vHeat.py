@@ -462,12 +462,4 @@ class vHeat(nn.Module):
         return x
 
 
-if __name__ == "__main__":
-    from fvcore.nn import flop_count_table, flop_count_str, FlopCountAnalysis
-    model = vHeat()#.cuda()
-    input = torch.randn((1, 3, 224, 224), device=torch.device('cpu'))
-    analyze = FlopCountAnalysis(model, (input,))
-    print(flop_count_str(analyze))
-
-
 

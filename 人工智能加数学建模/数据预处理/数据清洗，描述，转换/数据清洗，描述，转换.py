@@ -39,7 +39,7 @@ new_df1 = df.drop_duplicates() # 删除数据记录中所有列值相同的记�
 #new_df4 = df.drop_duplicates(['rm', 'rad']) # 删除数据记录中指定列值相同的记录
 
 #########################        异常值处理       #########################3
-def abnormal(w=0):
+def abnormal(w=1):
     if w==1:
         # 通过Z-Score方法判断异常值
         df_zscore = df.copy() # 复制一个用来存储Z-score得分的数据框
@@ -70,10 +70,9 @@ def abnormal(w=0):
                 df.loc[i, col] = np.nan
         return df
     if w==3:
-        error_index = df[(df['rm'] <= 40) | (df['rad'] >= 12)].index.tolist()
+        error_index = df[(df['rm'] >= 10000) | (df['rad'] >= 12)].index.tolist()
         for i in error_index:
             df.loc[i, :] = np.nan
-        #df.drop(index=error_index)
         return df
 df = abnormal(w=3) # 1:z-score    2:四分位检测    3:各种值约束检测
 
@@ -89,7 +88,7 @@ print ('是否存在缺失值')
 print (nan_col1)
 #print ('是否全缺失')
 #print (nan_col2)
-def fit_method(o=3):
+def fit_method(df2,o=3):
     if o == 1:
         #简单的填充方法
         imp=SimpleImputer(strategy='mean')
@@ -110,7 +109,7 @@ def fit_method(o=3):
         #print('丢弃含有缺失值的行')
         #print (df2)
     return df2
-df2 = fit_method(o=1)  # 1:简单填充  2:knn填充   3:丢弃不填充
+df = fit_method(df,o=3)  # 1:简单填充  2:knn填充   3:丢弃不填充
 
 ####################    相关性分析        ########################
 #  选择计算相关系数的方法
@@ -134,12 +133,34 @@ plt.savefig('相关度.png',  dpi=600)
 
 #########################    数据转换         #######################
 
+#########################    统计指标         #######################
+import numpy as np
+import pandas as pd
+from scipy.stats import skew, kurtosis
+
+def extract_stats(arr):
+    return {
+        'mean': np.mean(arr),
+        'std': np.std(arr, ddof=1),
+        'var': np.var(arr, ddof=1),
+        'skewness': skew(arr),
+        'kurtosis': kurtosis(arr),
+        'min': np.min(arr),
+        'max': np.max(arr),
+        'range': np.ptp(arr),  # max - min
+        'median': np.median(arr),
+        'q25': np.percentile(arr, 25),
+        'q75': np.percentile(arr, 75)
+    }
+
+features = extract_stats(df['rm'])
+print(pd.Series(features))
 
 
 ########################      输出文件      ###########################
 #定义列名列表
-col_names=['lstat','rm', 'rad']
+col_names=['lstat','rm', 'rad','chas']
 #将numpy数组转换为二维数组
-data=np.atleast_2d(df2)
+data=np.atleast_2d(df)
 #将二维数组按行保存为csv文件
 np.savetxt('result.csv',data,delimiter=',',fmt='%f',header=','.join(col_names),comments='')

@@ -5,9 +5,10 @@ import torch.optim as optim     # 优化器
 from torchvision import datasets, transforms # 数据集和预处理
 print(torch.__version__)
 print(torch.cuda.is_available())
+
 # 设置随机种子保证可重复性
 torch.manual_seed(42)
-#哈哈哈
+
 # 数据准备
 transform = transforms.Compose([
     transforms.ToTensor(),         # 将PIL图像转为Tensor (0-1范围)
@@ -83,9 +84,12 @@ class SimpleCNN(nn.Module):
         x = self.fc2(x)
         return x
 
-device = torch.device("cuda")
+device = torch.device("cpu")
 # 实例化网络
 model = SimpleCNN().to(device)
+
+#from vHeat import vHeat
+#model = vHeat().to(device)
 
 # 定义损失函数和优化器
 criterion = nn.CrossEntropyLoss()
