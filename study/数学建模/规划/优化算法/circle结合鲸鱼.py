@@ -11,16 +11,33 @@ plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
 
+
+# 改进的circle_map生成
+#基于混沌反向学习和水波算法改进的白鲸优化算法---2.1混沌反向学习策略
+def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, a=-10, b=10):
+    def tent(x):   # 改进
+        if x<0.499:
+            x = x/0.499
+        else:
+            x = (1-x)/(1-0.499)
+        return x
+    theta = np.zeros(N)
+    theta[0] = tent(theta0)  # 改进
+
+    for n in range(N-1):  # 改进
+        theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
+        theta[n+1] = tent(theta[n+1])   # 改进
+    # 映射到 [a, b]
+    x = a + (b - a) * theta
+    x = a + b - x   # 改进
+    return x
+
+
 def fun(X):  # 目标函数和约束条件
     x = X.flatten() #将X变为一维数组
-    fx = 0
-    for i in range(len(x)-1):
-        a = x[i]**2 - 10*np.cos(2*np.pi*x[i]) + 10
-        fx += a
-    fx += -7*x[-1]
-    return fx      #施加惩罚项
+    return sum([100*(x[i+1] - x[i]**2)**2 + (x[i] - 1)**2 for i in range(len(x)-1)])     #施加惩罚项
 
-s = np.zeros((1,30))
+s = np.zeros((1,6))
 sub = np.array(s-10).ravel()  # 自变量下限
 up = np.array(s+10).ravel()  # 自变量上限
 type = np.array(s).ravel()    #-1是有理数，0是整数，1是0-1变量
@@ -49,13 +66,17 @@ def type_x(xx,type,n):  #变量范围约束
     return xx
 def woa(sub,up,type,nums,det):
     n = len(sub)  # 自变量个数
-    num = nums * n  # 种群大小
+    num = nums   # 种群大小
     x = np.zeros([num, n])  #生成保存解的矩阵
     f = np.zeros(num)   #生成保存值的矩阵
-    for s in range(num):      #随机生成初始解
-        for v in range(n):
-            rand_data = np.random.uniform(0,1)
-            x[s, v] = sub[v] + (up[v] - sub[v]) * rand_data
+    N = num
+    omega=(np.sqrt(5)-1)/2
+
+    K=40.0
+
+    for s in range(n):      #circle_map生成初始解
+        x[:, s] = circle_map_uniform(N, 0+s/(n+1), omega, K, -10, 10)
+    for s in range(num):
         x[s, :] = type_x(x[s, :],type,n)
         f[s] = fun(x[s, :])
     best_f, a = new_min(f)  # 记录历史最优值
@@ -132,7 +153,7 @@ def woa(sub,up,type,nums,det):
         trace = np.hstack((trace, [best_f]))
     return best_x,best_f,trace
 
-best_x,best_f,trace = woa(sub,up,type,20,60)     #种群大小，迭代次数
+best_x,best_f,trace = woa(sub,up,type,100,100)     #种群大小，迭代次数
 #种群大小可以为自变量个数，迭代次数看情况
 print('最优解为：')
 print(best_x)

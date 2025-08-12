@@ -46,7 +46,7 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
             fbest = f_current_best
             Xbest = X[np.argmin(fit)]
 
-        # Phase 1: Exploration
+        # Phase 1: 探索阶段
         for i in range(int(SearchAgents / 2)):
             # Phase1: The hippopotamuses position update in the river or pond (Exploration)
             Dominant_hippopotamus = Xbest
@@ -90,7 +90,7 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
                 X[i, :] = X_P2
                 fit[i] = F_P2
 
-        # Phase 2: Exploration
+        # Phase 2: 防御阶段
         # 计算中间值，避免在循环中重复计算
         half_agents = int(SearchAgents / 2)
 
@@ -132,7 +132,7 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
                 X[i, :] = X_P3
                 fit[i] = F_P3
 
-        # Phase 3: Exploitation
+        # Phase 3: 逃离模式
         for i in range(SearchAgents):
             # 计算局部搜索范围
             LO_LOCAL = lowerbound / t
