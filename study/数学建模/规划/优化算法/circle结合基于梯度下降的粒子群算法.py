@@ -82,7 +82,6 @@ class particle:
         self.__fitnessValue = value
     def get_fitness_value(self):
         return self.__fitnessValue
-
 class PSO:
     def __init__(self, dim, size, iter_num, x_min,x_max, max_vel, tol, best_fitness_value=float('Inf'), C1=2, C2=2, W=1):
         self.C1 = C1      #加速常数1，控制局部最优解
