@@ -17,10 +17,27 @@ up = s+10  # 自变量上限
 type = s   #-1是有理数，0是整数，1是0-1变量
 def main():
     Best_score, Best_pos, HO_curve = HO(30, 100, sub, up, n_x, fitness)
-    plt.title('鲸鱼算法')
+    plt.title('河马算法')
     plt.plot(range(1,len(HO_curve)+1),HO_curve, color='r')
     plt.show()
 
+
+def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, ss = s, a=sub, b=up):
+    def tent(x):   # 改进
+        if x<0.499:
+            x = x/0.499
+        else:
+            x = (1-x)/(1-0.499)
+        return x
+    theta = np.zeros(N)
+    theta[0] = tent(theta0)  # 改进
+    for n in range(N-1):  # 改进
+        theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
+        theta[n+1] = tent(theta[n+1])   # 改进
+    # 映射到 [a, b]
+    x = a + (b - a) * theta
+    x = a + b - x   # 改进
+    return x
 def type_x(xx):  #变量范围约束
     xx = xx.ravel()
     for v in range(len(xx)):
@@ -48,8 +65,9 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
         return z
     # 初始化
     X = np.zeros([SearchAgents, dimension])
-    for i in range(SearchAgents):
-        X[i] = type_x(X[i])
+    for s in range(SearchAgents):
+        X[s, :] = circle_map_uniform(dimension, s/(SearchAgents+1), omega=(np.sqrt(5)-1)/2, K=40.0)
+        X[s, :] = type_x(X[s, :])
     fit = np.array([fitness(L) for L in X])
     # 最优解定义
     fbest = np.min(fit)

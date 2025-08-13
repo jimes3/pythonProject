@@ -19,6 +19,7 @@ def circle_map_uniform_original(N=1000, theta0=0.1, omega=0.6180339887, K=6.0, a
 
 # 改进的circle_map生成
 #基于混沌反向学习和水波算法改进的白鲸优化算法---2.1混沌反向学习策略
+#基于改进PSO-HO算法的无人机三维路径规划---3.3.1利用改进Circle反向学习初始化
 def circle_map_uniform(N=1000, theta0=0.1, omega=0.6180339887, K=6.0, a=0, b=10):
     def tent(x):   # 改进
         if x<0.499:

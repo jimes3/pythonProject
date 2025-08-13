@@ -38,14 +38,14 @@ def new_min(arr):  #求最小
 def type_x(xx,type,n):  #变量范围约束
     for v in range(n):
         if type[v] == -1:
-            xx[v] = np.maximum(sub[v], xx[v])
-            xx[v] = np.minimum(up[v], xx[v])
+            xx[v] = np.clip(xx[v],sub[v],up[v])
         elif type[v] == 0:
-            xx[v] = np.maximum(sub[v], int(xx[v]))
-            xx[v] = np.minimum(up[v], int(xx[v]))
-        else:
-            xx[v] = np.maximum(sub[v], random.randint(0,2))
-            xx[v] = np.minimum(up[v], random.randint(0,2))
+            xx[v] = np.clip(xx[v],sub[v],up[v]).round().astype(int)
+        elif type[v] == 1:
+            # Sigmoid 转化为概率
+            xx[v] = 1 / (1 + np.exp(-xx[v]))
+            # 随机取 0 或 1
+            xx[v] = (np.random.rand(*xx[v].shape) < xx[v]).astype(int)
     return xx
 def woa(sub,up,type,nums,det):
     n = len(sub)  # 自变量个数
