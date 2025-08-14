@@ -23,20 +23,20 @@ def main():
 
 
 def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, ss = s, a=sub, b=up):
-    def tent(x):   # 改进
+    def tent(x):   # 改进，基于混沌反向学习和水波算法改进的白鲸优化算法，2.1
         if x<0.499:
             x = x/0.499
         else:
             x = (1-x)/(1-0.499)
         return x
     theta = np.zeros(N)
-    theta[0] = tent(theta0)  # 改进
-    for n in range(N-1):  # 改进
+    theta[0] = tent(theta0)
+    for n in range(N-1):
         theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
-        theta[n+1] = tent(theta[n+1])   # 改进
+        theta[n+1] = tent(theta[n+1])
     # 映射到 [a, b]
     x = a + (b - a) * theta
-    x = a + b - x   # 改进
+    x = a + b - x   # 改进，基于混沌反向学习和水波算法改进的白鲸优化算法，2.1
     return x
 def type_x(xx):  #变量范围约束
     xx = xx.ravel()
@@ -96,7 +96,9 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
             A = Alfa[np.random.randint(1, 6)]
             B = Alfa[np.random.randint(1, 6)]
 
-            X_P1 = X[i, :] + np.random.rand() * (Dominant_hippopotamus - I1 * X[i, :])
+            # 改进点：自适应权重策略w    #####################################
+            w = np.exp(-(t/Max_iterations)**0.5)
+            X_P1 = w * X[i, :] + np.random.rand() * (Dominant_hippopotamus - I1 * X[i, :])
             T = np.exp(-t / Max_iterations)
             if T > 0.6:
                 X_P2 = X[i, :] + A * (Dominant_hippopotamus - I2 * MeanGroup)
@@ -164,6 +166,9 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
             D = Alfa[np.random.randint(1, 4)]
             # 更新X_P4位置
             X_P4 = X[i, :] + np.random.rand() * (LO_LOCAL + D * (HI_LOCAL - LO_LOCAL))
+            # 改进点  ###############################################
+            k = t/Max_iterations
+            X_P4 = (sub+up)/2*(1+k) - X_P4/k
             # 限制X_P4在界限内
             X_P4 = type_x(X_P4)
             # 计算新位置的适应度

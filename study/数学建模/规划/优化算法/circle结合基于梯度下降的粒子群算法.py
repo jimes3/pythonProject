@@ -4,20 +4,21 @@ import matplotlib.pyplot as plt
 plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
-
+np.set_printoptions(threshold=10) # threshold 指定超过多少使用省略号，np.inf代表无限大
+np.set_printoptions(suppress=True) #不以科学计数法输出
 
 def fitness(X):
-    x = X.flatten() #将X变为一维数组
+    x = X.ravel() #将X变为一维数组
     return sum([100*(x[i+1] - x[i]**2)**2 + (x[i] - 1)**2 for i in range(len(x)-1)])
 
 n_x = 10  # 变量个数
 s = np.zeros((1,n_x)).ravel()
-sub = s-10 # 自变量下限
-up = s+10  # 自变量上限
+sub = s-100 # 自变量下限
+up = s+100  # 自变量上限
 type = s   #-1是有理数，0是整数，1是0-1变量
 def main():
     # (变量数,粒子个数,最大迭代次数,x_min,x_max,max_vel,阈值,自身认知,群体认知,惯性因子)
-    pso = PSO(n_x, 10, 10000, sub, up, 6, 1e-4, C1=8, C2=2, W=0.1)
+    pso = PSO(n_x, 50, 1000, sub, up, 6, 1e-4, C1=2, C2=3, W=0.1)
     fit_var_list, best_pos = pso.update_ndim()
     print("最优位置:" + str(best_pos))
     print(f"最优解为：{fit_var_list[-1]:.9f}")
@@ -27,7 +28,35 @@ def main():
     plt.title('粒子群')
     plt.plot([i for i in range(1,len(fit_var_list)+1)],fit_var_list, color='r')
 
-
+# ===== 梯度下降 =====
+def gradient_descent(f, x0, lr=1e-3, max_iter=100, tol=1e-6):
+    # ===== 数值求导 =====
+    def numerical_gradient_max_dir(f, x, eps=lr,mode="full"):
+        x = np.array(x, dtype=float)
+        grad = np.zeros_like(x)
+        grads_all = np.zeros_like(x)
+        for i in range(len(x)):
+            x1 = x.copy()
+            x2 = x.copy()
+            x1[i] += eps
+            x2[i] -= eps
+            grads_all[i] = (f(x1) - f(x2)) / (2 * eps)
+        if mode == "full":   # 多个变量进行变化，适合连续
+            return grads_all
+        elif mode == "max":  # 单个变量进行变化，适合离散
+            idx_max = np.argmax(np.abs(grads_all))
+            grad[idx_max] = grads_all[idx_max]
+            return grad
+    x = np.array(x0, dtype=float)
+    for _ in range(max_iter):
+        grad = numerical_gradient_max_dir(f, x)
+        print('0',lr * grad)
+        x_new = x - lr * grad
+        print(x_new)
+        if np.linalg.norm(x_new - x) < tol:
+            break
+        x = x_new
+    return x, f(x)
 def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, a=sub, b=up):
     def tent(x):   # 改进
         if x<0.499:
@@ -116,7 +145,7 @@ class PSO:
         part.set_vel(vel_value)
     # 更新位置
     def update_pos(self, part):
-        pos_value = part.get_pos() + part.get_vel()
+        pos_value = type_x(part.get_pos() + part.get_vel())
         part.set_pos(pos_value)
         value = fitness(part.get_pos())
         if value < part.get_fitness_value():
@@ -132,9 +161,18 @@ class PSO:
                 self.update_vel(part)  # 更新速度
                 self.update_pos(part)  # 更新位置
             self.fitness_val_list.append(self.get_bestFitnessValue())  # 每次迭代完把当前的最优适应度存到列表
-            #print('第{}次最佳适应值为{}'.format(i, self.get_bestFitnessValue()))#################################################
-            if self.get_bestFitnessValue() < self.tol:
-                break
+            print('第{}次最佳适应值为{}'.format(i, self.get_bestFitnessValue()))#################################################
+            #if self.get_bestFitnessValue() < self.tol:
+                #break
+            if i % 20 == 0:
+                pos_value,_ = gradient_descent(fitness, self.best_position)
+                value = fitness(type_x(pos_value))
+                if value < part.get_fitness_value():
+                    part.set_fitness_value(value)
+                    part.set_best_pos(pos_value)
+                if value < self.get_bestFitnessValue():
+                    self.set_bestFitnessValue(value)
+                    self.set_bestPosition(pos_value)
         print('--------------粒子群--------------')
         return self.fitness_val_list, self.get_bestPosition()
 
