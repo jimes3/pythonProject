@@ -6,7 +6,7 @@ data = load_iris()
 y = data.target
 x = data.data
 print(x)
-pca = PCA(n_components=2)  # 加载PCA算法，设置降维后主成分数目为2
+pca = PCA(n_components=4)  # 加载PCA算法，设置降维后主成分数目为2
 reduced_x = pca.fit_transform(x)  # 对样本进行降维
 red_x, red_y = [], []
 blue_x, blue_y = [], []

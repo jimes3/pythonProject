@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 参数
-N = 30
-a, b = 5, 15
+N = 3000
+a, b = 0, 15
 omega = (np.sqrt(5)-1)/2   # 黄金分割
-K = 40.0                   # 增大 K 进入混沌
+K = 28.0                   # 增大 K 进入混沌
 
 
 def circle_map_uniform_original(N=1000, theta0=0.1, omega=0.6180339887, K=6.0, a=0, b=10):
@@ -20,27 +20,21 @@ def circle_map_uniform_original(N=1000, theta0=0.1, omega=0.6180339887, K=6.0, a
 # 改进的circle_map生成
 #基于混沌反向学习和水波算法改进的白鲸优化算法---2.1混沌反向学习策略
 #基于改进PSO-HO算法的无人机三维路径规划---3.3.1利用改进Circle反向学习初始化
-def circle_map_uniform(N=1000, theta0=0.1, omega=0.6180339887, K=6.0, a=0, b=10):
-    def tent(x):   # 改进
-        if x<0.499:
-            x = x/0.499
-        else:
-            x = (1-x)/(1-0.499)
-        return x
+def circle_map_uniform(N=1000, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=6.0, a=0, b=10):
     theta = np.zeros(N)
-    theta[0] = tent(theta0)  # 改进
-
+    theta[0] = theta0
+    #theta[0] = tent(theta0)  # 改进
     for n in range(N-1):  # 改进
         theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
-        theta[n+1] = tent(theta[n+1])   # 改进
+        #theta[n+1] = tent(theta[n+1])   # 改进
     # 映射到 [a, b]
-    x = a + (b - a) * theta
-    x = a + b - x   # 改进
-    return x
+    x1 = a + (b - a) * theta
+    x2 = b + a - x1   # 改进
+    return x1,x2
 
 def lyapunov_exponent(N, theta0, omega, K, delta=1e-8):
     def circle_map_func(theta, omega, K):
-        return (theta + omega - (K/(2*np.pi)) * np.sin(2*np.pi*theta)) % 1
+        return (theta + omega - (K/(3.5*np.pi)) * np.sin(3.5*np.pi*theta)) % 1
     theta = theta0
     theta_perturbed = (theta0 + delta) % 1
     lyap_sum = 0
@@ -76,19 +70,19 @@ plt.grid(True)
 plt.show()
 
 ######################################################################################
-x_seq = circle_map_uniform(N, 0.1234, omega, K, a, b)
+x_seq1,x_seq2 = circle_map_uniform(N, 0.1234, omega, K, a, b)
 # 图1：时间序列散点
 plt.figure(figsize=(6, 4))
-plt.scatter(range(N), x_seq, s=2, alpha=0.6)
+plt.scatter(range(N), x_seq1, s=2, alpha=0.6)
 plt.title(f"Chaotic Circle Map in [{a}, {b}]")
 plt.xlabel("Iteration")
 plt.ylabel("Value")
 plt.show()
 ######################################################################################
 # 以不同的初始值生成不同的随机数，范围[0,1)
-x = circle_map_uniform(N, 0, omega, K, a, b)
-y = circle_map_uniform(N, 0.5, omega, K, a, b)
-z = circle_map_uniform(N, 0.9, omega, K, a, b)
+x,_ = circle_map_uniform(N, 0, omega, K, a, b)
+y,_ = circle_map_uniform(N, 0.5, omega, K, a, b)
+z,_ = circle_map_uniform(N, 0.9, omega, K, a, b)
 # 图2：随机点分布
 fig = plt.figure(figsize=(10,7))
 ax = fig.add_subplot(111, projection='3d')

@@ -47,29 +47,28 @@ def type_x(xx):  #变量范围约束
             xx[v] = (np.random.rand(*xx[v].shape) < xx[v]).astype(int)
     return xx
 # 改进的circle_map生成
-#基于混沌反向学习和水波算法改进的白鲸优化算法---2.1混沌反向学习策略
-def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, ss = s, a=sub, b=up):
-    def tent(x):   # 改进
-        if x<0.499:
-            x = x/0.499
-        else:
-            x = (1-x)/(1-0.499)
-        return x
+def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=28.0, a=sub, b=up):
     theta = np.zeros(N)
-    theta[0] = tent(theta0)  # 改进
+    theta[0] = theta0  # 改进
     for n in range(N-1):  # 改进
         theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
-        theta[n+1] = tent(theta[n+1])   # 改进
     # 映射到 [a, b]
-    x = a + (b - a) * theta
-    x = a + b - x   # 改进
-    return x
+    x1 = a + (b - a) * theta
+    x2 = a + b - x1   # 改进
+    return x1,x2
 def woa(sub,up,num,det):
     n = len(sub)  # 自变量个数
     x = np.zeros([num, n])  #生成保存解的矩阵
     f = np.zeros(num)   #生成保存值的矩阵
     for s in range(num):   #circle_map生成初始解
-        x[s, :] = circle_map_uniform(n, s/(num+1), omega=(np.sqrt(5)-1)/2, K=40.0)
+        pos1,pos2 = circle_map_uniform(n, s/(num+1), omega=(np.sqrt(5)-1)/2, K=28.0)
+        v1 = fun(pos1)
+        v2 = fun(pos2)
+        if v1 < v2:
+            pos = pos1
+        else:
+            pos = pos2
+        x[s, :] = pos
         x[s, :] = type_x(x[s, :])
         f[s] = fun(x[s, :])
     best_f, a = new_min(f)  # 记录历史最优值

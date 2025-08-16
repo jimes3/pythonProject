@@ -22,22 +22,15 @@ def main():
     plt.show()
 
 
-def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, ss = s, a=sub, b=up):
-    def tent(x):   # 改进，基于混沌反向学习和水波算法改进的白鲸优化算法，2.1
-        if x<0.499:
-            x = x/0.499
-        else:
-            x = (1-x)/(1-0.499)
-        return x
+def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0,  a=sub, b=up):
     theta = np.zeros(N)
-    theta[0] = tent(theta0)
-    for n in range(N-1):
+    theta[0] = theta0
+    for n in range(N-1):  # 改进
         theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
-        theta[n+1] = tent(theta[n+1])
     # 映射到 [a, b]
-    x = a + (b - a) * theta
-    x = a + b - x   # 改进，基于混沌反向学习和水波算法改进的白鲸优化算法，2.1
-    return x
+    x1 = a + (b - a) * theta
+    x2 = b + a - x1   # 改进
+    return x1,x2
 def type_x(xx):  #变量范围约束
     xx = xx.ravel()
     for v in range(len(xx)):
@@ -66,7 +59,14 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
     # 初始化
     X = np.zeros([SearchAgents, dimension])
     for s in range(SearchAgents):
-        X[s, :] = circle_map_uniform(dimension, s/(SearchAgents+1), omega=(np.sqrt(5)-1)/2, K=40.0)
+        pos1,pos2 = circle_map_uniform(dimension, s/(SearchAgents+1), omega=(np.sqrt(5)-1)/2, K=28.0)
+        v1 = fitness(pos1)
+        v2 = fitness(pos2)
+        if v1 < v2:
+            pos = pos1
+        else:
+            pos = pos2
+        X[s, :] = pos
         X[s, :] = type_x(X[s, :])
     fit = np.array([fitness(L) for L in X])
     # 最优解定义

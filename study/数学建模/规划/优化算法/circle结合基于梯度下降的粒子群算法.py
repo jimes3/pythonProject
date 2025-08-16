@@ -50,29 +50,22 @@ def gradient_descent(f, x0, lr=1e-3, max_iter=100, tol=1e-6):
     x = np.array(x0, dtype=float)
     for _ in range(max_iter):
         grad = numerical_gradient_max_dir(f, x)
-        print('0',lr * grad)
+        #print('0',lr * grad)
         x_new = x - lr * grad
-        print(x_new)
+        #print(x_new)
         if np.linalg.norm(x_new - x) < tol:
             break
         x = x_new
     return x, f(x)
-def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=40.0, a=sub, b=up):
-    def tent(x):   # 改进
-        if x<0.499:
-            x = x/0.499
-        else:
-            x = (1-x)/(1-0.499)
-        return x
+def circle_map_uniform(N=30, theta0=0.1, omega=(np.sqrt(5)-1)/2, K=28.0, a=sub, b=up):
     theta = np.zeros(N)
-    theta[0] = tent(theta0)  # 改进
+    theta[0] = theta0  # 改进
     for n in range(N-1):  # 改进
         theta[n+1] = (3.5*theta[n] + omega - (K/(3.5*np.pi))*np.sin(3.5*np.pi*theta[n])) % 1
-        theta[n+1] = tent(theta[n+1])   # 改进
     # 映射到 [a, b]
-    x = a + (b - a) * theta
-    x = a + b - x   # 改进
-    return x
+    x1 = a + (b - a) * theta
+    x2 = a + b - x1   # 改进
+    return x1,x2
 def type_x(xx):  #变量范围约束
     xx = xx.ravel()
     for v in range(len(xx)):
@@ -89,7 +82,13 @@ def type_x(xx):  #变量范围约束
 class particle:
     # 初始化
     def __init__(self, size, max_vel, dim, ii):
-        pos = circle_map_uniform(dim, ii/(size+1), omega=(np.sqrt(5)-1)/2, K=40.0)
+        pos1,pos2 = circle_map_uniform(dim, ii/(size+1), omega=(np.sqrt(5)-1)/2, K=28.0)
+        v1 = fitness(pos1)
+        v2 = fitness(pos2)
+        if v1 < v2:
+            pos = pos1
+        else:
+            pos = pos2
         self.__pos = np.array(pos)  # 粒子的位置
         self.__vel = np.random.uniform(-max_vel, max_vel, (1, dim))  # 粒子的速度
         self.__bestPos = np.zeros((1, dim))  # 粒子最好的位置
@@ -127,6 +126,7 @@ class PSO:
         self.best_position = np.zeros((1, dim))  # 种群最优位置
         self.fitness_val_list = []  # 每次迭代最优适应值
         # 对种群进行初始化
+        print(particle(self.size, self.max_vel, self.dim , 3))
         self.Particle_list = [particle(self.size, self.max_vel, self.dim , i) for i in range(self.size)]
     def set_bestFitnessValue(self, value):
         self.best_fitness_value = value
