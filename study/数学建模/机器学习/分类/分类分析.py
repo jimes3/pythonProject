@@ -3,7 +3,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import GradientBoostingClassifier,RandomForestClassifier,AdaBoostClassifier   # 集成算法
-from sklearn.model_selection import cross_val_score    # 交叉验证
+from sklearn.model_selection import cross_val_score,cross_val_predict    # 交叉验证
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -123,9 +123,7 @@ def sort(X,y,z,w):
     # 将交叉检验结果存入结果列表
         cv_score_list.append(scores)
     # 将回归训练中得到的预测y存入列表
-        pre_y_list.append(model.fit(X, y).predict(X))
-        if w == 1:
-            print(f'{model}:',pre_y_list)
+        pre_y_list.append(cross_val_predict(model, X, y, cv=n_folds))
     if w == 0:
         ### 模型效果指标评估 ###
         # 获取样本量，特征数
@@ -144,8 +142,6 @@ def sort(X,y,z,w):
             tmp_list.append(tmp_score)
             tmp_score = precision_score(y, pre_y,average='micro')
             tmp_list.append(tmp_score)
-            #tmp_score = average_precision_score(y, pre_y)   #二分类，只适用于两种分类的情况
-            #tmp_list.append(tmp_score)
             tmp_score = f1_score(y, pre_y,average='micro')
             tmp_list.append(tmp_score)
             # 将结果存入分类评估列表
@@ -193,4 +189,7 @@ plt.show()
 '''
 sort(X_train,y_train,z='训练',w=0)
 sort(X_test,y_test,z='测试',w=0)
-#sort(X_redict,y_predict,z='预测',w=1)
+# 拟合并预测
+#y_pred = model.fit(X_train, y_train).predict(X_test)
+#print('-----------------------------预测-----------------------------')
+#print('lce_model预测结果:', y_pred)
