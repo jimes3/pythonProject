@@ -131,10 +131,10 @@ class BPNN:
         print('预测值：')
         result=[]
         for i in patterns:
-            result.append(self.update(i[0]))
-            print(i[0], '->', self.update(i[0]))
-        soft = softmax(result)
-        return soft
+            pred = self.update(i[0])
+            result.append(pred)
+            print(i[0], '->', pred)
+        return result
     # 权重
     def weights(self):
         print("输入层权重")
@@ -163,11 +163,11 @@ class BPNN:
 # 实例
 def demo():
     patt = [
-        [[1, 2, 5], [0]],
-        [[1, 3, 4], [1]],
-        [[1, 6, 2], [1]],
-        [[1, 5, 1], [0]],
-        [[1, 8, 4], [1]]
+        [[1, 2, 5], [2]],
+        [[1, 3, 4], [3]],
+        [[1, 6, 2], [3]],
+        [[1, 5, 1], [2]],
+        [[1, 8, 4], [3]]
     ]
     # 创建神经网络，3个输入节点，3个隐藏层节点，1个输出层节点
     n = BPNN(3, 3, 1)

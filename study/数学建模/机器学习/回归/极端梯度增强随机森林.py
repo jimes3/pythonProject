@@ -11,12 +11,12 @@ warnings.filterwarnings("ignore")
 
 # ---------------- 数据读取 ----------------
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
-                 usecols=['lstat','rm','chas'])
+                 usecols=['lstat','rm','crim','age','indus'])
 
 # 自变量
-X = df[['lstat','rm']].values
+X = df[['rm','crim','age','indus']].values
 # 因变量
-y = df['chas'].values
+y = df['lstat'].values
 
 # ---------------- 数据集切分 ----------------
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
@@ -26,20 +26,9 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# ---------------- 可视化 ----------------
-sns.set(style='whitegrid', context='notebook')
-sns.pairplot(df, height=2)
-plt.savefig('数据关系.png', dpi=600)
-plt.close()
-
-corr = df.corr()
-sns.heatmap(corr, cmap='GnBu_r', annot=True)
-plt.savefig('相关度热力图.png', dpi=600)
-plt.close()
-
 # ---------------- 初始化 LCERegressor ----------------
 lce_model = LCERegressor(
-    n_estimators=30,
+    n_estimators=15,
     bootstrap=True,
     max_samples=0.8,
     max_features="sqrt",
@@ -48,7 +37,7 @@ lce_model = LCERegressor(
     metric="neg_mean_squared_error",   # 回归指标
     n_iter=20,
     base_learner="xgboost",
-    base_n_estimators=(100, 300, 500),
+    base_n_estimators=(100, 200),
     base_max_depth=(3, 6, 9),
     base_learning_rate=(0.1,),
     base_gamma=(0, 1, 5),
@@ -71,8 +60,9 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         print('-----------------------------预测-----------------------------')
         print('LCERegressor预测结果:', [round(i,4) for i in y_pred])
     if w == "训练":
-        n_folds = 5
-        # 交叉验证评分 (neg_mean_squared_error)
+        n_folds = 3
+        print("开始交叉验证")
+        # 交叉验证评分
         scores = cross_val_score(model, X, y, cv=n_folds, scoring='neg_mean_squared_error')
         # 交叉验证预测结果
         y_pred = cross_val_predict(model, X, y, cv=n_folds)

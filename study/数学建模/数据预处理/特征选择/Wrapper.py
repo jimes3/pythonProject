@@ -11,7 +11,7 @@ y = df['medv'].values
 
 
 rfe = RFE(estimator=LogisticRegression(max_iter=3000), n_features_to_select=2).fit(X, y.astype('int'))
-print(rfe.support_, rfe.ranking_)
+print(rfe.support_,'\n', rfe.ranking_)
 '''
 1,指定一个有n个特征的数据集。
 2,选择一个算法模型来做RFE的基模型。

@@ -26,22 +26,10 @@ from sklearn.preprocessing import StandardScaler
 X_train = StandardScaler().fit_transform(X_train)    #标准化
 X_test = StandardScaler().fit_transform(X_test)    #标准化
 
-# 可视化数据关系
-sns.set(style='whitegrid', context='notebook')   #style控制默认样式,context控制着默认的画幅大小
-sns.pairplot(df, size=2)
-plt.savefig('数据关系.png',dpi=600)
-plt.close()
-# 相关度
-corr = df.corr()
-# 相关度热力图
-sns.heatmap(corr, cmap='GnBu_r',annot=True)
-plt.savefig('icon.png',dpi=600)
-plt.close()
-
 # 初始化 LCEClassifier
 lce_model = LCEClassifier(
     # ================= 外层随机森林参数 =================
-    n_estimators=30,          # 外层随机森林的基学习器数量（相当于有30棵“大树”，每棵树其实是一个XGBoost）
+    n_estimators=15,          # 外层随机森林的基学习器数量（相当于有30棵“大树”，每棵树其实是一个XGBoost）
     bootstrap=True,           # 是否采用Bootstrap抽样（有放回采样）
     max_samples=0.8,          # 每个基学习器训练时采样80%的样本
     max_features="sqrt",      # 每个基学习器随机使用 sqrt(特征数) 个特征
@@ -52,7 +40,7 @@ lce_model = LCEClassifier(
 
     # ================= 内层基学习器（XGBoost）参数 =================
     base_learner="xgboost",   # 指定基学习器为XGBoost
-    base_n_estimators=(100, 300, 500),    # XGBoost的树数量候选值
+    base_n_estimators=(100, 200, 300),    # XGBoost的树数量候选值
     base_max_depth=(3, 6, 9),             # XGBoost的树深度候选值
     base_learning_rate=(0.1,),  # 学习率候选值，越小越稳定但训练更慢
     base_gamma=(0, 1, 5),                 # 节点分裂的最小损失下降，越大越保守
