@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from torch.nn.utils import weight_norm
 import numpy as np
+import matplotlib.pyplot as plt
 np.set_printoptions(threshold=np.inf) # threshold 指定超过多少使用省略号，np.inf代表无限大
 np.set_printoptions(suppress=True) #不以科学计数法输出
 import warnings
@@ -140,3 +141,10 @@ for epoch in range(epochs):
 pred = model(train_x.to(device)).detach().cpu().numpy()
 print("预测值：")
 print(pred)
+# 画出原始值的曲线
+plt.plot(range(len(train_y)), train_y, color='k', label='y')
+# 画出各个模型的预测线
+plt.plot(range(len(train_y)), pred.ravel(), 'r', label='pred')
+plt.title('TCN')
+plt.legend(loc='upper left')
+plt.show()

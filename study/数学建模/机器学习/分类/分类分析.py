@@ -16,7 +16,7 @@ warnings.filterwarnings("ignore")
 
 
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
-                 usecols=['lstat','rm','crim','age','indus','chas'])
+                 usecols=['lstat','rm','crim','age','indus','rad'])
 #pre = pd.read_csv("实验数据.csv",
 #                      usecols=['lstat','rm', 'rad'])
 # 数据分析
@@ -27,7 +27,7 @@ df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
 X = df[['rm','crim','age','indus']].values
 #X_predict = pre[['lstat', 'rm']].values
 # 因变量
-y = df['chas'].values
+y = df['rad'].values
 #y_predict = pre['rad'].values
 print('分类种类:', np.unique(y))
 
