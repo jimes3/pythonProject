@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
-import ydata_profiling as pp
+#import ydata_profiling as pp
 import webbrowser
 import warnings
 warnings.filterwarnings("ignore")
@@ -134,9 +134,9 @@ def regressor(X,y,w,X_test = None):
         # 读出每个回归模型对象
         for model in model_dic:
             # 将每个回归模型导入交叉检验
-            scores = cross_val_score(model, X, y, cv=n_folds,error_score='raise')
+            scores = cross_val_score(model, X, y, cv=n_folds,scoring='neg_mean_squared_error',error_score='raise')
             # 将交叉检验结果存入结果列表
-            cv_score_list.append(scores)
+            cv_score_list.append(-scores)
             # 将回归训练中得到的预测y存入列表
             pre_y_list.append(cross_val_predict(model, X, y, cv=n_folds))
             if w == 1:
@@ -180,14 +180,14 @@ def regressor(X,y,w,X_test = None):
         # 循环结果画图
         for i, pre_y in enumerate(pre_y_list):
             # 子网络
-            plt.subplot(2, 3, i+1)
+            plt.subplot(3, 2, i+1)
             # 画出原始值的曲线
             plt.plot(np.arange(X.shape[0]), y, color='k', label='y')
             # 画出各个模型的预测线
             plt.plot(np.arange(X.shape[0]), pre_y, color_list[i], label=model_names[i])
             plt.title(model_names[i])
             plt.legend(loc='lower left')
-        plt.savefig(f'现实对比.png',dpi=1200)
+        plt.savefig('测试现实对比.png',dpi=3600)
         plt.show()
     if w == '预测':
         # 用完整训练集训练模型预测新数据

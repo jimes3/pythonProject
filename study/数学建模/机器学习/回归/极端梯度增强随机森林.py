@@ -3,8 +3,6 @@ import pandas as pd
 from sklearn.model_selection import cross_val_score, cross_val_predict, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 import warnings
 warnings.filterwarnings("ignore")
@@ -28,24 +26,24 @@ X_test = scaler.transform(X_test)
 
 # ---------------- 初始化 LCERegressor ----------------
 lce_model = LCERegressor(
-    n_estimators=15,
+    n_estimators=5,
     bootstrap=True,
     max_samples=0.8,
     max_features="sqrt",
     max_depth=3,
     min_samples_leaf=1,
     metric="neg_mean_squared_error",   # 回归指标
-    n_iter=20,
+    n_iter=1,
     base_learner="xgboost",
-    base_n_estimators=(100, 200),
-    base_max_depth=(3, 6, 9),
+    base_n_estimators=(50,),
+    base_max_depth=(3, 6,),
     base_learning_rate=(0.1,),
     base_gamma=(0, 1, 5),
-    base_min_child_weight=(1, 5, 10),
+    base_min_child_weight=(1, 5,),
     base_subsample=(0.7, 0.9, 1.0),
     base_colsample_bytree=(0.7, 0.9, 1.0),
     base_reg_alpha=(0,),
-    base_reg_lambda=(0.1, 1.0, 5.0),
+    base_reg_lambda=(0.1, 1.0,),
     base_booster=("gbtree",),
     n_jobs=-1,
     random_state=42,

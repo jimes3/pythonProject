@@ -6,6 +6,7 @@ np.set_printoptions(threshold=np.inf) # threshold 指定超过多少使用省略
 np.set_printoptions(suppress=True) #不以科学计数法输出
 import warnings
 warnings.filterwarnings("ignore")
+
 class Chomp1d(nn.Module):
     def __init__(self, chomp_size):
         super(Chomp1d, self).__init__()
@@ -91,8 +92,15 @@ class TCN(nn.Module):
 
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+from torch.utils.data import TensorDataset, DataLoader
+import torch.optim as optim
+print(torch.__version__)        # 看 PyTorch 版本
+print(torch.cuda.is_available()) # 检查是否支持 CUD
+# 指定设备
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Using device:", device)
 # 多因素 → 单因素单步预测
-model = TCN(input_size=1, output_size=1, num_channels=[16, 32, 64], kernel_size=3, dropout=0.05)
+model = TCN(input_size=1, output_size=1, num_channels=[16, 32, 64], kernel_size=3, dropout=0.05).to(device)
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
                  usecols=['lstat','rm','crim','age','indus'])
 # 自变量
@@ -105,14 +113,12 @@ train_y = df['lstat'].values
 train_x = torch.tensor(train_x, dtype=torch.float32)  # shape: [batch, 1, seq_len]
 train_y = torch.tensor(train_y, dtype=torch.float32)     # shape: [batch]
 
-from torch.utils.data import TensorDataset, DataLoader
 # 创建 Dataset
 dataset = TensorDataset(train_x, train_y)
 # 创建 DataLoader
 train_loader = DataLoader(dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader(dataset, batch_size=64, shuffle=True)
 
-import torch.optim as optim
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
@@ -121,6 +127,7 @@ for epoch in range(epochs):
     model.train()
     total_loss = 0
     for x, y in train_loader:
+        x, y = x.to(device), y.to(device)
         # x: (batch, 1, seq_len)，y: (batch,)
         optimizer.zero_grad()
         output = model(x)           # (batch, 1)
@@ -129,3 +136,7 @@ for epoch in range(epochs):
         optimizer.step()
         total_loss += loss.item()
     print(f"Epoch {epoch+1}, Loss: {total_loss / len(train_loader):.4f}")
+# 测试
+pred = model(train_x.to(device)).detach().cpu().numpy()
+print("预测值：")
+print(pred)

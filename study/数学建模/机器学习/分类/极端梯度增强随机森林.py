@@ -1,10 +1,8 @@
 from lce import LCEClassifier
 import pandas as pd
 from sklearn.model_selection import cross_val_score,cross_val_predict    # 交叉验证
-import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
-from sklearn.metrics import accuracy_score, recall_score, precision_score, average_precision_score, f1_score
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -29,32 +27,32 @@ X_test = StandardScaler().fit_transform(X_test)    #标准化
 # 初始化 LCEClassifier
 lce_model = LCEClassifier(
     # ================= 外层随机森林参数 =================
-    n_estimators=15,          # 外层随机森林的基学习器数量（相当于有30棵“大树”，每棵树其实是一个XGBoost）
+    n_estimators=10,          # 外层随机森林的基学习器数量（相当于有30棵“大树”，每棵树其实是一个XGBoost）
     bootstrap=True,           # 是否采用Bootstrap抽样（有放回采样）
     max_samples=0.8,          # 每个基学习器训练时采样80%的样本
     max_features="sqrt",      # 每个基学习器随机使用 sqrt(特征数) 个特征
     max_depth=3,              # 外层弱学习器（类似树）的最大深度，防止过拟合
     min_samples_leaf=1,       # 外层树的叶子最小样本数
     metric="accuracy",        # 评估指标，可以改为 "f1" 或 "auc"
-    n_iter=20,                # 内层XGBoost超参数搜索的迭代次数（尝试多少组超参数）
+    n_iter=1,                # 内层XGBoost超参数搜索的迭代次数（尝试多少组超参数）
 
     # ================= 内层基学习器（XGBoost）参数 =================
     base_learner="xgboost",   # 指定基学习器为XGBoost
-    base_n_estimators=(100, 200, 300),    # XGBoost的树数量候选值
-    base_max_depth=(3, 6, 9),             # XGBoost的树深度候选值
+    base_n_estimators=(50, 100),    # XGBoost的树数量候选值
+    base_max_depth=(3, 6),             # XGBoost的树深度候选值
     base_learning_rate=(0.1,),  # 学习率候选值，越小越稳定但训练更慢
-    base_gamma=(0, 1, 5),                 # 节点分裂的最小损失下降，越大越保守
-    base_min_child_weight=(1, 5, 10),     # 子节点所需的最小样本权重，越大越保守
+    base_gamma=(0, 1),                 # 节点分裂的最小损失下降，越大越保守
+    base_min_child_weight=(1, 5),     # 子节点所需的最小样本权重，越大越保守
     base_subsample=(0.7, 0.9, 1.0),       # 训练时的样本采样比例
     base_colsample_bytree=(0.7, 0.9, 1.0),# 每棵树训练时的特征采样比例
     base_reg_alpha=(0,),         # L1正则化系数（稀疏性）无
-    base_reg_lambda=(0.1, 1.0, 5.0),      # L2正则化系数（防止过拟合）
+    base_reg_lambda=(0.1, 1.0),      # L2正则化系数（防止过拟合）
     base_booster=("gbtree",),             # 提升器类型（gbtree=树模型，常用）
 
     # ================= 运行参数 =================
     n_jobs=-1,                # 使用所有CPU核心并行
     random_state=42,          # 固定随机种子，保证结果可复现
-    verbose=1                 # 日志输出等级（0=不输出，1=输出进度）
+    verbose=0                 # 日志输出等级（0=不输出，1=输出进度）
 )
 
 def evaluate_model(model, X, y, w='', X_test=0):

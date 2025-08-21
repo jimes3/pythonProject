@@ -84,7 +84,7 @@ if __name__ == "__main__":
     # 观测符号集合（心情）
     observations = ["开心", "郁闷", "郁闷", "开心"]
     # 隐状态集合（天气）
-    states = ["晴天", "雨天"]
+    states = ["晴天", "雨天","晴天", "雨天"]
     # 使用Baum-Welch算法学习隐马尔可夫模型的参数
     start_prob, transition_prob, emission_prob = baum_welch_learning(observations, states)
     print("学习得到的初始状态概率：", start_prob)

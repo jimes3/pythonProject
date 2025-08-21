@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from sklearn.metrics import accuracy_score, recall_score, precision_score, average_precision_score, f1_score
-import ydata_profiling as pp
+#import ydata_profiling as pp
 from matplotlib.colors import ListedColormap
 import webbrowser
 import warnings
@@ -104,7 +104,7 @@ min_weight_fraction_leaf： 叶子节点最小的样本权重和，叶子节点�
 max_leaf_nodes: 最大叶子节点数，最大叶子节点数，可以防止过拟合，默认是"None”
 '''
 
-def sort(X,y,z,w):
+def sort(X,y):
     # 设置交叉验证次数
     n_folds = 5
     # 不同模型的名称列表
@@ -124,37 +124,34 @@ def sort(X,y,z,w):
         cv_score_list.append(scores)
     # 将回归训练中得到的预测y存入列表
         pre_y_list.append(cross_val_predict(model, X, y, cv=n_folds))
-    if w == 0:
-        ### 模型效果指标评估 ###
-        # 获取样本量，特征数
-        n_sample, n_feature = X.shape
-        # 分类评估指标列表
-        model_metrics_list = []
-        # 循环每个模型的预测结果
-        for pre_y in pre_y_list:
-            # 临时结果列表
-            tmp_list = []
-            # 计算每个分类指标结果
-            tmp_score = accuracy_score(y, pre_y)
-            # 将结果存入临时列表
-            tmp_list.append(tmp_score)
-            tmp_score = recall_score(y, pre_y,average='micro')
-            tmp_list.append(tmp_score)
-            tmp_score = precision_score(y, pre_y,average='micro')
-            tmp_list.append(tmp_score)
-            tmp_score = f1_score(y, pre_y,average='micro')
-            tmp_list.append(tmp_score)
-            # 将结果存入分类评估列表
-            model_metrics_list.append(tmp_list)
-        df_score = pd.DataFrame(cv_score_list, index=model_names)
-        df_met = pd.DataFrame(model_metrics_list, index=model_names, columns=['准确率','召回率','精确率','F1分数'])
-        print('-----------------------------',z,'-----------------------------')
-        # 各个交叉验证的结果,数字为MSE
-        print(df_score)
-        # 各种评估结果
-        print(df_met)
+    ### 模型效果指标评估 ###
+    # 分类评估指标列表
+    model_metrics_list = []
+    # 循环每个模型的预测结果
+    for pre_y in pre_y_list:
+        # 临时结果列表
+        tmp_list = []
+        # 计算每个分类指标结果
+        tmp_score = accuracy_score(y, pre_y)
+        # 将结果存入临时列表
+        tmp_list.append(tmp_score)
+        tmp_score = recall_score(y, pre_y,average='micro')
+        tmp_list.append(tmp_score)
+        tmp_score = precision_score(y, pre_y,average='micro')
+        tmp_list.append(tmp_score)
+        tmp_score = f1_score(y, pre_y,average='micro')
+        tmp_list.append(tmp_score)
+        # 将结果存入分类评估列表
+        model_metrics_list.append(tmp_list)
+    df_score = pd.DataFrame(cv_score_list, index=model_names)
+    df_met = pd.DataFrame(model_metrics_list, index=model_names, columns=['准确率','召回率','精确率','F1分数'])
+    print('-----------------------------训练-----------------------------')
+    # 各个交叉验证的结果,数字为MSE
+    print(df_score)
+    # 各种评估结果
+    print(df_met)
 
-sort(X_train,y_train,z='训练',w=0)
+sort(X_train,y_train)
 # 拟合并预测
 y_pred = gbc_model.fit(X_train, y_train).predict(X_test)
 print('-----------------------------预测-----------------------------')
