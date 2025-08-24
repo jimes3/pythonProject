@@ -13,15 +13,16 @@ class MyProblemBatch(Problem):
                          xu=np.array([2,2]))
     def _evaluate(self, X, out, *args, **kwargs):
         # X shape = (n_samples, n_var)
-        f1 = np.sum(X**2, axis=1)
-        f2 = (X[:,0]-1)**2 + X[:,1]**2
-        f3 = (X[:,0]-1)**2 + X[:,1]**2
+        f1 = X[:, 0]
+        g = 1 + 9 * np.mean(X[:, 1:], axis=1)
+        f2 = g * (1 - np.sqrt(f1 / g))
+        f3 = np.sum(X**2, axis=1)
         out["F"] = np.column_stack([f1,f2,f3])
 
         g1 = X[:,0] + X[:,1] - 1
         out["G"] = g1.reshape(-1,1)
 
-n_var = 2   # 决策变量数
+n_var = 10   # 决策变量数
 n_obj = 3    # 目标数
 problem = MyProblemBatch()
 
@@ -46,8 +47,11 @@ res_nsga2 = minimize(
     ('n_gen', 50),#最大迭代次数
     verbose=True    # 是否显示迭代信息
 )
-
-
+# 得到 Pareto 前沿解和目标值
+X = res_nsga3.X          # 设计变量
+F = res_nsga3.F          # 目标函数值
+print(X)
+print(F)
 import matplotlib.pyplot as plt
 fig = plt.figure(figsize=(12,5))
 
