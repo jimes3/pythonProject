@@ -100,7 +100,7 @@ print(torch.cuda.is_available()) # 检查是否支持 CUD
 # 指定设备
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
-# 多因素 → 单因素单步预测
+# 多因素 → 单因素单步预测。通道数、输出单元数、每个卷积层的通道数、卷积核的大小
 model = TCN(input_size=1, output_size=1, num_channels=[16, 32, 64], kernel_size=3, dropout=0.05).to(device)
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
                  usecols=['lstat','rm','crim','age','indus'])
