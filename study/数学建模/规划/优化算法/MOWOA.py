@@ -9,11 +9,9 @@ type = s   #-1是有理数，0是整数，1是0-1变量
 
 # ---------------- 目标函数 ----------------
 def objfun(X):
-    f1 = X[:, 0]
-    g = 1 + 9 * np.mean(X[:, 1:], axis=1)
-    f2 = g * (1 - np.sqrt(f1 / g))
-    f3 = np.sum(X**2, axis=1)
-    return np.vstack([f1, f2, f3]).T
+    f1 = np.sum((X-2)**2, axis=1)
+    f2 = np.sum(X**2, axis=1)
+    return np.vstack([f1, f2]).T
 
 # ---------------- 约束函数示例 ----------------
 def constraint_violation(X):
@@ -115,8 +113,10 @@ if __name__ == "__main__":
 
     # 可视化三目标 Pareto 前沿
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(pareto_objs[:,0], pareto_objs[:,1], pareto_objs[:,2], c='blue', marker='o')
-    ax.set_xlabel('f1'); ax.set_ylabel('f2'); ax.set_zlabel('f3')
+    ax = fig.add_subplot(111)#, projection='3d')
+    ax.scatter(pareto_objs[:,0], pareto_objs[:,1], c='blue', marker='o')
+    ax.set_xlabel('f1')
+    ax.set_ylabel('f2')
+    #ax.set_zlabel('f3')
     ax.set_title('MOWOA Pareto Front (3 Objectives)')
     plt.show()
