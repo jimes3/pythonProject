@@ -42,7 +42,21 @@ def dominates(x1_obj, x2_obj, x1_violation, x2_violation):
         return x1_violation < x2_violation
     else:
         return np.all(x1_obj <= x2_obj) and np.any(x1_obj < x2_obj)
-
+# ---------------- 计算拥挤距离 ----------------
+def crowding_distance(F):
+    n = F.shape[0]
+    m = F.shape[1]
+    distance_arr = np.zeros(n)
+    for i in range(m):
+        idx = np.argsort(F[:, i])
+        f_max = np.max(F[:, i])
+        f_min = np.min(F[:, i])
+        distance_arr[idx[0]] = distance_arr[idx[-1]] = np.inf
+        if f_max - f_min == 0:
+            continue
+        for j in range(1, n-1):
+            distance_arr[idx[j]] += (F[idx[j+1], i] - F[idx[j-1], i]) / (f_max - f_min)
+    return distance_arr
 # ---------------- 多目标鲸鱼算法（MOWOA） ----------------
 def MOWOA(SearchAgents=50, dimension=n_x, Max_iterations=50, lb=sub, ub=up):
     X = np.random.uniform(lb, ub, (SearchAgents, dimension))
@@ -53,7 +67,9 @@ def MOWOA(SearchAgents=50, dimension=n_x, Max_iterations=50, lb=sub, ub=up):
     feasible_idx = np.where(Violation==0)[0]
     if len(feasible_idx) > 0:
         fronts = NonDominatedSorting().do(ObjVals[feasible_idx])
-        Leader = X[feasible_idx[fronts[0][0]]]  # Leader 选第一个前沿
+        front0_idx = feasible_idx[fronts[0]]
+        crowd_dist = crowding_distance(ObjVals[front0_idx])
+        Leader = X[front0_idx[np.argmax(crowd_dist)]]  # 选择非支配排序最前沿中最拥挤的
     else:
         Leader = X[np.argmin(Violation)]
 
@@ -91,8 +107,9 @@ def MOWOA(SearchAgents=50, dimension=n_x, Max_iterations=50, lb=sub, ub=up):
         feasible_idx = np.where(Violation==0)[0]
         if len(feasible_idx) > 0:
             fronts = NonDominatedSorting().do(ObjVals[feasible_idx])
-            # 选拥挤距离最大的前沿个体作为Leader更均匀，可选此处简单选第一个
-            Leader = X[feasible_idx[fronts[0][0]]]
+            front0_idx = feasible_idx[fronts[0]]
+            crowd_dist = crowding_distance(ObjVals[front0_idx])
+            Leader = X[front0_idx[np.argmax(crowd_dist)]]
         else:
             Leader = X[np.argmin(Violation)]
         print(f"Iteration {t}: Leader Violation = {np.min(Violation)}")
