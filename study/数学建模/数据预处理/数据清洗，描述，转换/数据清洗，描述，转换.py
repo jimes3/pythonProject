@@ -1,34 +1,44 @@
 import warnings
 warnings.filterwarnings("ignore")
 from sklearn.impute import SimpleImputer,KNNImputer
+from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-np.set_printoptions(threshold=np.inf) # threshold 指定超过多少使用省略号，np.inf代表无限大
-np.set_printoptions(suppress=True) #不以科学计数法输出
 #显示所有列
-pd.set_option('display.max_columns', None)
+pd.set_option('display.max_columns', 6)
 #显示所有行
 pd.set_option('display.max_rows', None)
 #设置value的显示长度为100，默认为50
 pd.set_option('max_colwidth',10)
-
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
+'''
+'ggplot'
+'bmh'
+'fivethirtyeight'
+'''
 
 ##########################     导入数据      #################################
-df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
-                 usecols=['lstat','rm', 'rad','chas'])
+df = pd.read_csv("C:\jimes\下载\材料一.csv")
+
+print("=== 数据质量初步评估 ===")
+print(f"数据形状: {df.shape}")  # (行数, 列数)
+print("\n前5行数据:")
+print(df.iloc[:,:6].head())
+print("\n数值列统计描述:")
+print(df.iloc[:,:6].describe())
+print("\n缺失值统计:")
+print(df.isnull().sum().sum())
+print("\n重复行统计:", df.duplicated().sum())
+
+#########################    数据转换         #######################
+df.loc[df['励磁波形'] == '正弦波', '励磁波形'] = 1
+df.loc[df['励磁波形'] == '三角波', '励磁波形'] = 2
+df.loc[df['励磁波形'] == '梯形波', '励磁波形'] = 3
 
 #############################    重复数据处理     ########################
-# 判断重复数据
-isDuplicated = df.duplicated() # 判断重复数据记录
-print('是否重复')
-print (isDuplicated)
-
 # 删除重复值
-new_df1 = df.drop_duplicates() # 删除数据记录中所有列值相同的记录
-#new_df2 = df.drop_duplicates(['rm']) # 删除数据记录中值相同的记录
-#new_df3 = df.drop_duplicates(['rad']) # 删除数据记录中值相同的记录
+#new_df1 = df.drop_duplicates() # 删除数据记录中所有列值相同的记录(行)
 #new_df4 = df.drop_duplicates(['rm', 'rad']) # 删除数据记录中指定列值相同的记录
 
 #########################        异常值处理       #########################3
@@ -67,70 +77,76 @@ def abnormal(w=1):
         for i in error_index:
             df.loc[i, :] = np.nan
         return df
-df = abnormal(w=3) # 1:z-score    2:四分位检测    3:各种值约束检测
+#df = abnormal(w=3) # 1:z-score    2:四分位检测    3:各种值约束检测
 
 #########################     缺失数据处理    ################################
-# 查看哪些值缺失
-nan_all = df.isnull() # 获得所有数据框中的N值
-print('缺失值判定')
-print (nan_all)
-# 查看哪些列缺失
-nan_col1 = df.isnull().any() # 获得含有NA的列
-#nan_col2 = df.isnull().all() # 获得全部为NA的列
-print ('是否存在缺失值')
-print (nan_col1)
-#print ('是否全缺失')
-#print (nan_col2)
 def fit_method(df2,o=3):
     if o == 1:
         #简单的填充方法
         imp=SimpleImputer(strategy='mean')
         #mean：用列均值填充缺失值；median：用列中位数填充缺失值；most_frequent：使用最频繁的值填充缺失值；constant：使用指定的常数填充缺失值。
         df2=imp.fit_transform(df)
-        #print('普通填充')
-        #print(df2)
     if o == 2:
         #使用KNN算法填充缺失值
         imp=KNNImputer(n_neighbors=2)
         #n_neighbors的值越大，模型考虑的邻居数量也就越多，预测结果也会更加准确，但同时也会使模型计算复杂度更高。
         df2=imp.fit_transform(df)
-        #print('knn填充')
-        #print(df2)
     if o == 3:
-        #3333丢弃缺失值
+        #丢弃缺失值
         df2 = df.dropna() # 直接丢弃含有NA的行记录
-        #print('丢弃含有缺失值的行')
-        #print (df2)
     return df2
-df = fit_method(df,o=3)  # 1:简单填充  2:knn填充   3:丢弃不填充
+#df = fit_method(df,o=3)  # 1:简单填充  2:knn填充   3:丢弃不填充
 
-####################    相关性分析        ########################
-#  选择计算相关系数的方法
-corr1  =  df.corr(method='pearson',  min_periods=10)   # 线性相关、连续、服从正态分布的数据集。min_periods，最小计算需求数量值
-corr2  =  df.corr(method='kendall',  min_periods=10)  #皮尔逊Pearson相关系数使用前提条件中，任何一个条件不满足时可以考虑使用该系数，建议数据大于500
-corr3  =  df.corr(method='spearman',  min_periods=10)  #衡量有序分类型数据的序数相关性
-#  绘制相关度热力图
-fig,  axs  =  plt.subplots(2,  2,  figsize=(10,  8))
-axs[0,  0].set_title('Pearson  Coefficient')
-sns.heatmap(corr1,  cmap='GnBu_r',  annot=True,  ax=axs[0,  0])
-axs[0,  1].set_title('Kendall  Coefficient')
-sns.heatmap(corr2,  cmap='GnBu_r',  annot=True,  ax=axs[0,  1])
-axs[1,  0].set_title('Spearman  Coefficient')
-sns.heatmap(corr3,  cmap='GnBu_r',  annot=True,  ax=axs[1,  0])
-#  保存图片
-plt.savefig('相关度.png',  dpi=600)
+###########################      统计指标       #######################
+start_col = 4
+end_col = 1029
+df['均值'] = df.iloc[:,start_col:end_col].mean(axis=1)    # 左闭右开，从0开始
+df['中位数'] = df.iloc[:, start_col:end_col].median(axis=1)
+df['总和'] = df.iloc[:, start_col:end_col].sum(axis=1)
+df['标准差'] = df.iloc[:, start_col:end_col].std(axis=1)
+df['最小值'] = df.iloc[:, start_col:end_col].min(axis=1)
+df['最大值'] = df.iloc[:, start_col:end_col].max(axis=1)
+df['极差'] = df['最大值'] - df['最小值']
+df['变异系数'] = df['标准差'] / df['均值']
+# 高级统计
+df['Q1'] = df.iloc[:, start_col:end_col].quantile(0.25, axis=1)
+df['Q3'] = df.iloc[:, start_col:end_col].quantile(0.75, axis=1)
+df['偏度'] = df.iloc[:, start_col:end_col].skew(axis=1)
+df['峰度'] = df.iloc[:, start_col:end_col].kurtosis(axis=1)
+# 傅里叶变换
+from scipy.fft import fft, fftfreq
+# 定义一个函数：输入一行序列，返回主频
+def get_main_freq(row):
+    T = 1 # 采样间隔
+    y = row.values
+    yf = fft(y)  # 复数幅值
+    xf = fftfreq(len(y), T)[:len(y)//2]  # 频率值
+    amplitude = 2.0/len(y) * np.abs(yf[:len(y)//2])  # 幅值
+    idx = np.argmax(amplitude[1:]) + 1
+
+    '''plt.bar(range(20), amplitude[:20])           # 用索引画
+    plt.xticks(ticks=range(0, 20, 5), labels=np.round(xf[:20:5], 3))  # 把横坐标标成频率值
+    plt.xlabel("Frequency (Hz)")
+    plt.ylabel("Amplitude")
+    plt.show()'''
+
+    return xf[idx]
+df['主频'] = df.iloc[:, start_col:end_col].apply(get_main_freq, axis=1)
+
+# 删除原列
+df = df.drop('0（磁通密度B，T）', axis=1)  # axis=1 表示作用于每一行
+df = df.drop(columns=[f'{i}' for i in range(1,1024)])
+
+# 获取列名
+column_names = df.columns.tolist()
+# 互换列使因变量在最前面
+column_names[0],column_names[2] = column_names[2],column_names[0]
 
 ###########################      标准化       #######################
-#X = StandardScaler().fit_transform(X_train)    #标准化
-#X = MinMaxScaler().fit_transform(X_train)     #归一化
-
-#########################    数据转换         #######################
-
+#X = StandardScaler().fit_transform(X_train)    #标准化 正态分布
+#df = MinMaxScaler().fit_transform(df)     #归一化 [0,1]
 
 ########################      输出文件      ###########################
-#定义列名列表
-col_names=['lstat','rm', 'rad','chas']
-#将numpy数组转换为二维数组
-data=np.atleast_2d(df)
-#将二维数组按行保存为csv文件
-np.savetxt('result.csv',data,delimiter=',',fmt='%f',header=','.join(col_names),comments='')
+# 转换为DataFrame（无列名）
+df = pd.DataFrame(df,columns=column_names)
+df.to_csv('result.csv', index=False, float_format='%.6f')  # header=False
