@@ -5,14 +5,15 @@ import numpy as np
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 import warnings
 warnings.filterwarnings("ignore")
-
+np.set_printoptions(threshold=np.inf) # threshold 指定超过多少使用省略号，np.inf代表无限大
+np.set_printoptions(suppress=True) #不以科学计数法输出
 
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
-                 usecols=['lstat','rm', 'chas'])
+                 usecols=['lstat','rm', 'rad','age','chas'])
 # 自变量
-X = df[['lstat', 'rm']].values
+X = df[['lstat', 'rm', 'age']].values
 # 因变量
-y = df['chas'].values
+y = df['rad'].values
 print('分类种类:', np.unique(y))
 
 ###################   数据集切分          ###################
@@ -88,3 +89,13 @@ def evaluate_model(model, X, y, w='', X_test=0):
 evaluate_model(lce_model,X_train,y_train,w="训练")
 # 预测测试集
 evaluate_model(lce_model,X_train,y_train,w="预测",X_test=X_test)
+
+import shap
+explainer = shap.KernelExplainer(lce_model.predict_proba,shap.sample(X_train, 10))
+shap_values = explainer.shap_values(X_test[:5])   # (样本量，特征数，类别数)
+print(shap_values)
+# 计算全局平均SHAP绝对值
+mean_abs_shap = np.abs(shap_values).mean(axis=(0,2))
+print('每个特征的总体平均贡献：\n',mean_abs_shap)
+mean_abs_shap1 = np.abs(shap_values).mean(axis=0).T
+print('每个类别的不同特征贡献：\n',mean_abs_shap1)

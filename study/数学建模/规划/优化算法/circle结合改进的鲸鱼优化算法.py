@@ -10,17 +10,17 @@ np.set_printoptions(suppress=True) #不以科学计数法输出
 plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
-
+plt.style.use('ggplot')
 
 
 def fun(X):  # 目标函数和约束条件
     x = X.flatten() #将X变为一维数组
-    return sum([100*(x[i+1] - x[i]**2)**2 + (x[i] - 1)**2 for i in range(len(x)-1)])     #施加惩罚项
+    return 418.9829 * len(x) - np.sum(x * np.sin(np.sqrt(np.abs(x))))   # x=420.9687
 
 n_x = 10  # 变量个数
 s = np.zeros((1,n_x)).ravel()
 sub = s-10 # 自变量下限
-up = s+10  # 自变量上限
+up = s+450  # 自变量上限
 type = s   #-1是有理数，0是整数，1是0-1变量
 
 def dd2(best_x, x):  #欧氏距离
@@ -153,5 +153,5 @@ print('最优值为：')
 print(float(best_f))
 
 plt.title('鲸鱼算法')
-plt.plot(range(1,len(trace)+1),trace, color='r')
+plt.plot(trace, color='r')
 plt.show()

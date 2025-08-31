@@ -135,7 +135,7 @@ def regressor(X,y,w,X_test = None):
         for model in model_dic:
             # 将每个回归模型导入交叉检验
             scores = cross_val_score(model, X, y, cv=n_folds,scoring='neg_mean_squared_error',error_score='raise')
-            # 将交叉检验结果存入结果列表
+            # 将交叉检验结果存入结果列表，MSE
             cv_score_list.append(-scores)
             # 将回归训练中得到的预测y存入列表
             pre_y_list.append(cross_val_predict(model, X, y, cv=n_folds))

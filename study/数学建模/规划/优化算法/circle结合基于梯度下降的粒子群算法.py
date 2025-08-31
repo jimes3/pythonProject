@@ -1,12 +1,11 @@
 import numpy as np
-
 import matplotlib.pyplot as plt
 plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
 np.set_printoptions(threshold=10) # threshold 指定超过多少使用省略号，np.inf代表无限大
 np.set_printoptions(suppress=True) #不以科学计数法输出
-
+plt.style.use('ggplot')
 def fitness(X):
     x = X.ravel() #将X变为一维数组
     return sum([100*(x[i+1] - x[i]**2)**2 + (x[i] - 1)**2 for i in range(len(x)-1)])

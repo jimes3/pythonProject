@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+plt.style.use('ggplot')
 # 参数
 N = 3000
 a, b = 0, 15

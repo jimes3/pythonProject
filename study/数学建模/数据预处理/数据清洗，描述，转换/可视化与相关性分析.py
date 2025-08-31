@@ -22,7 +22,7 @@ df = pd.read_csv("C:\\Users\Jimes\PycharmProjects\pythonProject\study\数学建�
 row_data = df.iloc[2000, 5:1000]
 
 plt.figure(figsize=(10, 6))
-plt.plot(range(len(row_data)), row_data.values, 'o-', linewidth=2, markersize=8)
+plt.plot(range(len(row_data)), row_data.values, marker='o', linewidth=2, markersize=8)
 plt.title('数据')
 plt.xlabel('时间')
 plt.ylabel('数值')

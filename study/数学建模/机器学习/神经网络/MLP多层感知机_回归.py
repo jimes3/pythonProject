@@ -5,6 +5,8 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from torch.utils.data import TensorDataset, DataLoader
 import matplotlib.pyplot as plt
+import numpy as np
+
 df = pd.read_csv("C:\\Users\Jimes\PycharmProjects\pythonProject\study\数学建模\机器学习\神经网络\TCN\ID,crim,zn,indus,chas,nox,rm,age,di.csv",
                  usecols=['lstat','rm','crim','age','indus'])
 # 自变量
@@ -20,7 +22,6 @@ train_y = torch.tensor(train_y, dtype=torch.float32)     # shape: [batch]
 dataset = TensorDataset(train_x, train_y)
 # 创建 DataLoader
 train_loader = DataLoader(dataset, batch_size=64, shuffle=True)
-
 
 class ResidualBlock(nn.Module):
     def __init__(self, in_features, out_features, dropout=0.2):
@@ -62,7 +63,7 @@ criterion = nn.MSELoss()
 optimizer = optim.Adam(net.parameters(), lr=1e-3)
 
 # 训练
-epochs = 1200
+epochs = 120
 losses = []
 for epoch in range(epochs):
     net.train()
@@ -94,3 +95,11 @@ plt.plot(range(len(train_y)), pred.ravel(), 'r', label='pred')
 plt.title('MLP')
 plt.legend(loc='upper left')
 plt.show()
+
+import shap
+explainer = shap.DeepExplainer(net,train_x[:100].to(device))
+shap_values = explainer.shap_values(train_x[:4].to(device))
+print(shap_values)
+# 计算全局平均SHAP绝对值
+mean_abs_shap = np.abs(shap_values).mean(axis=0)
+print('每个特征的总体平均贡献：\n',mean_abs_shap)

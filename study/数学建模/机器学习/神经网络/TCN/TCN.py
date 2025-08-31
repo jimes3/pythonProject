@@ -148,3 +148,11 @@ plt.plot(range(len(train_y)), pred.ravel(), 'r', label='pred')
 plt.title('TCN')
 plt.legend(loc='upper left')
 plt.show()
+
+import shap
+explainer = shap.DeepExplainer(model,train_x[:100].to(device))
+shap_values = explainer.shap_values(train_x[:3].to(device))
+
+# 计算全局平均SHAP绝对值
+mean_abs_shap = np.abs(shap_values).mean(axis=0)
+print('每个特征的总体平均贡献：\n',mean_abs_shap[0])

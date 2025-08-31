@@ -7,22 +7,14 @@ from sklearn.model_selection import cross_val_score,cross_val_predict    # 交�
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
-from sklearn.metrics import accuracy_score, recall_score, precision_score, average_precision_score, f1_score
-#import ydata_profiling as pp
-from matplotlib.colors import ListedColormap
-import webbrowser
+from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 import warnings
 warnings.filterwarnings("ignore")
-
 
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
                  usecols=['lstat','rm','crim','age','indus','rad'])
 #pre = pd.read_csv("实验数据.csv",
 #                      usecols=['lstat','rm', 'rad'])
-# 数据分析
-#report = df.profile_report(title='数据分析')
-#report.to_file(output_file='analyse.html')
-#webbrowser.open_new_tab('analyse.html')
 # 自变量
 X = df[['rm','crim','age','indus']].values
 #X_predict = pre[['lstat', 'rm']].values
@@ -113,16 +105,16 @@ def sort(X,y):
     model_dic = [log_model,RFC_model,knc_model,ada_model,svm_model,gbc_model]
     # 交叉验证结果
     cv_score_list = []
-    # 各个回归模型预测的y值列表
+    # 各个分类模型预测的y值列表
     pre_y_list = []
 
-    # 读出每个回归模型对象
+    # 读出每个分类模型对象
     for model in model_dic:
-    # 将每个回归模型导入交叉检验
-        scores = cross_val_score(model, X, y, cv=n_folds,error_score='raise')
+    # 将每个分类模型导入交叉检验
+        scores = cross_val_score(model, X, y, cv=n_folds,scoring='accuracy', error_score='raise')
     # 将交叉检验结果存入结果列表
         cv_score_list.append(scores)
-    # 将回归训练中得到的预测y存入列表
+    # 将分类训练中得到的预测y存入列表
         pre_y_list.append(cross_val_predict(model, X, y, cv=n_folds))
     ### 模型效果指标评估 ###
     # 分类评估指标列表
@@ -146,7 +138,7 @@ def sort(X,y):
     df_score = pd.DataFrame(cv_score_list, index=model_names)
     df_met = pd.DataFrame(model_metrics_list, index=model_names, columns=['准确率','召回率','精确率','F1分数'])
     print('-----------------------------训练-----------------------------')
-    # 各个交叉验证的结果,数字为MSE
+    # 各个交叉验证的结果，准确率
     print(df_score)
     # 各种评估结果
     print(df_met)
@@ -155,4 +147,4 @@ sort(X_train,y_train)
 # 拟合并预测
 y_pred = gbc_model.fit(X_train, y_train).predict(X_test)
 print('-----------------------------预测-----------------------------')
-print('lce_model预测结果:', y_pred)
+print('预测结果:', y_pred)

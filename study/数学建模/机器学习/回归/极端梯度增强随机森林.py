@@ -86,3 +86,11 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
 evaluate_regressor(lce_model, X_train, y_train, w="训练")
 # 用训练好的模型预测测试集
 evaluate_regressor(lce_model, X_train, y_train, w="预测", X_test=X_test)
+
+import shap
+explainer = shap.KernelExplainer(lce_model.predict,shap.sample(X_train, 100))
+shap_values = explainer.shap_values(X_test[:3])
+
+# 计算全局平均SHAP绝对值
+mean_abs_shap = np.abs(shap_values).mean(axis=0)
+print(mean_abs_shap)  # 每个特征的贡献

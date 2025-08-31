@@ -62,7 +62,7 @@ criterion = nn.CrossEntropyLoss()  # 多分类
 optimizer = optim.Adam(net.parameters(), lr=1e-3)
 
 # 训练网络
-num_epochs = 1000
+num_epochs = 100
 for epoch in range(num_epochs):
     net.train()
     running_loss = 0.0
@@ -95,3 +95,13 @@ with torch.no_grad():
         correct += (predicted == labels.to(device)).sum().item()
 
 print(f'Accuracy of the network: {100 * correct / total:.2f}%')
+
+import shap
+explainer = shap.DeepExplainer(net,train_x[:100].to(device))
+shap_values = explainer.shap_values(train_x[:4].to(device))
+print(shap_values)   # (类别数，样本量，特征数)
+# 计算全局平均SHAP绝对值
+mean_abs_shap = np.abs(shap_values).mean(axis=(0,1))
+print('每个特征的总体平均贡献：\n',mean_abs_shap)
+mean_abs_shap1 = np.abs(shap_values).mean(axis=1)
+print('每个类别的不同特征贡献：\n',mean_abs_shap1)

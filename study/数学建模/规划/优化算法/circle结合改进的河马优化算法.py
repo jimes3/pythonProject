@@ -1,24 +1,25 @@
 import numpy as np
 from scipy.special import gammaln
 from scipy.stats import uniform
+from tqdm import tqdm
 import matplotlib.pyplot as plt
 plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
-
+plt.style.use('ggplot')
 def fitness(X):
     x = X.flatten() #将X变为一维数组
-    return sum([100*(x[i+1] - x[i]**2)**2 + (x[i] - 1)**2 for i in range(len(x)-1)])
+    return 418.9829 * len(x) - np.sum(x * np.sin(np.sqrt(np.abs(x))))   # x=420.9687
 
 n_x = 10  # 变量个数
 s = np.zeros((1,n_x)).ravel()
-sub = s-10 # 自变量下限
-up = s+10  # 自变量上限
+sub = s+10 # 自变量下限
+up = s+450  # 自变量上限
 type = s   #-1是有理数，0是整数，1是0-1变量
 def main():
-    Best_score, Best_pos, HO_curve = HO(30, 100, sub, up, n_x, fitness)
+    Best_score, Best_pos, HO_curve = HO(100, 100, sub, up, n_x, fitness)
     plt.title('河马算法')
-    plt.plot(range(1,len(HO_curve)+1),HO_curve, color='r')
+    plt.plot(HO_curve, color='r')
     plt.show()
 
 
@@ -76,7 +77,7 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
     best_so_far = np.full(Max_iterations+1, np.inf)
     best_so_far[0] = fbest
     # 主循环
-    for t in range(1, Max_iterations+1):
+    for t in tqdm(range(1, Max_iterations+1)):
         # Phase 1: 探索阶段
         for i in range(int(SearchAgents / 2)):
             Dominant_hippopotamus = Xbest
@@ -179,14 +180,14 @@ def HO(SearchAgents, Max_iterations, lowerbound, upperbound, dimension, fitness)
                 X[i, :] = X_P4
                 fit[i] = F_P4
         # 存储最佳适应值
-        best_so_far[t] = fbest
-        print(f'Iteration {t}: Best Cost = {best_so_far[t]}')
         # 更新最优解
         f_current_best = np.min(fit)
+        best_so_far[t] = f_current_best
         if f_current_best < fbest:
             fbest = f_current_best
             Xbest = X[np.argmin(fit)]
     print("最优变量为：",Xbest)
+    print("最优值为：",fbest)
     return fbest, Xbest, best_so_far
 
 if __name__=='__main__':
