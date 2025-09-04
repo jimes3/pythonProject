@@ -1,61 +1,38 @@
-import numpy as np
+from lce import LCERegressor
 import pandas as pd
 from sklearn.linear_model import BayesianRidge, LinearRegression, ElasticNet
 from sklearn.svm import SVR
-from sklearn.ensemble import GradientBoostingRegressor  # 集成算法
-from sklearn.model_selection import cross_val_score,cross_val_predict    # 交叉验证
-from sklearn.metrics import explained_variance_score, mean_absolute_error, mean_squared_error, r2_score
-import matplotlib.pyplot as plt
-import seaborn as sns
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.model_selection import cross_val_score, cross_val_predict, train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import MinMaxScaler
-#import ydata_profiling as pp
-import webbrowser
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+import numpy as np
+import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
-
-# 数据导入
-df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
+from scipy import stats
+import seaborn as sns
+from tqdm import tqdm
+plt.rcParams['axes.unicode_minus'] = False #显示负号
+plt.rcParams['font.family'] = ['sans-serif']
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
+plt.style.use('ggplot')
+# ---------------- 数据读取 ----------------
+df = pd.read_csv("../ID,crim,zn,indus,chas,nox,rm,age,di.csv",
                  usecols=['lstat','rm','crim','age','indus'])
-#pre = pd.read_csv("实验数据.csv",
-#                      usecols=['lstat','rm', 'rad'])
-# 数据分析
-#report = df.profile_report(title='数据分析')
-#report.to_file(output_file='analyse.html')
-#webbrowser.open_new_tab('analyse.html')
-# 可视化数据关系
-sns.set(style='whitegrid', context='notebook')   #style控制默认样式,context控制着默认的画幅大小
-sns.pairplot(df, size=2)
-plt.savefig('数据关系.png',dpi=600)
-plt.close()
-# 相关度
-corr = df.corr()
-''' method：可选值为{‘pearson’, ‘kendall’, ‘spearman’}
-    pearson：Pearson相关系数来衡量两个数据集合是否在一条线上面，即针对线性数据的相关系数计算
-    kendall：用于反映分类变量相关性的指标，即针对无序序列的相关系数，非正太分布的数据
-    spearman：非线性的，非正太分析的数据的相关系数
-    min_periods：样本最少的数据量 '''
-# 相关度热力图
-sns.heatmap(corr, cmap='GnBu_r',annot=True)
-plt.savefig('icon.png',dpi=600)
 
 # 自变量
 X = df[['rm','crim','age','indus']].values
-#X_predict = pre[['lstat', 'rm']].values
 # 因变量
 y = df['lstat'].values
-#y_predict = pre['rad'].values
 
-###################   数据集切分       #####################
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)  # train_test_split方法分割数据集
+# ---------------- 数据集切分 ----------------
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
-#######################    数据标准化       ######################
-X_train = StandardScaler().fit_transform(X_train)    #标准化
-X_test = StandardScaler().fit_transform(X_test)    #标准化
-#X = MinMaxScaler().fit_transform(X_train)     #归一化
-#X_predict = StandardScaler().fit_transform(X_predict)
-
+# ---------------- 标准化 ----------------
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
 # 建立贝叶斯岭回归模型
 br_model = BayesianRidge()
@@ -117,60 +94,81 @@ gbr_model = GradientBoostingRegressor()
    6) 最大叶子节点数max_leaf_nodes: 通过限制最大叶子节点数，可以防止过拟合，默认是"None”，即不限制最大的叶子节点数。如果加了限制，算法会建立在最大叶子节点数内最优的决策树。如果特征不多，可以不考虑这个值，但是如果特征分成多的话，可以加以限制，具体的值可以通过交叉验证得到。
    7) 节点划分最小不纯度min_impurity_split:  这个值限制了决策树的增长，如果某节点的不纯度(基于基尼系数，均方差)小于这个阈值，则该节点不再生成子节点。即为叶子节点 。一般不推荐改动默认值1e-7。'''
 
-def regressor(X,y,w,X_test = None):
-    if w == '训练':
-        # 设置交叉验证次数
-        n_folds = 5
+#  极端梯度增强随机森林
+lce_model = LCERegressor(
+    n_estimators=10,
+    bootstrap=True,
+    max_samples=0.8,
+    max_features="sqrt",
+    max_depth=3,
+    min_samples_leaf=1,
+    metric="neg_mean_squared_error",   # 回归指标
+    n_iter=1,
+    base_learner="xgboost",
+    base_n_estimators=(100,),
+    base_max_depth=(3,),
+    base_learning_rate=(1,),
+    base_gamma=(0,),
+    base_min_child_weight=(1,),
+    base_subsample=(1.0,),
+    base_colsample_bytree=(1.0,),
+    base_reg_alpha=(0,),
+    base_reg_lambda=(0,),
+    base_booster=("gbtree",),
+    n_jobs=-1,
+    random_state=42,
+    verbose=1
+)
+
+# ---------------- 评估函数 ----------------
+def evaluate_regressor(model, X, y, w='', X_test=None):
+    if w == "预测":
+        # 用完整训练集训练模型预测新数据
+        y_pred = model.fit(X, y).predict(X_test)
+        print('-----------------------------预测-----------------------------')
+        print('模型预测结果:', [round(i,4) for i in y_pred])
+    if w == "训练":
+        n_folds = 3
         # 不同模型的名称列表
-        model_names = ['BayesianRidge', 'LinearRegression', 'ElasticNet', 'SVR', 'GBR']
+        model_names = ['lr', 'etc', 'svr', 'gbc','lce']
         # 不同回归模型
-        model_dic = [br_model, lr_model, etc_model, svr_model, gbr_model]
+        model_dic = [lr_model,etc_model,svr_model,gbr_model,lce_model]
         # 交叉验证结果
         cv_score_list = []
-        # 各个回归模型预测的y值列表
+        # 各个模型预测的y值列表
         pre_y_list = []
-
-        # 读出每个回归模型对象
-        for model in model_dic:
-            # 将每个回归模型导入交叉检验
-            scores = cross_val_score(model, X, y, cv=n_folds,scoring='neg_mean_squared_error',error_score='raise')
-            # 将交叉检验结果存入结果列表，MSE
+        print('交叉检验开始：')
+        for model in tqdm(model_dic):
+            # 将每个模型导入交叉检验
+            scores = cross_val_score(model, X, y, cv=n_folds, scoring='neg_mean_squared_error')
+            # 将交叉检验结果存入结果列表
             cv_score_list.append(-scores)
-            # 将回归训练中得到的预测y存入列表
+            # 将训练中得到的预测y存入列表
             pre_y_list.append(cross_val_predict(model, X, y, cv=n_folds))
-            if w == 1:
-                print(f'{model}:',pre_y_list)
         ### 模型效果指标评估 ###
-        # 获取样本量，特征数
-        n_sample, n_feature = X.shape
-        # 回归评估指标对象列表
-        model_metrics_name = [explained_variance_score, mean_absolute_error, mean_squared_error, r2_score]
-        # 回归评估指标列表
+        # 分类评估指标列表
         model_metrics_list = []
         # 循环每个模型的预测结果
-        for pre_y in pre_y_list:
+        for y_pred in pre_y_list:
             # 临时结果列表
             tmp_list = []
-            # 循环每个指标对象
-            for mdl in model_metrics_name:
-                # 计算每个回归指标结果
-                tmp_score = mdl(y, pre_y)
-                # 将结果存入临时列表
-                tmp_list.append(tmp_score)
-            # 将结果存入回归评估列表
+            # 计算每个分类指标结果
+            mse = mean_squared_error(y, y_pred)
+            tmp_list.append(mse)
+            tmp_list.append(np.sqrt(mse))
+            tmp_list.append(mean_absolute_error(y, y_pred))
+            tmp_list.append(r2_score(y, y_pred))
+            # 将结果存入分类评估列表
             model_metrics_list.append(tmp_list)
         df_score = pd.DataFrame(cv_score_list, index=model_names)
-        df_met = pd.DataFrame(model_metrics_list, index=model_names, columns=['ev', 'mae', 'mse', 'r2'])
-        # 各个交叉验证的结果,数字为MSE
+        # 计算每行的均值和标准差
+        df_score['均值'] = df_score.mean(axis=1)
+        df_score['方差'] = df_score.std(axis=1)
+        df_metrics = pd.DataFrame(model_metrics_list, index=model_names,columns=['MSE', 'RMSE', 'MAE', 'R²'])
+        print('-----------------------------训练-----------------------------')
+        print('交叉验证MSE:')
         print(df_score)
-        # 各种评估结果
-        print(df_met)
-        '''
-        ev     explained_variance_score：解释回归模型的方差得分，其值取值范围是[0,1]，越接近于1说明自变量越能解释因变量的方差变化，值越小则说明效果越差。
-        mae    mean_absolute_error：平均绝对误差（Mean Absolute Error, MAE），用于评估预测结果和真实数据集的接近程度的程度，其值越小说明拟合效果越好。
-        mse    mean_squared_error：均方差（Mean squared error, MSE），该指标计算的是拟合数据和原始数据对应样本点的误差的平方和的均值，其值越小说明拟合效果越好。
-        r2     r2_score：判定系数，其含义是也是解释回归模型的方差得分，其值取值范围是[0,1]，越接近于1说明自变量越能解释因变量的方差变化，值越小则说明效果越差。
-        '''
+        print(df_metrics)
         ### 可视化 ###
         # 创建画布
         plt.figure(figsize=(9, 6))
@@ -188,10 +186,105 @@ def regressor(X,y,w,X_test = None):
             plt.legend(loc='lower left')
         plt.savefig('测试现实对比.png',dpi=3600)
         plt.show()
-    if w == '预测':
-        # 用完整训练集训练模型预测新数据
-        y_pred = gbr_model.fit(X, y).predict(X_test)
-        print('-----------------------------预测-----------------------------')
-        print('LCERegressor预测结果:', [round(i,4) for i in y_pred])
-regressor(X_train,y_train,w='训练')
-regressor(X_train,y_train,w='预测',X_test=X_test)
+    if w == "残差分析":   # 残差必须要近似正态
+        y_pred = model.fit(X, y).predict(X)
+        # 残差分析
+        residuals = y - y_pred
+        sns.histplot(residuals, kde=True)
+        plt.title("残差正态分布检验")
+        plt.show()
+        import statsmodels.api as sm
+        sm.qqplot(residuals, line='45', fit=True)
+        plt.title("残差QQ图")  #靠近45度线表明符合正态
+        plt.show()
+        from scipy.stats import shapiro
+        stat, p = shapiro(residuals)
+        print('Shapiro-Wilk test p-value:', p)
+        if p > 0.05:
+            print("残差近似正态")
+        else:
+            print("残差偏离正态")
+        # 残差标准差
+        n, p = len(y), 1
+        sigma = np.sqrt(np.sum(residuals**2) / (n - p))
+        # 置信区间
+        alpha = 0.06
+        t_val = stats.t.ppf(1 - alpha/2, df=n - p)
+        ci_lower = y_pred - t_val * sigma
+        ci_upper = y_pred + t_val * sigma
+        in_ci = (y >= ci_lower) & (y <= ci_upper)
+        coverage = np.mean(in_ci)
+        print("置信区间覆盖率:", coverage)
+        # 按大小排序方便可视化
+        sort_idx = np.argsort(y_pred)
+        y_sorted = y[sort_idx]
+        y_pred_sorted = y_pred[sort_idx]
+        ci_lower_sorted = ci_lower[sort_idx]
+        ci_upper_sorted = ci_upper[sort_idx]
+        # 可视化
+        plt.scatter(range(len(y)), y_sorted, label="Data")
+        plt.plot(range(len(y_pred)), y_pred_sorted, color="red", label="Fitted curve")
+        plt.fill_between(range(len(y)), ci_lower_sorted, ci_upper_sorted, color="pink", alpha=0.3, label="95% CI")
+        plt.legend()
+        plt.show()
+
+# 交叉验证训练
+evaluate_regressor(lce_model, X_train, y_train, w="训练")
+# 用训练好的模型预测测试集
+evaluate_regressor(lce_model, X_train, y_train, w="预测", X_test=X_test)
+
+# 敏感性分析
+import shap
+#lce_model.fit(X_train, y_train)
+explainer = shap.KernelExplainer(lce_model.predict,shap.sample(X_train, 100))
+shap_values = explainer.shap_values(X_test[:3])
+# 计算全局平均SHAP绝对值
+mean_abs_shap = np.abs(shap_values).mean(axis=0)
+print('每个特征的贡献占比：\n',mean_abs_shap/sum(mean_abs_shap))  # 每个特征的贡献
+
+plt.bar(range(len(mean_abs_shap)), mean_abs_shap)
+plt.ylabel('SHAP贡献占比')
+plt.show()
+
+# 稳定性分析
+noise_level = 0.05  # 设置噪声强度，可以调节大小
+X_train_noisy = X_train + np.random.normal(loc=0.0, scale=noise_level, size=X_train.shape)
+# 交叉验证训练
+evaluate_regressor(lce_model, X_train_noisy, y_train, w="训练")
+
+# 不确定性分析
+evaluate_regressor(lce_model, X_train, y_train, w="残差分析")
+# 残差不符合正态分布，使用Bootstrap
+from sklearn.utils import resample
+plt.ioff()
+y_preds = []
+for i in tqdm(range(10)): # Bootstrap重复次数
+    # 有放回采样训练集
+    X_resampled, y_resampled = resample(X_train, y_train, random_state=i)
+    # 拟合模型
+    lce_model.fit(X_resampled, y_resampled)
+    # 对测试集预测
+    y_pred = lce_model.predict(X_test)
+    y_preds.append(y_pred)
+
+y_preds = np.array(y_preds)
+# 计算均值和标准差
+y_mean = y_preds.mean(axis=0)
+y_std = y_preds.std(axis=0)
+# 95% 置信区间
+lower = np.percentile(y_preds, 2.5, axis=0)
+upper = np.percentile(y_preds, 97.5, axis=0)
+# 为了画图，按 X 排序
+order = np.argsort(y_mean)  # 以第一维特征为横轴
+y_mean_plot = y_mean[order]
+lower_plot = lower[order]
+upper_plot = upper[order]
+# 绘图
+plt.figure(figsize=(8,5))
+plt.plot(range(len(y_mean_plot)), y_mean_plot, color="blue", label="预测均值")
+plt.fill_between(range(len(y_mean_plot)), lower_plot, upper_plot, color="blue", alpha=0.2, label="95% CI")
+plt.xlabel("X")
+plt.ylabel("预测值")
+plt.title("Bootstrap 预测均值与置信区间")
+plt.legend()
+plt.show()

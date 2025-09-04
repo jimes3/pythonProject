@@ -62,7 +62,7 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         # 用完整训练集训练模型预测新数据
         y_pred = model.fit(X, y).predict(X_test)
         print('-----------------------------预测-----------------------------')
-        print('LCERegressor预测结果:', [round(i,4) for i in y_pred])
+        print('模型预测结果:', [round(i,4) for i in y_pred])
 
     if w == "训练":
         n_folds = 3
