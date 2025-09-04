@@ -32,3 +32,27 @@ pylab.ylabel('')
 pylab.legend(loc=3, borderaxespad=0., bbox_to_anchor=(0, 1))
 pylab.show()
 #pylab.savefig('p1.png', dpi=200, bbox_inches='tight')
+import matplotlib.pyplot as plt
+from scipy import stats
+# 残差分析
+residuals = y - y_pred
+plt.scatter(y_pred, residuals)
+plt.axhline(0, color="red", linestyle="--")
+plt.xlabel("Predicted")
+plt.ylabel("Residuals")
+plt.title("Residuals vs Predicted")
+plt.show()
+# 残差标准差
+n, p = len(y), 3    # 预测数，参数数
+sigma = np.sqrt(np.sum(residuals**2) / (n - p))
+# 置信区间
+alpha = 0.05
+t_val = stats.t.ppf(1 - alpha/2, df=n - p)
+ci_lower = y_pred - t_val * sigma
+ci_upper = y_pred + t_val * sigma
+# 可视化
+plt.scatter(range(len(y)), y, label="Data")
+plt.plot(range(len(y_pred)), y_pred, color="red", label="Fitted curve")
+plt.fill_between(range(len(y)), ci_lower, ci_upper, color="pink", alpha=0.3, label="95% CI")
+plt.legend()
+plt.show()

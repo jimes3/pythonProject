@@ -4,8 +4,14 @@ from sklearn.model_selection import cross_val_score, cross_val_predict, train_te
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
+import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
+from scipy import stats
+import seaborn as sns
+plt.rcParams['axes.unicode_minus'] = False #显示负号
+plt.rcParams['font.family'] = ['sans-serif']
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
 
 # ---------------- 数据读取 ----------------
 df = pd.read_csv("ID,crim,zn,indus,chas,nox,rm,age,di.csv",
@@ -57,6 +63,7 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         y_pred = model.fit(X, y).predict(X_test)
         print('-----------------------------预测-----------------------------')
         print('LCERegressor预测结果:', [round(i,4) for i in y_pred])
+
     if w == "训练":
         n_folds = 3
         print("开始交叉验证")
@@ -80,13 +87,55 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         print(f"Std CV MSE: {scores.std():.4f}")
         print('性能评估指标:')
         print(df_metrics)
-
+    if w == "残差分析":   # 残差必须要近似正态
+        y_pred = model.fit(X, y).predict(X)
+        # 残差分析
+        residuals = y - y_pred
+        sns.histplot(residuals, kde=True)
+        plt.title("残差正态分布检验")
+        plt.show()
+        import statsmodels.api as sm
+        sm.qqplot(residuals, line='45', fit=True)
+        plt.title("残差QQ图")  #靠近45度线表明符合正态
+        plt.show()
+        from scipy.stats import shapiro
+        stat, p = shapiro(residuals)
+        print('Shapiro-Wilk test p-value:', p)
+        if p > 0.05:
+            print("残差近似正态")
+        else:
+            print("残差偏离正态")
+        # 残差标准差
+        n, p = len(y), 1
+        sigma = np.sqrt(np.sum(residuals**2) / (n - p))
+        # 置信区间
+        alpha = 0.06
+        t_val = stats.t.ppf(1 - alpha/2, df=n - p)
+        ci_lower = y_pred - t_val * sigma
+        ci_upper = y_pred + t_val * sigma
+        in_ci = (y >= ci_lower) & (y <= ci_upper)
+        coverage = np.mean(in_ci)
+        print("Coverage:", coverage)
+        # 按大小排序方便可视化
+        sort_idx = np.argsort(y_pred)
+        y_sorted = y[sort_idx]
+        y_pred_sorted = y_pred[sort_idx]
+        ci_lower_sorted = ci_lower[sort_idx]
+        ci_upper_sorted = ci_upper[sort_idx]
+        # 可视化
+        plt.scatter(range(len(y)), y_sorted, label="Data")
+        plt.plot(range(len(y_pred)), y_pred_sorted, color="red", label="Fitted curve")
+        plt.fill_between(range(len(y)), ci_lower_sorted, ci_upper_sorted, color="pink", alpha=0.3, label="95% CI")
+        plt.legend()
+        plt.show()
 # ---------------- 使用 ----------------
 # 交叉验证训练
 evaluate_regressor(lce_model, X_train, y_train, w="训练")
 # 用训练好的模型预测测试集
 evaluate_regressor(lce_model, X_train, y_train, w="预测", X_test=X_test)
+evaluate_regressor(lce_model, X_train, y_train, w="残差分析")
 
+# 敏感性分析
 import shap
 explainer = shap.KernelExplainer(lce_model.predict,shap.sample(X_train, 100))
 shap_values = explainer.shap_values(X_test[:3])
