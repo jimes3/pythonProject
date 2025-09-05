@@ -1,10 +1,9 @@
 from lce import LCERegressor
 import pandas as pd
-from sklearn.linear_model import BayesianRidge, LinearRegression, ElasticNet
+from sklearn.linear_model import BayesianRidge, LinearRegression
 from sklearn.svm import SVR
-from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.ensemble import GradientBoostingRegressor,RandomForestRegressor
 from sklearn.model_selection import cross_val_score, cross_val_predict, train_test_split
-from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,22 +16,16 @@ plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
 plt.style.use('ggplot')
-# ---------------- 数据读取 ----------------
-df = pd.read_csv("../ID,crim,zn,indus,chas,nox,rm,age,di.csv",
-                 usecols=['lstat','rm','crim','age','indus'])
 
-# 自变量
-X = df[['rm','crim','age','indus']].values
-# 因变量
-y = df['lstat'].values
+# ---------------- 数据读取 ----------------
+df = pd.read_csv("../数据预处理/3.时域频域特征-标准化.csv")
+features = df.columns[1:].tolist()
+y = df['磁芯损耗，w/m3'].values
+X = df[features].values  # numpy格式
+print('分类种类:', np.unique(y))
 
 # ---------------- 数据集切分 ----------------
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
-
-# ---------------- 标准化 ----------------
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
 
 # 建立贝叶斯岭回归模型
 br_model = BayesianRidge()
@@ -47,25 +40,17 @@ lr_model = LinearRegression()
    normalize:是否将数据归一化。
    copy_X:默认为True，当为True时，X会被copied,否则X将会被覆写。
    n_jobs:默认值为1。计算时使用的核数,-1使用所有更快'''
-# 弹性网络回归模型
-etc_model = ElasticNet()
-'''parameters : α值。  ρ 逐渐增大时，L1 正则项占据主导地位，代价函数越接近 Lasso 回归，当 ρ 逐渐减小时，L2 正则项占据主导地位，代价函数越接近岭回归。
-   l1_ratio：ρ值，ElasticNet混合参数，其中0 <= l1_ratio <= 1。对于l1_ratio = 0，惩罚为L2范数。 对于l1_ratio = 1，为L1范数。 对于0 <l1_ratio<1，惩罚是L1和L2的组合。
-   fit_intercept：一个布尔值，制定是否需要b值。
-   max_iter：一个整数，指定最大迭代数。
-   normalize：一个布尔值。如果为True，那么训练样本会在回归之前会被归一化。
-   copy_X：一个布尔值。如果为True，会复制X，否则会覆盖X。
-   precompute：一个布尔值或者一个序列。它决定是否提前计算Gram矩阵来加速计算。Gram也可以传递参数， 对于稀疏输入，此选项始终为“True”以保留稀疏性。
-   tol：一个浮点数，指定判断迭代收敛与否的一个阈值。
-   warm_start：一个布尔值。如果为True，那么使用前一次训练结果继续训练，否则从头开始训练。
-   positive：一个布尔值。如果为True，那么强制要求权重向量的分量都为整数。
-   selection：一个字符串，可以选择‘cyclic’或者‘random’。它指定了当每轮迭代的时候，选择权重向量的哪个分量来更新。
-   ‘ramdom’：更新的时候，随机选择权重向量的一个分量来更新。
-   ‘cyclic’：更新的时候，从前向后一次选择权重向量的一个分量来更新。
-   random_state：一个整数或者一个RandomState实例，或者None。
-        如果为整数，则它指定了随机数生成器的种子。
-        如果为RandomState实例，则指定了随机数生成器。
-        如果为None，则使用默认的随机数生成器。'''
+# 随机森林
+rf_model = RandomForestRegressor(
+    n_estimators=100,       # 树的数量，默认100
+    max_depth=None,         # 树的最大深度，None表示不限制
+    min_samples_split=2,    # 内部节点再划分所需最小样本数
+    min_samples_leaf=1,     # 叶子节点最少样本数
+    max_features='auto',    # 每次分裂考虑的最大特征数，auto=√特征数
+    bootstrap=True,         # 是否有放回抽样
+    random_state=42,        # 随机种子，保证可复现
+    n_jobs=-1               # 并行计算，-1使用所有CPU
+)
 # 支持向量机回归
 svr_model = SVR()
 '''kernel ： string，optional（default ='rbf'）
@@ -127,12 +112,35 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         y_pred = model.fit(X, y).predict(X_test)
         print('-----------------------------预测-----------------------------')
         print('模型预测结果:', [round(i,4) for i in y_pred])
+    if w == "稳定":
+        n_folds = 3
+        print("开始交叉验证")
+        # 交叉验证评分
+        scores = cross_val_score(model, X, y, cv=n_folds, scoring='neg_mean_squared_error')
+        # 交叉验证预测结果
+        y_pred = cross_val_predict(model, X, y, cv=n_folds)
+        # 回归评估指标
+        mse = mean_squared_error(y, y_pred)
+        rmse = np.sqrt(mse)
+        mae = mean_absolute_error(y, y_pred)
+        r2 = r2_score(y, y_pred)
+        # 输出结果
+        df_score = pd.DataFrame([-scores], columns=[f'Fold{i+1}' for i in range(n_folds)])  # 取负号得到 MSE
+        df_metrics = pd.DataFrame([[round(mse,4), round(rmse,4), round(mae,4), round(r2,4)]],
+                                  columns=['MSE', 'RMSE', 'MAE', 'R²'])
+        print('-----------------------------训练-----------------------------')
+        print('交叉验证MSE:')
+        print(df_score)
+        print(f"Mean CV MSE: {(-scores).mean():.4f}")
+        print(f"Std CV MSE: {scores.std():.4f}")
+        print('性能评估指标:')
+        print(df_metrics)
     if w == "训练":
         n_folds = 3
         # 不同模型的名称列表
-        model_names = ['lr', 'etc', 'svr', 'gbc','lce']
+        model_names = ['lr', 'rf', 'svr', 'gbc','lce']
         # 不同回归模型
-        model_dic = [lr_model,etc_model,svr_model,gbr_model,lce_model]
+        model_dic = [lr_model,rf_model,svr_model,gbr_model,lce_model]
         # 交叉验证结果
         cv_score_list = []
         # 各个模型预测的y值列表
@@ -215,6 +223,7 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         in_ci = (y >= ci_lower) & (y <= ci_upper)
         coverage = np.mean(in_ci)
         print("置信区间覆盖率:", coverage)
+        plt.ioff()
         # 按大小排序方便可视化
         sort_idx = np.argsort(y_pred)
         y_sorted = y[sort_idx]
@@ -228,63 +237,76 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         plt.legend()
         plt.show()
 
-# 交叉验证训练
-evaluate_regressor(lce_model, X_train, y_train, w="训练")
-# 用训练好的模型预测测试集
-evaluate_regressor(lce_model, X_train, y_train, w="预测", X_test=X_test)
-
 # 敏感性分析
-import shap
-#lce_model.fit(X_train, y_train)
-explainer = shap.KernelExplainer(lce_model.predict,shap.sample(X_train, 100))
-shap_values = explainer.shap_values(X_test[:3])
-# 计算全局平均SHAP绝对值
-mean_abs_shap = np.abs(shap_values).mean(axis=0)
-print('每个特征的贡献占比：\n',mean_abs_shap/sum(mean_abs_shap))  # 每个特征的贡献
-
-plt.bar(range(len(mean_abs_shap)), mean_abs_shap)
-plt.ylabel('SHAP贡献占比')
-plt.show()
+def mingan():
+    import shap
+    lce_model.fit(X_train, y_train)
+    explainer = shap.KernelExplainer(lce_model.predict,shap.sample(X_train, 100))
+    shap_values = explainer.shap_values(X_test[:3])
+    # 计算全局平均SHAP绝对值
+    mean_abs_shap = np.abs(shap_values).mean(axis=0)
+    print('每个特征的贡献占比：\n',mean_abs_shap/sum(mean_abs_shap))  # 每个特征的贡献
+    # 绘制特征重要性柱状图，按权重大小排序
+    sorted_idx = np.argsort(mean_abs_shap)[::-1]  # 从大到小
+    sorted_features = [features[i] for i in sorted_idx]
+    sorted_weights = [mean_abs_shap[i] for i in sorted_idx]
+    plt.figure(figsize=(10, 6))
+    plt.barh(sorted_features, sorted_weights, color='skyblue')
+    plt.xlabel('特征权重')
+    plt.title('SHAP分析后的特征权重')
+    plt.show()
+    plt.ioff()
 
 # 稳定性分析
-noise_level = 0.05  # 设置噪声强度，可以调节大小
-X_train_noisy = X_train + np.random.normal(loc=0.0, scale=noise_level, size=X_train.shape)
-# 交叉验证训练
-evaluate_regressor(lce_model, X_train_noisy, y_train, w="训练")
+def wending():
+    noise_level = 0.05  # 设置噪声强度，可以调节大小
+    X_train_noisy = X_train + np.random.normal(loc=0.0, scale=noise_level, size=X_train.shape)
+    # 交叉验证训练
+    evaluate_regressor(lce_model, X_train_noisy, y_train, w="稳定")
 
 # 不确定性分析
-evaluate_regressor(lce_model, X_train, y_train, w="残差分析")
-# 残差不符合正态分布，使用Bootstrap
-from sklearn.utils import resample
-plt.ioff()
-y_preds = []
-for i in tqdm(range(10)): # Bootstrap重复次数
-    # 有放回采样训练集
-    X_resampled, y_resampled = resample(X_train, y_train, random_state=i)
-    # 拟合模型
-    lce_model.fit(X_resampled, y_resampled)
-    # 对测试集预测
-    y_pred = lce_model.predict(X_test)
-    y_preds.append(y_pred)
+def buqueding():
+    evaluate_regressor(lce_model, X_train, y_train, w="残差分析")
+    # 残差不符合正态分布，使用Bootstrap
+    from sklearn.utils import resample
+    y_preds = []
+    for i in tqdm(range(10)): # Bootstrap重复次数
+        # 有放回采样训练集
+        X_resampled, y_resampled = resample(X_train, y_train, random_state=i)
+        # 拟合模型
+        lce_model.fit(X_resampled, y_resampled)
+        # 对测试集预测
+        y_pred = lce_model.predict(X_test)
+        y_preds.append(y_pred)
+    y_preds = np.array(y_preds)
+    # 计算均值和标准差
+    y_mean = y_preds.mean(axis=0)
+    y_std = y_preds.std(axis=0)
+    # 95% 置信区间
+    lower = np.percentile(y_preds, 2.5, axis=0)
+    upper = np.percentile(y_preds, 97.5, axis=0)
+    # 为了画图，按 X 排序
+    order = np.argsort(y_mean)  # 以第一维特征为横轴
+    y_mean_plot = y_mean[order]
+    lower_plot = lower[order]
+    upper_plot = upper[order]
+    # 绘图
+    plt.figure(figsize=(8,5))
+    plt.plot(range(len(y_mean_plot)), y_mean_plot, color="blue", label="预测均值")
+    plt.fill_between(range(len(y_mean_plot)), lower_plot, upper_plot, color="blue", alpha=0.2, label="95% CI")
+    plt.xlabel("X")
+    plt.ylabel("预测值")
+    plt.title("Bootstrap 预测均值与置信区间")
+    plt.legend()
+    plt.show()
 
-y_preds = np.array(y_preds)
-# 计算均值和标准差
-y_mean = y_preds.mean(axis=0)
-y_std = y_preds.std(axis=0)
-# 95% 置信区间
-lower = np.percentile(y_preds, 2.5, axis=0)
-upper = np.percentile(y_preds, 97.5, axis=0)
-# 为了画图，按 X 排序
-order = np.argsort(y_mean)  # 以第一维特征为横轴
-y_mean_plot = y_mean[order]
-lower_plot = lower[order]
-upper_plot = upper[order]
-# 绘图
-plt.figure(figsize=(8,5))
-plt.plot(range(len(y_mean_plot)), y_mean_plot, color="blue", label="预测均值")
-plt.fill_between(range(len(y_mean_plot)), lower_plot, upper_plot, color="blue", alpha=0.2, label="95% CI")
-plt.xlabel("X")
-plt.ylabel("预测值")
-plt.title("Bootstrap 预测均值与置信区间")
-plt.legend()
-plt.show()
+# 交叉验证训练
+#evaluate_regressor(lce_model, X_train, y_train, w="训练")
+# 用训练好的模型预测测试集
+#evaluate_regressor(lce_model, X_train, y_test, w="预测", X_test=X_test)
+print('---------------------敏感性分析---------------------')
+mingan()
+print('---------------------稳定性分析---------------------')
+wending()
+print('---------------------不确定性分析---------------------')
+buqueding()

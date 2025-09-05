@@ -17,7 +17,12 @@ pd.set_option('max_colwidth',100)
 plt.rcParams['axes.unicode_minus'] = False #显示负号
 plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
-
+plt.style.use('ggplot')
+'''
+'ggplot'
+'bmh'
+'fivethirtyeight'
+'''
 for i in range(9):     #批量生成变量名
     locals()['v'+ str(i)] = i
 print(v1)
