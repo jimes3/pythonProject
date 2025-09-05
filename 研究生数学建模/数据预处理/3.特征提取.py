@@ -57,12 +57,9 @@ cols = df.columns.tolist()
 cols = [cols[2]] + cols[:2] + cols[3:]
 df = df[cols]
 
-###########################      标准化       #######################
-df = StandardScaler().fit_transform(df)     #归一化 [0,1]  , 标准化 正态
-
 ########################      输出文件      ###########################
 df = pd.DataFrame(df,columns=cols)
-df.to_csv('3.时域频域特征-标准化.csv', index=False, float_format='%.6f')  # header=False
+df.to_csv('3.时域频域特征.csv', index=False, float_format='%.6f')  # header=False
 
 
 ###########################      PCA主成分分析       ############################
@@ -70,8 +67,13 @@ from sklearn.decomposition import PCA  # 加载PCA算法包
 #在进行主成分分析前，最好分析下自变量间的相关系数，看看有哪几大类相关性很高，
 # 再来设置降维后主成分个数，后面还要对降维后的进行相关性检验，要求无相关性。
 df = pd.read_csv("1.数据清洗.csv")
-y = df['励磁波形']
-x = df.iloc[:, 7:1031]
+yy =  df['励磁波形']
+y = yy.values.reshape(-1, 1)
+x = df.iloc[:, 7:1031].values
+scaler_x = StandardScaler()
+x = scaler_x.fit_transform(x)
+scaler_y = StandardScaler()
+y = scaler_y.fit_transform(y)
 
 pca = PCA(n_components=5)  # 加载PCA算法，设置降维后主成分数目看贡献到哪里比较小，再选择数目
 reduced_x = pca.fit_transform(x)  # 对样本进行降维
@@ -84,8 +86,7 @@ print("每个特征的权重：\n", feature_weights)
 
 # 将降维后的数据转为 DataFrame
 reduced_df = pd.DataFrame(reduced_x, columns=[f'PC{i+1}' for i in range(reduced_x.shape[1])])
-# 合并 y
-final_df = pd.concat([y.reset_index(drop=True), reduced_df], axis=1)
+final_df = pd.concat([yy.reset_index(drop=True), reduced_df], axis=1)
 # 保存为新的 CSV
 final_df.to_csv("3.PCA降维数据.csv", index=False)
 
@@ -117,10 +118,16 @@ class Autoencoder(nn.Module):
         return self.encoder(x)
 
 df = pd.read_csv("1.数据清洗.csv")
-y = df['励磁波形']
-X = df.iloc[:, 7:1031].values  # numpy格式
+yy =  df['励磁波形']
+y = yy.values.reshape(-1, 1)
+x = df.iloc[:, 7:1031].values
+scaler_x = StandardScaler()
+x = scaler_x.fit_transform(x)
+scaler_y = StandardScaler()
+y = scaler_y.fit_transform(y)
+
 # 将数据转换为 Tensor
-X_tensor = torch.tensor(X, dtype=torch.float32)
+X_tensor = torch.tensor(x, dtype=torch.float32)
 dataset = TensorDataset(X_tensor, X_tensor)  # 输入和目标都是 X
 dataloader = DataLoader(dataset, batch_size=64, shuffle=True)
 
@@ -153,7 +160,7 @@ plt.title('潜在维度选择曲线')
 plt.grid(True)
 plt.show()
 
-input_dim = X.shape[1]
+input_dim = x.shape[1]
 hidden_dim = 25  # 压缩到几维
 model = Autoencoder(input_dim, hidden_dim)
 with torch.no_grad():
@@ -162,7 +169,6 @@ print(X_lowdim)
 
 # 将降维后的数据转为 DataFrame
 reduced_df = pd.DataFrame(X_lowdim, columns=[f'AE{i+1}' for i in range(X_lowdim.shape[1])])
-# 合并 y
-final_df = pd.concat([y.reset_index(drop=True), reduced_df], axis=1)
+final_df = pd.concat([yy.reset_index(drop=True), reduced_df], axis=1)
 # 保存为新的 CSV
 final_df.to_csv("3.自动编码器降维数据.csv", index=False)

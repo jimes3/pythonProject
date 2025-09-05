@@ -93,7 +93,7 @@ embedding_matrix = torch.tensor(npz['embeddings'], dtype=torch.float)
 vocab_size, embedding_dim = embedding_matrix.shape
 print(f"词汇表大小: {vocab_size}, 词嵌入维度: {embedding_dim}")
 
-# 定义RNN模型
+# 定义模型
 class SimpleLSTM(nn.Module):
     def __init__(self, vocab_size, embedding_dim, hidden_dim, output_dim, num_layers,  pad_idx, embedding_matrix=None):
         """

@@ -5,6 +5,7 @@ from sklearn.ensemble import GradientBoostingClassifier,RandomForestClassifier  
 from sklearn.model_selection import cross_val_score,cross_val_predict    # 交叉验证
 from tqdm import tqdm
 from lce import LCEClassifier
+from sklearn.preprocessing import StandardScaler
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
@@ -15,37 +16,36 @@ plt.rcParams['font.family'] = ['sans-serif']
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
 plt.style.use('ggplot')
 
-df = pd.read_csv("../数据预处理/3.时域频域特征-标准化.csv")
+df = pd.read_csv("../数据预处理/3.时域频域特征.csv")
 features = df.columns[4:].tolist()
 y = df['励磁波形'].values
 X = df.iloc[:, 4:].values  # numpy格式
 print('分类种类:', np.unique(y))
 
-df.loc[df['励磁波形'] == -1.253591, '励磁波形'] = 1
-df.loc[df['励磁波形'] == 0.056246, '励磁波形'] = 2
-df.loc[df['励磁波形'] == 1.366083, '励磁波形'] = 3
 ###################   数据集切分          ###################
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+# 特征标准化
+scaler_X = StandardScaler()
+X_train = scaler_X.fit_transform(X_train)   # 用训练集fit
+X_test = scaler_X.transform(X_test)         # 测试集用训练集参数
 
 
 # 逻辑回归
 log_model = LogisticRegression()
-log_model.fit(X, y.astype('int'))
 '''penalty：使用指定正则化项，可以指定为’l1’或者’l2’，L1正则化可以抵抗共线性，还会起到特征选择的作用，不重要的特征系数将会变为0；L2正则化一般不会将系数变为0，但会将不重要的特征系数变的很小，起到避免过拟合的作用。
    C：正则化强度取反，值越小正则化强度越大
    n_jobs: 指定线程数
    random_state：随机数生成器'''
 # 随机森林
 RFC_model = RandomForestClassifier()
-RFC_model.fit(X, y.astype('int'))
 '''n_estimators：森林中树的数量，默认是10棵，如果资源足够可以多设置一些。
    max_features：寻找最优分隔的最大特征数，默认是"auto"。
    max_ depth：树的最大深度。
    min_ samples_split：树中一个节点所需要用来分裂的最少样本数，默认是2。
    min_ samples_leaf：树中每个叶子节点所需要的最少的样本数。'''
 # SVM
-svm_model = SVC(kernel='linear', C=1.0, random_state=0).fit(X, y.astype('int'))
+svm_model = SVC(kernel='linear', C=1.0, random_state=0)
 '''
 kernel:   str      linear：线性核函数   poly：多项式核函数    rbf：径像核函数/高斯核   sigmod：sigmod核函数
 c:  float    表示错误项的惩罚系数C越大，即对分错样本的惩罚程度越大，因此在训练样本中准确率越高，但是泛化能力降低；
@@ -57,7 +57,7 @@ class_weight	该参数表示给每个类别分别设置不同的惩罚参数C，
                 如果给定参数‘balance’，则使用y的值自动调整与输入数据中的类频率成反比的权重。	字典类型或者‘balance’字符串。默认为None
 '''
 # 梯度提升树
-gbc_model = GradientBoostingClassifier().fit(X, y.astype('int'))
+gbc_model = GradientBoostingClassifier()
 '''
 n_estimators: 也就是弱学习器的最大迭代次数，或者说最大的弱学习器的个数。太小，容易欠拟合,太大，又容易过拟合.默认是100。
 learning_rate: 即每个弱学习器的权重缩减系数?ν，也称作步长,默认1.
@@ -98,15 +98,15 @@ lce_model = LCEClassifier(
     random_state=42,          # 固定随机种子，保证结果可复现
     verbose=0                 # 日志输出等级（0=不输出，1=输出进度）
 )
-def evaluate_model(X,y,w='',model=None,n_folds=5):
+def evaluate_model(X,y,w='',model=None,X_test=None):
     if w == "训练":
+        n_folds = 3
         model_names = ['log', 'svm', 'RFC', 'gbc','lce']
         model_dic = [log_model,svm_model,RFC_model,gbc_model,lce_model]
         # 交叉验证结果
         cv_score_list = []
         # 各个分类模型预测的y值列表
         pre_y_list = []
-        print('交叉检验开始：\n')
         for model in tqdm(model_dic):
             # 将每个分类模型导入交叉检验
             scores = cross_val_score(model, X, y, cv=n_folds,scoring='accuracy', error_score='raise')
@@ -166,7 +166,10 @@ def evaluate_model(X,y,w='',model=None,n_folds=5):
         print(f"Std CV accuracy: {scores.std():.4f}")
         print('性能评估指标:')
         print(df_metrics)
-
+    if w == "预测":
+        y_pred = model.fit(X, y).predict(X_test)
+        print('-----------------------------预测-----------------------------')
+        print('模型预测结果:', [round(i,4) for i in y_pred])
 # 敏感性分析
 def mingan():
     import shap

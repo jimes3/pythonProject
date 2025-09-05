@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
 from scipy import stats
+from sklearn.preprocessing import StandardScaler
 import seaborn as sns
 from tqdm import tqdm
 plt.rcParams['axes.unicode_minus'] = False #显示负号
@@ -18,14 +19,21 @@ plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中�
 plt.style.use('ggplot')
 
 # ---------------- 数据读取 ----------------
-df = pd.read_csv("../数据预处理/3.时域频域特征-标准化.csv")
+df = pd.read_csv("../数据预处理/3.时域频域特征.csv")
 features = df.columns[1:].tolist()
 y = df['磁芯损耗，w/m3'].values
 X = df[features].values  # numpy格式
-print('分类种类:', np.unique(y))
 
 # ---------------- 数据集切分 ----------------
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+# 特征标准化
+scaler_X = StandardScaler()
+X_train = scaler_X.fit_transform(X_train)   # 用训练集fit
+X_test = scaler_X.transform(X_test)         # 测试集用训练集参数
+
+scaler_y = StandardScaler()
+y_train = scaler_y.fit_transform(y_train.reshape(-1,1))
+y_test = scaler_y.transform(y_test.reshape(-1,1))
 
 # 建立贝叶斯岭回归模型
 br_model = BayesianRidge()
@@ -110,8 +118,9 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
     if w == "预测":
         # 用完整训练集训练模型预测新数据
         y_pred = model.fit(X, y).predict(X_test)
+        y_pred = scaler_y.inverse_transform(y_pred.reshape(-1,1))
         print('-----------------------------预测-----------------------------')
-        print('模型预测结果:', [round(i,4) for i in y_pred])
+        print('模型预测结果:', [round(i,4) for i in y_pred.ravel()])
     if w == "稳定":
         n_folds = 3
         print("开始交叉验证")
@@ -145,7 +154,6 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         cv_score_list = []
         # 各个模型预测的y值列表
         pre_y_list = []
-        print('交叉检验开始：')
         for model in tqdm(model_dic):
             # 将每个模型导入交叉检验
             scores = cross_val_score(model, X, y, cv=n_folds, scoring='neg_mean_squared_error')
@@ -198,11 +206,13 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         y_pred = model.fit(X, y).predict(X)
         # 残差分析
         residuals = y - y_pred
-        sns.histplot(residuals, kde=True)
+        # 对 residuals 随机采样，否则时间太长
+        sample_resid = np.random.choice(residuals.ravel(), size=1000, replace=False)
+        sns.histplot(sample_resid, kde=True)
         plt.title("残差正态分布检验")
         plt.show()
         import statsmodels.api as sm
-        sm.qqplot(residuals, line='45', fit=True)
+        sm.qqplot(sample_resid, line='45', fit=True)
         plt.title("残差QQ图")  #靠近45度线表明符合正态
         plt.show()
         from scipy.stats import shapiro
@@ -281,7 +291,6 @@ def buqueding():
     y_preds = np.array(y_preds)
     # 计算均值和标准差
     y_mean = y_preds.mean(axis=0)
-    y_std = y_preds.std(axis=0)
     # 95% 置信区间
     lower = np.percentile(y_preds, 2.5, axis=0)
     upper = np.percentile(y_preds, 97.5, axis=0)
@@ -303,7 +312,7 @@ def buqueding():
 # 交叉验证训练
 #evaluate_regressor(lce_model, X_train, y_train, w="训练")
 # 用训练好的模型预测测试集
-#evaluate_regressor(lce_model, X_train, y_test, w="预测", X_test=X_test)
+#evaluate_regressor(lce_model, X_train, y_train, w="预测", X_test=X_test)
 print('---------------------敏感性分析---------------------')
 mingan()
 print('---------------------稳定性分析---------------------')

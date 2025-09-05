@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor,GradientBoostingRegressor,GradientBoostingClassifier
 import matplotlib.pyplot as plt
 plt.rcParams['axes.unicode_minus'] = False #显示负号
@@ -8,10 +9,14 @@ plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中�
 plt.style.use('ggplot')
 
 ##########################     导入数据      #################################
-df = pd.read_csv("3.时域频域特征-标准化.csv")
-
+df = pd.read_csv("3.时域频域特征.csv")
 X = df.iloc[:,1:].values
 y = df.iloc[:,0].values
+
+scaler_X = StandardScaler()
+X = scaler_X.fit_transform(X)   # 特征标准化
+scaler_y = StandardScaler()
+y = scaler_y.fit_transform(y.reshape(-1,1))   # 标签标准化
 
 ###################    随机森林    #####################
 rf = RandomForestRegressor(n_estimators=12, max_depth=6)  # 值越大，越相关

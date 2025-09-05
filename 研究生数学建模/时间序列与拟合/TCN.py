@@ -76,17 +76,9 @@ class TCN(nn.Module):
         self.linear = nn.Linear(num_channels[-1], output_size)
         self.output_size = output_size
         self.init_weights()
-
     def init_weights(self):
         self.linear.weight.data.normal_(0, 0.01)
-
     def forward(self, x):
-        """
-        x: (batch, input_size, seq_len)
-        输出:
-          - return_seq=False: (batch, output_size)  单步预测
-          - return_seq=True:  (batch, seq_len, output_size) 多步预测
-        """
         y1 = self.tcn(x)                         # (batch, channels, seq_len)
         out = self.linear(y1.transpose(1, 2))    # (batch, seq_len, output_size)
         return out[:, -self.output_size, :]                 # 取最后一步，单步预测
@@ -102,14 +94,13 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
 # 多因素 → 单因素单步预测。通道数、输出单元数、每个卷积层的通道数、卷积核的大小
 model = TCN(input_size=1, output_size=1, num_channels=[16, 32, 64], kernel_size=3, dropout=0.05).to(device)
-df = pd.read_csv("../ID,crim,zn,indus,chas,nox,rm,age,di.csv",
-                 usecols=['lstat','rm','crim','age','indus'])
-# 自变量
-train_x = df[['rm','crim','age','indus']].values
-train_x = MinMaxScaler().fit_transform(train_x)    #标准化
+# ---------------- 数据读取 ----------------
+df = pd.read_csv("../数据预处理/3.时域频域特征.csv")
+features = df.columns[1:].tolist()
+train_y = df['磁芯损耗，w/m3'].values
+train_x = df[features].values  # numpy格式
 train_x = train_x.reshape(train_x.shape[0],1,train_x.shape[1])
-# 因变量
-train_y = df['lstat'].values
+
 # 转成 Tensor
 train_x = torch.tensor(train_x, dtype=torch.float32)  # shape: [batch, 1, seq_len]
 train_y = torch.tensor(train_y, dtype=torch.float32)     # shape: [batch]
@@ -143,7 +134,7 @@ print("预测值：")
 print(pred)
 # 画出原始值的曲线
 plt.plot(range(len(train_y)), train_y, color='k', label='y')
-# 画出各个模型的预测线
+# 画出模型的预测线
 plt.plot(range(len(train_y)), pred.ravel(), 'r', label='pred')
 plt.title('TCN')
 plt.legend(loc='upper left')
