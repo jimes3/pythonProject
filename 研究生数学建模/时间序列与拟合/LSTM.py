@@ -1,92 +1,84 @@
-import pandas as pd
 import numpy as np
-import torch
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
 import matplotlib.pyplot as plt
-
+from sklearn.metrics import mean_squared_error
 # ---------------- 1. 读取数据 ----------------
 df = pd.read_csv("时间序列预测数据集.csv")
 series = df['Temp'].values.astype(float)
 
-# ---------------- 2. 数据归一化 ----------------
-scaler = MinMaxScaler()
+# ---------------- 2. 参数 ----------------
+seq_len = 100     # 输入序列长度
+n_steps = 5      # 预测未来 n 步
+test_size = 0.2  # 测试集比例
+
+# ---------------- 3. 数据归一化 ----------------
+scaler = StandardScaler()
 series_scaled = scaler.fit_transform(series.reshape(-1,1)).flatten()
 
-# ---------------- 3. 定义时间序列 Dataset ----------------
-class TimeSeriesDataset(Dataset):
-    def __init__(self, series, seq_len=5, pred_step=1):
-        series = np.array(series, dtype=float)
-        self.X, self.y = [], []
-        for i in range(len(series) - seq_len - pred_step + 1):
-            self.X.append(series[i:i+seq_len])
-            self.y.append(series[i+seq_len+pred_step-1])
-        self.X = np.array(self.X).reshape(-1, seq_len, 1)
-        self.y = np.array(self.y).reshape(-1, 1)
+# ---------------- 4. 构造多步训练样本 ----------------
+X, y = [], []
+for i in range(len(series_scaled) - seq_len - n_steps + 1):
+    X.append(series_scaled[i:i+seq_len])
+    y.append(series_scaled[i+seq_len:i+seq_len+n_steps])
+X = np.array(X).reshape(-1, seq_len, 1)   # (samples, timesteps, features)
+y = np.array(y)                            # (samples, n_steps)
 
-    def __len__(self):
-        return len(self.X)
+# ---------------- 5. 划分训练/测试 ----------------
+split_idx = int(len(X) * (1 - test_size))
+X_train, X_test = X[:split_idx], X[split_idx:]
+y_train, y_test = y[:split_idx], y[split_idx:]
 
-    def __getitem__(self, idx):
-        return torch.tensor(self.X[idx], dtype=torch.float32), torch.tensor(self.y[idx], dtype=torch.float32)
+# ---------------- 6. 构建 LSTM ----------------
+model = Sequential()
+# 第一层 LSTM，返回序列以供下一层处理
+model.add(LSTM(128, input_shape=(seq_len,1), return_sequences=True))
+#model.add(Dropout(0.2))
+# 第二层 LSTM，不返回序列
+model.add(LSTM(64))
+#model.add(Dropout(0.2))
+# 输出 n 步
+model.add(Dense(n_steps))
+model.compile(optimizer='adam', loss='mse')
 
-seq_len = 5
-pred_step = 1
-dataset = TimeSeriesDataset(series_scaled, seq_len=seq_len, pred_step=pred_step)
-loader = DataLoader(dataset, batch_size=4, shuffle=True)
+# ---------------- 7. 训练 ----------------
+y = model.fit(X_train, y_train, epochs=5, batch_size=32, verbose=1)
+# ---------------- 在训练集上预测 ----------------
+y_train_pred_scaled = model.predict(X_train)
+y_train_pred = scaler.inverse_transform(y_train_pred_scaled)
+y_train_true = scaler.inverse_transform(y_train)
 
-# ---------------- 4. 定义 LSTM 模型 ----------------
-class LSTMRegressor(nn.Module):
-    def __init__(self, input_size=1, hidden_size=64, num_layers=1):
-        super().__init__()
-        self.lstm = nn.LSTM(input_size=input_size, hidden_size=hidden_size, num_layers=num_layers, batch_first=True)
-        self.fc = nn.Linear(hidden_size, 1)
+# ---------------- 计算训练集 MSE ----------------
+from sklearn.metrics import mean_squared_error
+mse_train = mean_squared_error(y_train_true, y_train_pred)
+print("训练集 MSE:", mse_train)
 
-    def forward(self, x):
-        out, _ = self.lstm(x)       # out: (B, seq_len, hidden_size)
-        out = out[:, -1, :]         # 取最后时间步
-        out = self.fc(out)
-        return out
+# ---------------- 可视化 ----------------
+import matplotlib.pyplot as plt
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = LSTMRegressor(input_size=1, hidden_size=64, num_layers=1).to(device)
-
-criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-
-# ---------------- 5. 训练 ----------------
-epochs = 100
-for epoch in range(epochs):
-    model.train()
-    epoch_loss = 0
-    for xb, yb in loader:
-        xb, yb = xb.to(device), yb.to(device)
-        optimizer.zero_grad()
-        pred = model(xb)
-        loss = criterion(pred, yb)
-        loss.backward()
-        optimizer.step()
-        epoch_loss += loss.item()
-    if (epoch+1) % 10 == 0:
-        print(f"Epoch {epoch+1}/{epochs}, Loss: {epoch_loss/len(loader):.4f}")
-
-# ---------------- 6. 预测 ----------------
-model.eval()
-with torch.no_grad():
-    X_full = torch.tensor(dataset.X, dtype=torch.float32).to(device)
-    y_pred = model(X_full).cpu().numpy()
-
-# 反归一化
-y_pred_rescaled = scaler.inverse_transform(y_pred)
-y_true_rescaled = scaler.inverse_transform(dataset.y)
-
-# ---------------- 7. 可视化 ----------------
 plt.figure(figsize=(12,5))
-plt.plot(y_true_rescaled, label="True Temp")
-plt.plot(y_pred_rescaled, label="Predicted Temp")
-plt.xlabel("Day")
+plt.plot(y_train_true.flatten(), label='True Temp (Train)')
+plt.plot(y_train_pred.flatten(), label='Predicted Temp (Train)')
+plt.xlabel("Time")
 plt.ylabel("Temperature")
-plt.title("LSTM Temperature Prediction")
+plt.title("LSTM Fit on Training Set")
+plt.legend()
+plt.show()
+
+# ---------------- 8. 预测 ----------------
+y_pred_scaled = model.predict(X_test)
+y_pred = scaler.inverse_transform(y_pred_scaled)  # 反归一化
+y_true = scaler.inverse_transform(y_test)
+mse = mean_squared_error(y_true, y_pred)
+print("测试集 MSE:", mse)
+# ---------------- 9. 可视化 ----------------
+plt.figure(figsize=(12,5))
+plt.plot(y_true.flatten(), label='True Temp')
+plt.plot(y_pred.flatten(), label='Predicted Temp')
+plt.xlabel("Time")
+plt.ylabel("Temperature")
+plt.title("Keras LSTM Multi-step Forecast")
 plt.legend()
 plt.show()

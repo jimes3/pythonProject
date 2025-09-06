@@ -207,7 +207,7 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
         # 残差分析
         residuals = y - y_pred
         # 对 residuals 随机采样，否则时间太长
-        sample_resid = np.random.choice(residuals.ravel(), size=1000, replace=False)
+        sample_resid = np.random.choice(residuals.ravel(), size=1000, replace=True)
         sns.histplot(sample_resid, kde=True)
         plt.title("残差正态分布检验")
         plt.show()

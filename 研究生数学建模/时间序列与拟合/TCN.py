@@ -1,12 +1,20 @@
 import torch
 import torch.nn as nn
 from torch.nn.utils import weight_norm
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from torch.utils.data import TensorDataset, DataLoader
+import torch.optim as optim
 import numpy as np
 import matplotlib.pyplot as plt
 np.set_printoptions(threshold=np.inf) # threshold 指定超过多少使用省略号，np.inf代表无限大
 np.set_printoptions(suppress=True) #不以科学计数法输出
 import warnings
 warnings.filterwarnings("ignore")
+plt.rcParams['axes.unicode_minus'] = False #显示负号
+plt.rcParams['font.family'] = ['sans-serif']
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 散点图标签可以显示中文
+plt.style.use('ggplot')
 
 class Chomp1d(nn.Module):
     def __init__(self, chomp_size):
@@ -83,27 +91,37 @@ class TCN(nn.Module):
         out = self.linear(y1.transpose(1, 2))    # (batch, seq_len, output_size)
         return out[:, -self.output_size, :]                 # 取最后一步，单步预测
 
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-from torch.utils.data import TensorDataset, DataLoader
-import torch.optim as optim
-print(torch.__version__)        # 看 PyTorch 版本
-print(torch.cuda.is_available()) # 检查是否支持 CUD
 # 指定设备
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
+output_size = 1
+seq_len = 100  # 训练序列长度
 # 多因素 → 单因素单步预测。通道数、输出单元数、每个卷积层的通道数、卷积核的大小
-model = TCN(input_size=1, output_size=1, num_channels=[16, 32, 64], kernel_size=3, dropout=0.05).to(device)
+model = TCN(input_size=1, output_size=output_size, num_channels=[32, 32, 16], kernel_size=3, dropout=0).to(device)
+
 # ---------------- 数据读取 ----------------
-df = pd.read_csv("../数据预处理/3.时域频域特征.csv")
-features = df.columns[1:].tolist()
-train_y = df['磁芯损耗，w/m3'].values
-train_x = df[features].values  # numpy格式
-train_x = train_x.reshape(train_x.shape[0],1,train_x.shape[1])
+def series_to_XY(series, seq_len):
+    series = np.array(series).astype(float)
+    N = len(series)
+    XX = []
+    YY = []
+    for i in range(0, N - seq_len):
+        x = series[i:i+seq_len]
+        XX.append([x.tolist()])   # [[...]] -> 1 个通道
+        YY.append(series[i+seq_len])  # 下一个值作为目标，可以改成其他目标
+    return XX, YY
+df = pd.read_csv("时间序列预测数据集.csv")
+seq = torch.from_numpy(df['Temp'].values.astype(float)).float()
+
+scaler = StandardScaler()
+series_scaled = scaler.fit_transform(seq.reshape(-1, 1))
+seq = series_scaled.flatten()       # 转回 1D
+
+train_x,train_y = series_to_XY(seq,seq_len)
 
 # 转成 Tensor
-train_x = torch.tensor(train_x, dtype=torch.float32)  # shape: [batch, 1, seq_len]
-train_y = torch.tensor(train_y, dtype=torch.float32)     # shape: [batch]
+train_x = torch.tensor(train_x, dtype=torch.float32)
+train_y = torch.tensor(train_y, dtype=torch.float32)
 
 # 创建 Dataset
 dataset = TensorDataset(train_x, train_y)
@@ -113,8 +131,8 @@ test_loader = DataLoader(dataset, batch_size=64, shuffle=True)
 
 criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-epochs = 40
+# 训练
+epochs = 20
 for epoch in range(epochs):
     model.train()
     total_loss = 0
@@ -128,22 +146,115 @@ for epoch in range(epochs):
         optimizer.step()
         total_loss += loss.item()
     print(f"Epoch {epoch+1}, Loss: {total_loss / len(train_loader):.4f}")
-# 测试
+# 可视化
 pred = model(train_x.to(device)).detach().cpu().numpy()
-print("预测值：")
-print(pred)
+pred = torch.tensor(scaler.inverse_transform(pred), dtype=torch.float32)
+train_y = scaler.inverse_transform(train_y.reshape(-1, 1))  # 反标准化
+mse = torch.mean((pred - train_y) ** 2)
+print(mse)
 # 画出原始值的曲线
 plt.plot(range(len(train_y)), train_y, color='k', label='y')
 # 画出模型的预测线
-plt.plot(range(len(train_y)), pred.ravel(), 'r', label='pred')
+plt.plot(range(len(pred.ravel())), pred.ravel(), 'r', label='pred')
 plt.title('TCN')
 plt.legend(loc='upper left')
 plt.show()
 
-import shap
-explainer = shap.DeepExplainer(model,train_x[:100].to(device))
-shap_values = explainer.shap_values(train_x[:3].to(device))
+# 预测
+def predict(train_x,H):
+    model.eval()
+    preds = []
+    last_seq = train_x[-1].unsqueeze(1)  # 取训练集最后一条序列作为预测起点
+    print(last_seq.shape)
+    # 拷贝一份最后序列
+    x_input = last_seq.clone().to(device)
+    for h in range(H):
+        with torch.no_grad():
+            y_pred = model(x_input)
+            y_pred_val = y_pred.cpu().numpy().flatten()[0]
+            preds.append(y_pred_val)
+        # 删除最老的时间步，加上预测值
+        y_pred_tensor = torch.tensor([[[y_pred_val]]], dtype=torch.float32).to(device)
+        x_input = torch.cat([x_input[:, :, 1:], y_pred_tensor], dim=2)
+    # 反标准化
+    preds = scaler.inverse_transform(np.array(preds).reshape(-1,1)).flatten()
+    print("未来预测值:", preds)
+    return preds
 
-# 计算全局平均SHAP绝对值
-mean_abs_shap = np.abs(shap_values).mean(axis=0)
-print('每个特征的总体平均贡献：\n',mean_abs_shap[0])
+# 稳定性分析
+def wending():
+    model.eval()
+    with torch.no_grad():
+        # 原始预测
+        pred_orig = model(train_x.to(device)).detach().cpu().numpy()
+        # 加噪声预测
+        noise_std = 0.01
+        x_noisy = train_x + torch.randn_like(train_x) * noise_std
+        pred_noisy = model(x_noisy.to(device)).detach().cpu().numpy()
+    # 反标准化
+    pred_orig = scaler.inverse_transform(pred_orig)
+    pred_noisy = scaler.inverse_transform(pred_noisy)
+    # 计算 MSE / 差异
+    import numpy as np
+    mse_orig = np.mean((pred_orig - train_y.reshape(-1,1))**2)
+    mse_noisy = np.mean((pred_noisy - train_y.reshape(-1,1))**2)
+    print(f"原始 MSE: {mse_orig:.4f}")
+    print(f"加噪声 MSE: {mse_noisy:.4f}")
+
+# 不确定性分析
+def buqueding(train_x):
+    # 残差分析
+    residuals = pred - train_y
+    # 对 residuals 随机采样，否则时间太长
+    sample_resid = np.random.choice(residuals.ravel(), size=3000, replace=False)
+    import seaborn as sns
+    sns.histplot(sample_resid, kde=True)
+    plt.title("残差正态分布检验")
+    plt.show()
+    import statsmodels.api as sm
+    sm.qqplot(sample_resid, line='45', fit=True)
+    plt.title("残差QQ图")  #靠近45度线表明符合正态
+    plt.show()
+    from scipy.stats import shapiro,normaltest, jarque_bera
+    stat, p = normaltest(residuals)
+    print('D’Agostino K² test p-value:', np.round(float(p),7))
+    stat, p = shapiro(residuals)
+    print('Shapiro-Wilk test p-value:', np.round(float(p),7))
+    stat, p = jarque_bera(residuals)
+    print('Jarque-Bera test p-value:', np.round(float(p),7))
+    if p > 0.05:
+        print("残差近似正态")
+    else:
+        print("残差偏离正态")
+
+    # bootstrap
+    H = 10        # 预测步数
+    B = 50       # bootstrap 次数
+    sim_preds = np.zeros((B, H))
+    for b in range(B):
+        # 预测未来 H 步
+        noise_std = 0.01
+        x_noisy = train_x + torch.randn_like(train_x) * noise_std
+        sim_preds[b, :] = predict(x_noisy,H)
+
+    # 计算均值和 95% CI
+    mean_pred = np.mean(sim_preds, axis=0)
+    lower = np.percentile(sim_preds, 2.5, axis=0)
+    upper = np.percentile(sim_preds, 97.5, axis=0)
+    # 输出
+    print("预测均值:", mean_pred)
+    print("95% CI 下界:", lower)
+    print("95% CI 上界:", upper)
+    # 可视化
+    plt.figure(figsize=(8,5))
+    plt.plot(range(H), mean_pred, color='blue', label='预测均值')
+    plt.fill_between(range(H), lower, upper, color='blue', alpha=0.2, label='95% CI')
+    plt.xlabel("步数")
+    plt.ylabel("预测值")
+    plt.title("Bootstrap 预测均值与 95% CI")
+    plt.legend()
+    plt.show()
+
+#predict(train_x,10)
+#wending()
+buqueding(train_x)
