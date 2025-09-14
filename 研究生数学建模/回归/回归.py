@@ -200,7 +200,7 @@ def evaluate_regressor(model, X, y, w='', X_test=None):
             plt.plot(np.arange(X.shape[0]), pre_y, color_list[i], label=model_names[i])
             plt.title(model_names[i])
             plt.legend(loc='lower left')
-        plt.savefig('测试现实对比.png',dpi=3600)
+        #plt.savefig('测试现实对比.png',dpi=3600)
         plt.show()
     if w == "残差分析":   # 残差必须要近似正态
         y_pred = model.fit(X, y).predict(X)
